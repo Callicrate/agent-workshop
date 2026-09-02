@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 4,
+  "plugin": "python-local-dev",
+  "sourceRoot": "skills/",
+  "sourceDigest": "d360641adb80bb4f00ab6ee8e6f98da117fa3721f1f323d63b7f0903fd20d055",
+  "projectionManifestDigest": "32f4977ee4553a93bf46108db222a10dcc21e199cab726debf6788069cfadf18",
+  "projectionDigest": "3aa0beb1ef37b6150b947844539650038a36a0352ec93172b82151caba9b11d8",
+  "cachebuster": "3aa0beb1ef37",
+  "sourceSkills": [
+    "python-debugging",
+    "local-project-execution"
+  ],
+  "excludedSourcePrefixes": [],
+  "sourceFiles": [
+    {
+      "path": "skills/local-project-execution/references/command-shape-guardrails.md",
+      "mode": "100644",
+      "sha256": "254f2b7f8d6474c11e1bf78942a94f163efe170872537c45d3b90ff60dbe3ca9"
+    },
+    {
+      "path": "skills/local-project-execution/references/databricks-local-command-surface.md",
+      "mode": "100644",
+      "sha256": "503a7a2241cbf6d622259a3ed99ae480a5c674f9af088633c19f87a94c2374f2"
+    },
+    {
+      "path": "skills/local-project-execution/references/execution-preflight.md",
+      "mode": "100644",
+      "sha256": "4339f66c700c097c4cc6cfc607b167783cc495728b62dd45b0224e3fee0fb78d"
+    },
+    {
+      "path": "skills/local-project-execution/references/python-and-js-commands.md",
+      "mode": "100644",
+      "sha256": "65290f60fdc9e246ee71f47db465717605e6dde17628e208a92cd5a994642fa7"
+    },
+    {
+      "path": "skills/local-project-execution/references/windows-command-patterns.md",
+      "mode": "100644",
+      "sha256": "b9b41f69eb398577c90d50682bf837e2078eaeca5aef84f2744b17a938612e96"
+    },
+    {
+      "path": "skills/local-project-execution/scripts/inspect_project.py",
+      "mode": "100644",
+      "sha256": "42b10d767ac775944da652f6e1b53714ca7350da27b494434e57e8d44a862883"
+    },
+    {
+      "path": "skills/local-project-execution/SKILL.md",
+      "mode": "100644",
+      "sha256": "376cd8ccc3c78a77cda5ef94534788e8f5d4f39e4dfc13d06e1f4d45f9959844"
+    },
+    {
+      "path": "skills/local-project-execution/tests/test_inspect_project.py",
+      "mode": "100644",
+      "sha256": "e856b3c5f3b62ee3d75cd5fffab770638e933ea8d48ab4cc61de68ae5c5b29c9"
+    },
+    {
+      "path": "skills/python-debugging/assets/error-cheatsheet.json",
+      "mode": "100644",
+      "sha256": "a9564dbe1aa916eb6571d3d4cc704060723067a8edd8c4caba001d6f820c4774"
+    },
+    {
+      "path": "skills/python-debugging/references/error-patterns.md",
+      "mode": "100644",
+      "sha256": "85dd90577d888095c6dfa58fbbdbecef5ebca11c1256fbb995b6994033f3f71d"
+    },
+    {
+      "path": "skills/python-debugging/references/import-hang-triage.md",
+      "mode": "100644",
+      "sha256": "de19a668d454e56af9ed74acd3f3da8a2693b8e29fbb0b5b2db75fbc6320aade"
+    },
+    {
+      "path": "skills/python-debugging/references/logging-patterns.md",
+      "mode": "100644",
+      "sha256": "ad912668edde22fad46e01c0fe7f4956d7d56a6002fc3d54df0408b6a6a74c5a"
+    },
+    {
+      "path": "skills/python-debugging/references/notebook-runtime-order.md",
+      "mode": "100644",
+      "sha256": "2ebeea5b31cf2fe7714d3dbbd4fcc3f64346b431ff14562b9f88647f9010d22d"
+    },
+    {
+      "path": "skills/python-debugging/references/repro-and-compile-preflights.md",
+      "mode": "100644",
+      "sha256": "36202d8cdac520353f3ac69b3799e9ff7d70c74288230165bb8c7773d30c0319"
+    },
+    {
+      "path": "skills/python-debugging/references/workflow-traceback.md",
+      "mode": "100644",
+      "sha256": "1bbea40bf89820af3b18ffa57fd49e8c844bbff2be61859c5ff9a17760835440"
+    },
+    {
+      "path": "skills/python-debugging/scripts/analyze_traceback.py",
+      "mode": "100644",
+      "sha256": "1aba5296220766062185db373e9192d6ee917de839bd552e222561ed314d25a3"
+    },
+    {
+      "path": "skills/python-debugging/scripts/check_notebook_runtime_order.py",
+      "mode": "100644",
+      "sha256": "9180a2b142b74dc9cd3a00357581b29232b6c86d57f6d130e9c7add3009293cc"
+    },
+    {
+      "path": "skills/python-debugging/scripts/diagnostic_safety.py",
+      "mode": "100644",
+      "sha256": "64d96c61540e423d83bc08e3982b2d6d362445c4bf7c6a671509d63b5c3a5cf1"
+    },
+    {
+      "path": "skills/python-debugging/SKILL.md",
+      "mode": "100644",
+      "sha256": "c898b775563ffac50e04bb25f0718bb319d38e028b58a41ba9497d3f3c71fb4b"
+    },
+    {
+      "path": "skills/python-debugging/tests/test_diagnostic_helpers.py",
+      "mode": "100644",
+      "sha256": "ebd754956612b61a31bdf0fee9b700fed93b4ea1a0022a52871de06d1bdb79d3"
+    }
+  ],
+  "generatedFiles": [
+    "skills/local-project-execution/references/command-shape-guardrails.md",
+    "skills/local-project-execution/references/databricks-local-command-surface.md",
+    "skills/local-project-execution/references/execution-preflight.md",
+    "skills/local-project-execution/references/python-and-js-commands.md",
+    "skills/local-project-execution/references/windows-command-patterns.md",
+    "skills/local-project-execution/scripts/inspect_project.py",
+    "skills/local-project-execution/SKILL.md",
+    "skills/local-project-execution/tests/test_inspect_project.py",
+    "skills/python-debugging/assets/error-cheatsheet.json",
+    "skills/python-debugging/references/error-patterns.md",
+    "skills/python-debugging/references/import-hang-triage.md",
+    "skills/python-debugging/references/logging-patterns.md",
+    "skills/python-debugging/references/notebook-runtime-order.md",
+    "skills/python-debugging/references/repro-and-compile-preflights.md",
+    "skills/python-debugging/references/workflow-traceback.md",
+    "skills/python-debugging/scripts/analyze_traceback.py",
+    "skills/python-debugging/scripts/check_notebook_runtime_order.py",
+    "skills/python-debugging/scripts/diagnostic_safety.py",
+    "skills/python-debugging/SKILL.md",
+    "skills/python-debugging/tests/test_diagnostic_helpers.py",
+    "source-lock.json"
+  ],
+  "generatedOutputs": [
+    {
+      "path": "skills/local-project-execution/references/command-shape-guardrails.md",
+      "mode": "100644",
+      "sha256": "254f2b7f8d6474c11e1bf78942a94f163efe170872537c45d3b90ff60dbe3ca9"
+    },
+    {
+      "path": "skills/local-project-execution/references/databricks-local-command-surface.md",
+      "mode": "100644",
+      "sha256": "503a7a2241cbf6d622259a3ed99ae480a5c674f9af088633c19f87a94c2374f2"
+    },
+    {
+      "path": "skills/local-project-execution/references/execution-preflight.md",
+      "mode": "100644",
+      "sha256": "4339f66c700c097c4cc6cfc607b167783cc495728b62dd45b0224e3fee0fb78d"
+    },
+    {
+      "path": "skills/local-project-execution/references/python-and-js-commands.md",
+      "mode": "100644",
+      "sha256": "65290f60fdc9e246ee71f47db465717605e6dde17628e208a92cd5a994642fa7"
+    },
+    {
+      "path": "skills/local-project-execution/references/windows-command-patterns.md",
+      "mode": "100644",
+      "sha256": "b9b41f69eb398577c90d50682bf837e2078eaeca5aef84f2744b17a938612e96"
+    },
+    {
+      "path": "skills/local-project-execution/scripts/inspect_project.py",
+      "mode": "100644",
+      "sha256": "42b10d767ac775944da652f6e1b53714ca7350da27b494434e57e8d44a862883"
+    },
+    {
+      "path": "skills/local-project-execution/SKILL.md",
+      "mode": "100644",
+      "sha256": "376cd8ccc3c78a77cda5ef94534788e8f5d4f39e4dfc13d06e1f4d45f9959844"
+    },
+    {
+      "path": "skills/local-project-execution/tests/test_inspect_project.py",
+      "mode": "100644",
+      "sha256": "e856b3c5f3b62ee3d75cd5fffab770638e933ea8d48ab4cc61de68ae5c5b29c9"
+    },
+    {
+      "path": "skills/python-debugging/assets/error-cheatsheet.json",
+      "mode": "100644",
+      "sha256": "a9564dbe1aa916eb6571d3d4cc704060723067a8edd8c4caba001d6f820c4774"
+    },
+    {
+      "path": "skills/python-debugging/references/error-patterns.md",
+      "mode": "100644",
+      "sha256": "85dd90577d888095c6dfa58fbbdbecef5ebca11c1256fbb995b6994033f3f71d"
+    },
+    {
+      "path": "skills/python-debugging/references/import-hang-triage.md",
+      "mode": "100644",
+      "sha256": "de19a668d454e56af9ed74acd3f3da8a2693b8e29fbb0b5b2db75fbc6320aade"
+    },
+    {
+      "path": "skills/python-debugging/references/logging-patterns.md",
+      "mode": "100644",
+      "sha256": "ad912668edde22fad46e01c0fe7f4956d7d56a6002fc3d54df0408b6a6a74c5a"
+    },
+    {
+      "path": "skills/python-debugging/references/notebook-runtime-order.md",
+      "mode": "100644",
+      "sha256": "2ebeea5b31cf2fe7714d3dbbd4fcc3f64346b431ff14562b9f88647f9010d22d"
+    },
+    {
+      "path": "skills/python-debugging/references/repro-and-compile-preflights.md",
+      "mode": "100644",
+      "sha256": "36202d8cdac520353f3ac69b3799e9ff7d70c74288230165bb8c7773d30c0319"
+    },
+    {
+      "path": "skills/python-debugging/references/workflow-traceback.md",
+      "mode": "100644",
+      "sha256": "1bbea40bf89820af3b18ffa57fd49e8c844bbff2be61859c5ff9a17760835440"
+    },
+    {
+      "path": "skills/python-debugging/scripts/analyze_traceback.py",
+      "mode": "100644",
+      "sha256": "1aba5296220766062185db373e9192d6ee917de839bd552e222561ed314d25a3"
+    },
+    {
+      "path": "skills/python-debugging/scripts/check_notebook_runtime_order.py",
+      "mode": "100644",
+      "sha256": "9180a2b142b74dc9cd3a00357581b29232b6c86d57f6d130e9c7add3009293cc"
+    },
+    {
+      "path": "skills/python-debugging/scripts/diagnostic_safety.py",
+      "mode": "100644",
+      "sha256": "64d96c61540e423d83bc08e3982b2d6d362445c4bf7c6a671509d63b5c3a5cf1"
+    },
+    {
+      "path": "skills/python-debugging/SKILL.md",
+      "mode": "100644",
+      "sha256": "c898b775563ffac50e04bb25f0718bb319d38e028b58a41ba9497d3f3c71fb4b"
+    },
+    {
+      "path": "skills/python-debugging/tests/test_diagnostic_helpers.py",
+      "mode": "100644",
+      "sha256": "ebd754956612b61a31bdf0fee9b700fed93b4ea1a0022a52871de06d1bdb79d3"
+    }
+  ],
+  "generatedManifestFields": [
+    "version"
+  ]
+}

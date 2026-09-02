@@ -1,0 +1,34 @@
+{
+  "name": "review-and-learning",
+  "version": "0.2.0+agents.2e72885c9773",
+  "description": "Critical review, AI retrospective, and lessons-learned workflows projected from the canonical AGENTS repository.",
+  "author": {
+    "name": "Callicrate",
+    "url": "https://github.com/Callicrate"
+  },
+  "keywords": [
+    "critical-review",
+    "retrospective",
+    "lessons-learned",
+    "evidence"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Review and Learning",
+    "shortDescription": "Critical reviews, retrospectives, and lessons.",
+    "longDescription": "Adds evidence-backed critical review, Copilot and Codex retrospective analysis, and reusable lessons-learned extraction workflows.",
+    "developerName": "Callicrate",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Critically review this document or proposal.",
+      "Mine this history for reusable lessons."
+    ],
+    "composerIcon": "./assets/review-and-learning.png",
+    "logo": "./assets/review-and-learning.png",
+    "logoDark": "./assets/review-and-learning.png"
+  }
+}
