@@ -1,0 +1,6 @@
+interface:
+  display_name: "Skill Display Name"
+  short_description: "One-line Codex app picker description"
+  default_prompt: "Run this skill's core workflow for the current task and summarize the result."
+policy:
+  allow_implicit_invocation: true

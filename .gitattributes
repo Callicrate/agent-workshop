@@ -1,0 +1,7 @@
+marketplaces/*/plugins/*/skills/** linguist-generated=true
+marketplaces/*/plugins/*/source-lock.json linguist-generated=true
+.claude-plugin/marketplace.json linguist-generated=true
+marketplaces/claude/plugins/*/.claude-plugin/plugin.json linguist-generated=true
+.github/plugin/marketplace.json linguist-generated=true
+marketplaces/copilot/plugins/*/.plugin/plugin.json linguist-generated=true
+README.md whitespace=cr-at-eol

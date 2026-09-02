@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 4,
+  "plugin": "frontend-product-ui",
+  "sourceRoot": "skills/",
+  "sourceDigest": "6c1407bcf4983bbb01e5d6260d17ca3e2c34601a03964264f2f7bc7c1d03f8c7",
+  "projectionManifestDigest": "8ca7f84576ed24fb9e3a1c0c078c546f2d66ba072190f5c9cb6c8795bcab4c22",
+  "projectionDigest": "a63027be192cb55473940b3a5f9955015a6dbff9bc43ed63f236b62b6e5d2273",
+  "cachebuster": "a63027be192c",
+  "sourceSkills": [
+    "frontend-product-ui"
+  ],
+  "excludedSourcePrefixes": [],
+  "sourceFiles": [
+    {
+      "path": "skills/frontend-product-ui/references/browser-session-patterns.md",
+      "mode": "100644",
+      "sha256": "a9647651d188d3ca409b521030a7d7a134bf166e6c2e9a01d7d099bf6de2e2e2"
+    },
+    {
+      "path": "skills/frontend-product-ui/references/hosted-terminal-ui.md",
+      "mode": "100644",
+      "sha256": "926d39cbf600abb7707c1bd70d99b1ee2da935b2b1b960e350d6da580fa50bee"
+    },
+    {
+      "path": "skills/frontend-product-ui/references/product-ui-workflow.md",
+      "mode": "100644",
+      "sha256": "84b29a07fd35564dab2099d481db8c942af1f9e61752366cc11274fd1240661b"
+    },
+    {
+      "path": "skills/frontend-product-ui/references/state-transition-patterns.md",
+      "mode": "100644",
+      "sha256": "c4e2ff926d7e97f0021856d0ba9e791719d328c398304ee982f0d0e3eb85b0ad"
+    },
+    {
+      "path": "skills/frontend-product-ui/references/ui-access-map.md",
+      "mode": "100644",
+      "sha256": "c9452755c328e5745602474ddd6afe2b9acef7e2c32f1c0399b279c52c5b4932"
+    },
+    {
+      "path": "skills/frontend-product-ui/references/ui-patterns.md",
+      "mode": "100644",
+      "sha256": "d3f03353affffc4e588cf96fbcb75a3231f9bf453232422e3a6f6bd483886b6e"
+    },
+    {
+      "path": "skills/frontend-product-ui/references/visual-verification.md",
+      "mode": "100644",
+      "sha256": "3b5b7b885b6ac1d9f8f6dbd94a0b42fe293c865377d319e8fa0ccfebea1f134c"
+    },
+    {
+      "path": "skills/frontend-product-ui/SKILL.md",
+      "mode": "100644",
+      "sha256": "b5483bad9eaaa79e8c026d87728ac0f0a5d10905a2aadcc7c0ece225054e2a1b"
+    }
+  ],
+  "generatedFiles": [
+    "skills/frontend-product-ui/references/browser-session-patterns.md",
+    "skills/frontend-product-ui/references/hosted-terminal-ui.md",
+    "skills/frontend-product-ui/references/product-ui-workflow.md",
+    "skills/frontend-product-ui/references/state-transition-patterns.md",
+    "skills/frontend-product-ui/references/ui-access-map.md",
+    "skills/frontend-product-ui/references/ui-patterns.md",
+    "skills/frontend-product-ui/references/visual-verification.md",
+    "skills/frontend-product-ui/SKILL.md",
+    "source-lock.json"
+  ],
+  "generatedOutputs": [
+    {
+      "path": "skills/frontend-product-ui/references/browser-session-patterns.md",
+      "mode": "100644",
+      "sha256": "a9647651d188d3ca409b521030a7d7a134bf166e6c2e9a01d7d099bf6de2e2e2"
+    },
+    {
+      "path": "skills/frontend-product-ui/references/hosted-terminal-ui.md",
+      "mode": "100644",
+      "sha256": "926d39cbf600abb7707c1bd70d99b1ee2da935b2b1b960e350d6da580fa50bee"
+    },
+    {
+      "path": "skills/frontend-product-ui/references/product-ui-workflow.md",
+      "mode": "100644",
+      "sha256": "84b29a07fd35564dab2099d481db8c942af1f9e61752366cc11274fd1240661b"
+    },
+    {
+      "path": "skills/frontend-product-ui/references/state-transition-patterns.md",
+      "mode": "100644",
+      "sha256": "c4e2ff926d7e97f0021856d0ba9e791719d328c398304ee982f0d0e3eb85b0ad"
+    },
+    {
+      "path": "skills/frontend-product-ui/references/ui-access-map.md",
+      "mode": "100644",
+      "sha256": "c9452755c328e5745602474ddd6afe2b9acef7e2c32f1c0399b279c52c5b4932"
+    },
+    {
+      "path": "skills/frontend-product-ui/references/ui-patterns.md",
+      "mode": "100644",
+      "sha256": "d3f03353affffc4e588cf96fbcb75a3231f9bf453232422e3a6f6bd483886b6e"
+    },
+    {
+      "path": "skills/frontend-product-ui/references/visual-verification.md",
+      "mode": "100644",
+      "sha256": "3b5b7b885b6ac1d9f8f6dbd94a0b42fe293c865377d319e8fa0ccfebea1f134c"
+    },
+    {
+      "path": "skills/frontend-product-ui/SKILL.md",
+      "mode": "100644",
+      "sha256": "b5483bad9eaaa79e8c026d87728ac0f0a5d10905a2aadcc7c0ece225054e2a1b"
+    }
+  ],
+  "generatedManifestFields": [
+    "version"
+  ]
+}

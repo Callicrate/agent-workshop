@@ -1,0 +1,67 @@
+[
+  {
+    "name": "all_ok_allows",
+    "rows": [
+      {"gate_scoring_run_id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "gate_run_contract_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "publish_gate": "ok"},
+      {"gate_scoring_run_id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "gate_run_contract_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "publish_gate": "ok"}
+    ],
+    "expected": {"publication_decision": "ALLOW_PUBLISH", "publication_reason": "all_label_gates_allow", "gate_row_count": 2}
+  },
+  {
+    "name": "zero_variance_unchanged_allows",
+    "rows": [
+      {"gate_scoring_run_id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "gate_run_contract_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "publish_gate": "ok_zero_variance_unchanged"}
+    ],
+    "expected": {"publication_decision": "ALLOW_PUBLISH", "publication_reason": "all_label_gates_allow", "gate_row_count": 1}
+  },
+  {
+    "name": "mixed_allow_statuses_allow",
+    "rows": [
+      {"gate_scoring_run_id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "gate_run_contract_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "publish_gate": "ok"},
+      {"gate_scoring_run_id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "gate_run_contract_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "publish_gate": "ok_zero_variance_unchanged"}
+    ],
+    "expected": {"publication_decision": "ALLOW_PUBLISH", "publication_reason": "all_label_gates_allow", "gate_row_count": 2}
+  },
+  {
+    "name": "mixed_allow_and_block_blocks",
+    "rows": [
+      {"gate_scoring_run_id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "gate_run_contract_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "publish_gate": "ok"},
+      {"gate_scoring_run_id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "gate_run_contract_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "publish_gate": "BLOCK_PUBLISH_UNKNOWN_LABEL"}
+    ],
+    "expected": {"publication_decision": "BLOCK_PUBLISH", "publication_reason": "non_allow_status", "gate_row_count": 2}
+  },
+  {
+    "name": "empty_blocks",
+    "rows": [],
+    "expected": {"publication_decision": "BLOCK_PUBLISH", "publication_reason": "empty_gate_result", "gate_row_count": 0}
+  },
+  {
+    "name": "unknown_status_blocks",
+    "rows": [
+      {"gate_scoring_run_id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "gate_run_contract_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "publish_gate": "mystery"}
+    ],
+    "expected": {"publication_decision": "BLOCK_PUBLISH", "publication_reason": "non_allow_status", "gate_row_count": 1}
+  },
+  {
+    "name": "mixed_contract_blocks",
+    "rows": [
+      {"gate_scoring_run_id": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "gate_run_contract_digest": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", "publish_gate": "ok"},
+      {"gate_scoring_run_id": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "gate_run_contract_digest": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb", "publish_gate": "ok"}
+    ],
+    "expected": {"publication_decision": "BLOCK_PUBLISH", "publication_reason": "mixed_gate_contract", "gate_row_count": 2}
+  },
+  {
+    "name": "null_row_identity_blocks",
+    "rows": [
+      {"gate_scoring_run_id": null, "gate_run_contract_digest": null, "publish_gate": "ok"}
+    ],
+    "expected": {"publication_decision": "BLOCK_PUBLISH", "publication_reason": "invalid_gate_row", "gate_row_count": 1}
+  },
+  {
+    "name": "blank_row_identity_blocks",
+    "rows": [
+      {"gate_scoring_run_id": "", "gate_run_contract_digest": "", "publish_gate": "ok"}
+    ],
+    "expected": {"publication_decision": "BLOCK_PUBLISH", "publication_reason": "mixed_gate_contract", "gate_row_count": 1}
+  }
+]
