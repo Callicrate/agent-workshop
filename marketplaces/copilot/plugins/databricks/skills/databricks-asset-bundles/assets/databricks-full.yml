@@ -1,0 +1,147 @@
+bundle:
+  name: "my-etl-project"
+  databricks_cli_version: ">=0.218.0"
+  deployment:
+    fail_on_active_runs: true
+  git:
+    origin_url: "https://github.com/org/repo.git"
+    branch: "main"
+
+permissions:
+  - user_name: "${var.user_name}"
+    level: CAN_MANAGE
+  - group_name: "data-engineering"
+    level: CAN_VIEW
+  - service_principal_name: "etl-service-principal"
+    level: CAN_RUN
+
+variables:
+  user_name:
+    description: "Workspace owner for paths, permissions, and tags"
+    default: "owner@company.com"
+  job_basename:
+    default: "ETL Pipeline"
+  catalog:
+    default: "main"
+  schema:
+    default: "default"
+  serverless_environment_version:
+    description: "Workspace-supported serverless environment version; verify before changing"
+    default: "4"
+  tags:
+    type: complex
+    default:
+      Team: "data-engineering"
+      Project: "etl-pipeline"
+      Owner: "${var.user_name}"
+      DataClassification: "Confidential"
+      Environment: "${bundle.target}"
+      ApplicationName: "${bundle.name}"
+      ResourceOwner: "data-engineering"
+      CiscoMailAlias: "alerts@company.com"
+      DataTaxonomy: "Operational ETL data"
+      IntendedPublic: "false"
+
+workspace:
+  root_path: "/Workspace/Shared/bundles/${bundle.name}"
+
+resources:
+  jobs:
+    daily_etl:
+      name: "${var.job_basename} - Daily ETL (${bundle.target})"
+      tags: ${var.tags}
+      schedule:
+        quartz_cron_expression: "0 0 6 * * ?"
+        timezone_id: "UTC"
+        pause_status: PAUSED
+      email_notifications:
+        on_failure:
+          - alerts@company.com
+      environments:
+        - environment_key: default
+          spec:
+            client: "1"
+            environment_version: "${var.serverless_environment_version}"
+            dependencies:
+              - pydantic==2.11.3
+              - tenacity==9.1.2
+      tasks:
+        - task_key: extract
+          notebook_task:
+            notebook_path: ./notebooks/01_extract.ipynb
+            base_parameters:
+              catalog: ${var.catalog}
+              schema: ${var.schema}
+          environment_key: default
+        - task_key: transform
+          depends_on:
+            - task_key: extract
+          notebook_task:
+            notebook_path: ./notebooks/02_transform.ipynb
+            base_parameters:
+              catalog: ${var.catalog}
+              schema: ${var.schema}
+          environment_key: default
+        - task_key: load
+          depends_on:
+            - task_key: transform
+          notebook_task:
+            notebook_path: ./notebooks/03_load.ipynb
+            base_parameters:
+              catalog: ${var.catalog}
+              schema: ${var.schema}
+          environment_key: default
+    ml_training:
+      name: "${var.job_basename} - ML Training (${bundle.target})"
+      tags: ${var.tags}
+      tasks:
+        - task_key: train
+          notebook_task:
+            notebook_path: ./notebooks/train_model.ipynb
+            base_parameters:
+              catalog: ${var.catalog}
+              schema: ${var.schema}
+              experiment_path: "/Shared/experiments/${bundle.name}/${bundle.target}"
+          new_cluster:
+            spark_version: "17.3.x-gpu-ml-scala2.12"
+            node_type_id: "g5.xlarge"
+            num_workers: 0
+            spark_conf:
+              spark.databricks.cluster.profile: "singleNode"
+            custom_tags: ${var.tags}
+          libraries:
+            - pypi:
+                package: "mlflow==2.21.3"
+            - pypi:
+                package: "scikit-learn==1.6.1"
+
+targets:
+  dev:
+    default: true
+    mode: development
+    workspace:
+      host: "https://dev-workspace.databricks.com"
+      root_path: "/Workspace/Users/${var.user_name}/bundles/${bundle.name}-dev"
+    variables:
+      catalog: "dev_catalog"
+      schema: "sandbox"
+    resources:
+      jobs:
+        daily_etl:
+          schedule:
+            pause_status: PAUSED
+  prod:
+    mode: production
+    workspace:
+      host: "https://prod-workspace.databricks.com"
+      root_path: "/Workspace/Shared/bundles/${bundle.name}"
+    variables:
+      catalog: "prod_catalog"
+      schema: "production"
+    resources:
+      jobs:
+        daily_etl:
+          schedule:
+            pause_status: UNPAUSED
+    run_as:
+      service_principal_name: etl-service-principal

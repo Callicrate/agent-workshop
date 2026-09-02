@@ -1,0 +1,91 @@
+{
+  "skill_name": "critically-review",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Critically review the white paper in evals/files/product-whitepaper.md. Focus on unsupported claims, benchmark fairness, omissions, and argumentative tricks.",
+      "expected_output": "A strong review flags the unsupported market-size claim, the overreach from pilot results to broad staffing cuts, the unfair baseline configuration, the unsupported novelty claim, the weak security reasoning, the false confidence around human escalation, and the strong rhetoric about irreversible cost disadvantage. It should mention cherry-picking, hasty generalization, and omitted deployment risks.",
+      "files": [
+        "evals/files/product-whitepaper.md"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Review the design note in evals/files/system-design-note.md like a skeptical senior engineer. Find logic errors, hidden assumptions, and operational risk.",
+      "expected_output": "A strong review catches the broken exactly-once claim, missing idempotency, synchronous fan-out bottleneck, risky single-node cache, missing persistence, missing authorization, weak retry logic, lack of error handling and backpressure, and overconfident operational claims.",
+      "files": [
+        "evals/files/system-design-note.md"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Do a hostile-but-fair review of evals/files/policy-memo.md. Focus on causal claims, omitted context, and fallacies.",
+      "expected_output": "A strong review identifies the weak causal inference, tiny and non-representative sample, ignored counterevidence from engineering, false dichotomy, selective metric choice, and missing alternative explanations like seasonality, pipeline mix, or staffing changes.",
+      "files": [
+        "evals/files/policy-memo.md"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Critique evals/files/investment-thesis.md for assumptions, missing evidence, bad math, and strategy gaps.",
+      "expected_output": "A strong review flags TAM-to-revenue overreach, unsupported comparable-company claims, unrealistic pricing and customer-count assumptions, missing CAC and channel strategy, weak treatment of regulation and competition, and the absence of downside scenarios or sensitivity analysis.",
+      "files": [
+        "evals/files/investment-thesis.md"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Reconsider your review of evals/files/system-design-note.md using these competing assessments. Review A says retries guarantee exactly-once processing and the design is ready. Review B correctly challenges retries, but also says there is no authentication at all and that the in-memory cache is durable. Adjudicate both reviews before changing findings or scores.",
+      "expected_output": "A strong adjudication treats both reviews as derived claims, verifies them against the design note, marks the exactly-once claim contradicted, decomposes the authentication claim and marks it partly-supported because edge authentication exists while service authorization is missing, marks cache durability contradicted, preserves prior claim identity and counter-evidence, and recalculates readiness only after those dispositions. It does not average scores, majority-vote, or accept either review wholesale.",
+      "files": [
+        "evals/files/system-design-note.md"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Review evals/files/system-design-note.md but do not modify the repository or create review workspace files. Return findings in chat.",
+      "expected_output": "The reviewer builds an explicit in-memory plan, TODO, claim ledger, and evidence log with exact claim, location, support, disconfirming or missing evidence, centrality, and verification status. It produces evidence-backed findings on the broken exactly-once claim or missing idempotency, and does not call init_review.py or write workspace files.",
+      "files": [
+        "evals/files/system-design-note.md"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "As a read-only subagent in a dirty repository, critically review evals/files/policy-memo.md and return the evidence-backed findings.",
+      "expected_output": "The reviewer completes the review with the required in-memory ledger fields, flags the unsupported causal conclusion from 7 versus 10 sales deals or the false dichotomy, and does not block on the dirty or read-only workspace or create durable scaffolding.",
+      "files": [
+        "evals/files/policy-memo.md"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Create a durable review workspace at reviews/q3-risk-review for this authorized multi-pass review of evals/files/system-design-note.md, then conduct the first pass.",
+      "expected_output": "The reviewer initializes only reviews/q3-risk-review with init_review.py, preserves existing files by omitting --force, uses the planning assets there, and records evidence-backed findings on the synchronous fan-out bottleneck or missing service authorization.",
+      "files": [
+        "evals/files/system-design-note.md"
+      ]
+    },
+    {
+      "id": 9,
+      "prompt": "Write one critical review report at reports/design-review.md for evals/files/product-whitepaper.md. Do not create any other files.",
+      "expected_output": "The reviewer maintains the required ledger in memory, writes only reports/design-review.md, and includes an evidence-backed finding on the unfair disabled-tool baseline or unsupported staffing-cut extrapolation. It does not initialize a seven-file review workspace.",
+      "files": [
+        "evals/files/product-whitepaper.md"
+      ]
+    },
+    {
+      "id": 10,
+      "prompt": "The repository contract requires a durable multi-pass review ledger under audits/release-17. Perform the review setup.",
+      "expected_output": "The reviewer initializes the explicitly required audits/release-17 workspace without --force and uses the persistent plan, TODO, claim ledger, and evidence log.",
+      "files": []
+    },
+    {
+      "id": 11,
+      "prompt": "Autonomously review evals/files/system-design-note.md for implementation readiness. The user is unavailable, so do not ask follow-up questions; make the best reversible evidence-backed decision and state what would validate the next state.",
+      "expected_output": "The reviewer writes overall_assessment.summary as exactly one of proceed:, revise:, stop:, or insufficient-evidence: followed by a nonblank evidence-grounded rationale; classifies every unknown as blocking or nonblocking; and writes overall_assessment.decision_impact as exactly two nonblank lines, Next action: followed by Validation gate:. The action is the smallest reversible move and the gate is observable. It does not turn nonblocking unknowns into questions for the unavailable user or treat a review-only recommendation as authorization to patch.",
+      "files": [
+        "evals/files/system-design-note.md"
+      ]
+    }
+  ]
+}

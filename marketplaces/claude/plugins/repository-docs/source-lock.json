@@ -1,0 +1,1257 @@
+{
+  "schemaVersion": 4,
+  "plugin": "repository-docs",
+  "sourceRoot": "skills/",
+  "sourceDigest": "c1da324ca7fc97fe48e8fd6f4aa0f76eb5e1f82ddd80db91bb93b628aef79ad6",
+  "projectionManifestDigest": "fdb1f6abd6d6340a31aef7ff5a8901c2c1c8a2513e6631e14f6ff2c14dc0c5b3",
+  "projectionDigest": "ce6b6a66cb531c2b8e7c339a821e8f344aa54dc0605438df53f10ea7193f1bcb",
+  "cachebuster": "ce6b6a66cb53",
+  "sourceSkills": [
+    "documentation-author",
+    "api-documentation-author",
+    "agents-md"
+  ],
+  "excludedSourcePrefixes": [],
+  "sourceFiles": [
+    {
+      "path": "skills/agents-md/agents/openai.yaml",
+      "mode": "100644",
+      "sha256": "9cb03e4b14ae9b11c498eabd68a086e33591423ebb5475eb2186017db7fde41b"
+    },
+    {
+      "path": "skills/agents-md/assets/agentsmd-contract-bearing.md",
+      "mode": "100644",
+      "sha256": "bc53f2a1ac24bc4ec32b1895d8c6a8e7c6cbd16a30e06e8c7cc750e1154d0632"
+    },
+    {
+      "path": "skills/agents-md/assets/agentsmd-full.md",
+      "mode": "100644",
+      "sha256": "1d59cb6275d1b8817849ff05519ff313adb727c72c9769cc0e7450375a7bec27"
+    },
+    {
+      "path": "skills/agents-md/assets/agentsmd-minimal.md",
+      "mode": "100644",
+      "sha256": "7c613af17ce1010ec5562aac9623f144c38b9aef52b0c5d045e08f45eec902e1"
+    },
+    {
+      "path": "skills/agents-md/assets/agentsmd-operational.md",
+      "mode": "100644",
+      "sha256": "14a372faf382f8d5882e04f46194c9d856b3e20ca2b7962607b6b52e0bdf5d85"
+    },
+    {
+      "path": "skills/agents-md/assets/example-contract-bearing-agentsmd.md",
+      "mode": "100644",
+      "sha256": "11c127ff8bfe6fcc21ba5d4fb9dedd6ebc73d9c641ee95998cd871ed95ed3886"
+    },
+    {
+      "path": "skills/agents-md/assets/example-operational-agentsmd.md",
+      "mode": "100644",
+      "sha256": "1ac183405f0c2ba4072302db50b2120b1d3b3bec1b8f08455299cff972109f53"
+    },
+    {
+      "path": "skills/agents-md/assets/example-validated-agentsmd.md",
+      "mode": "100644",
+      "sha256": "871839998177bfc1d579c249afc36562f11bc4c8a7d6776c956b2322d0e88531"
+    },
+    {
+      "path": "skills/agents-md/assets/writing-tips.md",
+      "mode": "100644",
+      "sha256": "b3575e1b942e9a5f1cbe580fa203b4308e02ad7ffc348d86d6abfe9116ca8f74"
+    },
+    {
+      "path": "skills/agents-md/pytest.ini",
+      "mode": "100644",
+      "sha256": "07ccbc44497c0704d083a4d59aa7661683928abf7f25e25792d9d83ef000d72f"
+    },
+    {
+      "path": "skills/agents-md/references/contract-bearing-agentsmd.md",
+      "mode": "100644",
+      "sha256": "10dc9fcbe4dad85ec7238dc5edb8f8589e242f0b2d070362ee84b9ffdda88fcf"
+    },
+    {
+      "path": "skills/agents-md/references/degraded-tool-surface.md",
+      "mode": "100644",
+      "sha256": "b1aa6607e7389047e634bbc678c696195827126f5356de0737f85ada0e6e9ae1"
+    },
+    {
+      "path": "skills/agents-md/references/domain-specific/databricks-spark.md",
+      "mode": "100644",
+      "sha256": "21c97452bc79bb2c51ac44a667c4e30be8b9f62771329af5bf765bd04390a04e"
+    },
+    {
+      "path": "skills/agents-md/references/domain-specific/ml-projects.md",
+      "mode": "100644",
+      "sha256": "953fd1482a8a9513f470335cf7e00135fa511d0827228282c325e224bd04e589"
+    },
+    {
+      "path": "skills/agents-md/references/evidence-invalidation.md",
+      "mode": "100644",
+      "sha256": "fddb948782cdb42f1e3c9f3b277dc03c4be58525699c6a5f53398d4eb634f18a"
+    },
+    {
+      "path": "skills/agents-md/references/language-specific/other-stack-guidance.md",
+      "mode": "100644",
+      "sha256": "39262a7e84ac80390eb29f8bac14b61a1e06c964b72c886f4067b634f3dcf3ea"
+    },
+    {
+      "path": "skills/agents-md/references/language-specific/python-guidance.md",
+      "mode": "100644",
+      "sha256": "186c23c2b8d33a50073bc32184a9b3d0ebc8c51c9470ebcf4ee9b6f0604cf875"
+    },
+    {
+      "path": "skills/agents-md/references/language-specific/typescript-guidance.md",
+      "mode": "100644",
+      "sha256": "fe35179604cce4a7a827968befa67578405067896bd9a3ee108e6c4fc451b0c4"
+    },
+    {
+      "path": "skills/agents-md/references/manual-audit.md",
+      "mode": "100644",
+      "sha256": "2444bb269b8c835858894864e12ec2e94fde838e6f3f31c511252edbe9e23aba"
+    },
+    {
+      "path": "skills/agents-md/references/normal-authoring.md",
+      "mode": "100644",
+      "sha256": "482601eb53968509454fdfd71a2f6a22f30e7c89f06bf869581a4e1c0fe8bcb4"
+    },
+    {
+      "path": "skills/agents-md/references/subagent-coordination-patterns.md",
+      "mode": "100644",
+      "sha256": "fc31f03d53ab6eb4c884280b7f030f1be765d3751b06890679777de1bf5e12c2"
+    },
+    {
+      "path": "skills/agents-md/references/template-selection.md",
+      "mode": "100644",
+      "sha256": "a63e5cd8349b249073ae16cbfcf5ab7de5065e72bcace7b9731199fc0c5a9843"
+    },
+    {
+      "path": "skills/agents-md/references/tool-contracts.md",
+      "mode": "100644",
+      "sha256": "d4ce0e75a522434d01ffd21f7892a243433894e8fefb25a1ebf386cf0fa7fd3f"
+    },
+    {
+      "path": "skills/agents-md/references/topology-and-handoff-guidance.md",
+      "mode": "100644",
+      "sha256": "85d35692292d4892eadc510fe1cf7c28c8faf34beec41326284ca273f29b5ff2"
+    },
+    {
+      "path": "skills/agents-md/scripts/analyze_project.py",
+      "mode": "100644",
+      "sha256": "acf43273d90af6ccad6030d3e1af203baac6465b4d4e7c8b93e2e52a382dc18b"
+    },
+    {
+      "path": "skills/agents-md/scripts/bounded_io.py",
+      "mode": "100644",
+      "sha256": "a1e41540925608e419aaeea783d508c15dacababe24c5b7ca48fe4034ea7d0fd"
+    },
+    {
+      "path": "skills/agents-md/scripts/check_agentsmd_templates.py",
+      "mode": "100644",
+      "sha256": "4898273df7e9bec0438619f67aebe1d666287886274ba3db280f2616826b3515"
+    },
+    {
+      "path": "skills/agents-md/scripts/codex_instruction_sources.py",
+      "mode": "100644",
+      "sha256": "ebe643ca965e16a9173a81c53ccc8f9e36d090f5b1c7770fbb3f34b4773b063c"
+    },
+    {
+      "path": "skills/agents-md/scripts/run_agentsmd_fixture_checks.py",
+      "mode": "100644",
+      "sha256": "7c1855999b417d91f83ac672a18ae85df7a7afa0b92388242653adc2d23e9c14"
+    },
+    {
+      "path": "skills/agents-md/scripts/semantic_check_agentsmd.py",
+      "mode": "100644",
+      "sha256": "b0f7bb8f4ec00d204f8f14875ac0e5349cf8cca9f610bca36879450fa9501d77"
+    },
+    {
+      "path": "skills/agents-md/scripts/validate_agentsmd.py",
+      "mode": "100644",
+      "sha256": "ccf7ae4eca5e17bf565c14e291bbbc81042f308170cef34f59670f91119407dc"
+    },
+    {
+      "path": "skills/agents-md/SKILL.md",
+      "mode": "100644",
+      "sha256": "edf59d55e78926af74af69d45c4775cc77e9504d61a6ad3335eac2459d4adec6"
+    },
+    {
+      "path": "skills/agents-md/spec.md",
+      "mode": "100644",
+      "sha256": "3ec39ccc621785cc60d5f32cb452e17f0aad1b83fa200c7cd8b9bd4b8b6dd3ba"
+    },
+    {
+      "path": "skills/agents-md/tests/conftest.py",
+      "mode": "100644",
+      "sha256": "20e04bbeb22512812fd63c18ad1a245648ccbe9d4af5a897013f4c19a85fe358"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/bad-broken-link/AGENTS.md",
+      "mode": "100644",
+      "sha256": "96f3fb839b2f4bef352749db3d1d78970c291035b4d0dfd88e89d70e83dbce6c"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/bad-nested-conflict/AGENTS.md",
+      "mode": "100644",
+      "sha256": "269c42757ac1cda50f5d9b5a7830f3d1abc90f82ba8f23a84484dd0f68a68aec"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/bad-nested-conflict/packages/api/AGENTS.md",
+      "mode": "100644",
+      "sha256": "74672a1162a844b6b674df5a681ee71330152c5523a90feb5d64c1397f9e363d"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/bad-nested-conflict/packages/api/src/routes/.gitkeep",
+      "mode": "100644",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/bad-placeholders/AGENTS.md",
+      "mode": "100644",
+      "sha256": "36a54ad0af5b26231e57c064f77259277e064f7a1368b0616b922ecfddc0219b"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/bad-stale-path/AGENTS.md",
+      "mode": "100644",
+      "sha256": "af5a0a35f744579ad23b79699eaeb96674806d298f24cc4ed259be8ab2cc1ab4"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/bad-stale-path/pyproject.toml",
+      "mode": "100644",
+      "sha256": "9d430a3eab45161cbdb2190d2a6084ff083c0b3847c3af3b22b2e61e5712ca4f"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/bad-stale-path/src/current/__init__.py",
+      "mode": "100644",
+      "sha256": "86ffb0db97537319ca64b9c43b7c44e0d0c423438ee0ec10ef18addf4985e744"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/bad-unsafe-command/AGENTS.md",
+      "mode": "100644",
+      "sha256": "3fd792c1076215d8b0bc927e505dad5e7f1f9ace74a2381688902ce1198158e0"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/contract-bearing/AGENTS.md",
+      "mode": "100644",
+      "sha256": "25db0f0db706a314ae1f777a6d98fffc6e03a9b978ba57a3f9cbdfafdea46d60"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/contract-bearing/api/openapi.yaml",
+      "mode": "100644",
+      "sha256": "c3edf33828c0d9db632c08ed9ba245a94ac2be0195fa11aac5d2ca6be76741b0"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/contract-bearing/cmd/gateway/main.go",
+      "mode": "100644",
+      "sha256": "55a60bb97151b2b4b680462447ce60ec34511b14fa10d77440c97b9777101566"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/contract-bearing/docs/operations.md",
+      "mode": "100644",
+      "sha256": "1f7e79e19430a22e9f59aed9e670d4284e094855f98f7e28acb6065db598cb1f"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/contract-bearing/go.mod",
+      "mode": "100644",
+      "sha256": "44c2f2c9e11c155e971a9c0ea03b944bf74698831b5abc44d9d7dc65445162c3"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/contract-bearing/internal/generated/client.go",
+      "mode": "100644",
+      "sha256": "1484d9e0ee18af124262a66904ce81c7f37a9a092523b664ba24561c5b335d1d"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/contract-bearing/internal/handlers/handler_test.go",
+      "mode": "100644",
+      "sha256": "892d8ebedd87f9b5d332159f86fc652c10ed8d8ba9bd8d50c2b51841630b736b"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/contract-bearing/internal/handlers/testdata/sample.json",
+      "mode": "100644",
+      "sha256": "29f629a64796aea58e769c021a74cc277ee12d0ee7c4f9546534189cea399e6b"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/contract-bearing/Makefile",
+      "mode": "100644",
+      "sha256": "37a1ae411aa9b2463356c6787994685c31bc365230844aa997a6cd6c9fa1ad9c"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/contract-bearing/migrations/001_init.sql",
+      "mode": "100644",
+      "sha256": "d932f861335a1552bbfc6d6a90ecd1af6f255ef23b5bc89101ef5850dc3aa09a"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/dynamic-paths/AGENTS.md",
+      "mode": "100644",
+      "sha256": "cd13bd6e5afae2fc5ed40e0d2ecc45b6eb13f138138dc21f6d274c93a5200917"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/dynamic-paths/configs/train/base.yaml",
+      "mode": "100644",
+      "sha256": "156e23091c7992d3fc71d9cb29964c551aae2f1b31f4b7be8a1a30ccedbfaf6a"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/fixture-manifest.json",
+      "mode": "100644",
+      "sha256": "569d252dcd3f22554b78eeb04bae69c1176137b183823a82a5ad9faa102264eb"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/good-maintainer-only-command/AGENTS.md",
+      "mode": "100644",
+      "sha256": "7e536c7ef3e80075eed6d38bf161572070cb0f8244e2af41029e2e8386f8fc76"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/minimal-python/AGENTS.md",
+      "mode": "100644",
+      "sha256": "93fb2a69761993e75e791985d0bee3e0d3ea500786bca9d01f638fda578852b4"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/minimal-python/pyproject.toml",
+      "mode": "100644",
+      "sha256": "cf35273885998349eba71083cc5d3ebb94f22c4964f9bceb42e4e73986a31772"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/minimal-python/src/ledger_cli/cli.py",
+      "mode": "100644",
+      "sha256": "09307eac0efcbf215d8205a04b4824853f781470cd78781481d9d4ea441f9914"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/minimal-python/tests/fixtures/small-ledger.csv",
+      "mode": "100644",
+      "sha256": "246f53bbf26ec4f082a3bddd50e7628181b7506a025b81fb2a43d6536f76b1b9"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/minimal-python/tests/test_cli.py",
+      "mode": "100644",
+      "sha256": "16457a6bd3a446d3005951e4a2c50187ed390e58d44e923022d6cde6615e0307"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/nested-agents/AGENTS.md",
+      "mode": "100644",
+      "sha256": "d40ad1757c2a32f40a51b6c537cf79d5265afb8a9cc2b4cc694d8f5694706a83"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/nested-agents/packages/api/AGENTS.md",
+      "mode": "100644",
+      "sha256": "e7ae99252b91f7c41cc44e8e67f301b2f32b3ce28a183b318f5b2497aeb4b02d"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/nested-agents/packages/api/package.json",
+      "mode": "100644",
+      "sha256": "bf6fe42e143f47ece742de43dac5d7376b77a0b9ddd0317b4d4f4a93dcd52317"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/operational/.gitignore",
+      "mode": "100644",
+      "sha256": "f3540e04f42a695047cd3b330e8cfbbf35ceef8bb8a3dd0dbc3421d16557d83e"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/operational/AGENTS.md",
+      "mode": "100644",
+      "sha256": "7cc3c82f9c2c966936d850ada790cac7c506fe39e7e402106a26204035d8a6eb"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/operational/compose.yaml",
+      "mode": "100644",
+      "sha256": "de006f6e577ad70a3437be2a3d589d22cd5befaed9ac3fc457e2cc1280812b2c"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/operational/docs/lab-contract.md",
+      "mode": "100644",
+      "sha256": "a56a5fd469b42a3e56c48be4b6b322b7b35d7e371877d19fe32455eb05c950c8"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/operational/evidence/sample.json",
+      "mode": "100644",
+      "sha256": "785623f5524f15a487dec463b48329b2846c37bf7c01f1d6457bb04129258403"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/operational/pyproject.toml",
+      "mode": "100644",
+      "sha256": "199e79547c55b15475f222cda0e052e37bdf987ab49397d902944445d809b9d6"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/operational/scripts/replay_lab.py",
+      "mode": "100644",
+      "sha256": "b21a870f8a64f666cfa218d063bc70a6fb4db7ec562661d56484d96f33eee60c"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/operational/status/active.md",
+      "mode": "100644",
+      "sha256": "ee70a57fa473cdeebc4426f3d7a9f50f6c20860d05c5b4d07a514480cef02e8d"
+    },
+    {
+      "path": "skills/agents-md/tests/README.md",
+      "mode": "100644",
+      "sha256": "f55b54c68fd0e6efc6edcf891e30a54e8f63b19cc3ef1a0165f9351d6a03ac1e"
+    },
+    {
+      "path": "skills/agents-md/tests/test_analyze_project.py",
+      "mode": "100644",
+      "sha256": "6ee117055b450587dac2546a6a65af0c68df5ee0d144be791756a8536cfcc3f0"
+    },
+    {
+      "path": "skills/agents-md/tests/test_bounded_io.py",
+      "mode": "100644",
+      "sha256": "0cdffc3170a6008131be99293627fe56de9833b5500de9be18b7b52cc047392f"
+    },
+    {
+      "path": "skills/agents-md/tests/test_codex_instruction_sources.py",
+      "mode": "100644",
+      "sha256": "eb3c9a7c408393d0a7f5c89440bc5f78aaa29bdc652cf83ca0ecf16938af9d93"
+    },
+    {
+      "path": "skills/agents-md/tests/test_fixture_harness.py",
+      "mode": "100644",
+      "sha256": "01cff5053ba38303c70308c8d64b72f4d1d3ff52812c4bd95c5ea1874ad7d2ce"
+    },
+    {
+      "path": "skills/agents-md/tests/test_semantic_check_agentsmd.py",
+      "mode": "100644",
+      "sha256": "72ceef3f009504b35c45d109cd2b724c3921779cb9a94fdb65a538da814c4c91"
+    },
+    {
+      "path": "skills/agents-md/tests/test_validate_agentsmd.py",
+      "mode": "100644",
+      "sha256": "5ed1f852ac9d7ca68c80b17bcdab18209838873a97586dc2c3b59bc63f6be5f8"
+    },
+    {
+      "path": "skills/api-documentation-author/references/agent-readable-docs.md",
+      "mode": "100644",
+      "sha256": "4e868f76a2032a134a6f1f018183058050b4e2844e748adb2c2d61c8f01f8d86"
+    },
+    {
+      "path": "skills/api-documentation-author/references/auth-patterns.md",
+      "mode": "100644",
+      "sha256": "d0da4913903016a5878d1a9c24004df8e17eb65bc07114246c136bfc70749d4c"
+    },
+    {
+      "path": "skills/api-documentation-author/references/common-patterns.md",
+      "mode": "100644",
+      "sha256": "516ab38ad480a1d7811675c256d40abbe64c697684642bb0e2c6fca170055453"
+    },
+    {
+      "path": "skills/api-documentation-author/references/endpoint-template.md",
+      "mode": "100644",
+      "sha256": "79a34538cf1ed25156b45af951409475c0c978f0bdacdd35b683f788d1e89cff"
+    },
+    {
+      "path": "skills/api-documentation-author/references/formatting-rules.md",
+      "mode": "100644",
+      "sha256": "de3ec0abb6e40da64123410d9d4485bbb6f3ba9c1cb675df24acc26bb20b1612"
+    },
+    {
+      "path": "skills/api-documentation-author/references/organization-guide.md",
+      "mode": "100644",
+      "sha256": "b4330f30e70df4f001ea63eca32790b33cfe33ef47829930bf421bb2693b5b40"
+    },
+    {
+      "path": "skills/api-documentation-author/references/query-artifact-patterns.md",
+      "mode": "100644",
+      "sha256": "f8c1a087134d7bb215de9a9a49d1112ea8d622f19b2f194b0ca575fe5adc665e"
+    },
+    {
+      "path": "skills/api-documentation-author/references/request-template-checklist.md",
+      "mode": "100644",
+      "sha256": "8b4f7a14ed43d95f1456ff9988313b4debf4dc95be26a761ff519ab9ed0e8df2"
+    },
+    {
+      "path": "skills/api-documentation-author/references/response-schema-tables.md",
+      "mode": "100644",
+      "sha256": "6697d49cbe10d19f21037d89ef51fd6db7b05ce1d41f0badd4bd08cc4b7dab08"
+    },
+    {
+      "path": "skills/api-documentation-author/references/tool-interface-patterns.md",
+      "mode": "100644",
+      "sha256": "49b9cf691a8180a8b4af8415049816d5943b97c5cc5a54520b9f9ba81617bd65"
+    },
+    {
+      "path": "skills/api-documentation-author/scripts/validate_api_doc.py",
+      "mode": "100644",
+      "sha256": "8df02e2ab43d8f4895680761c9ad015c8fed3cb9fd8cab3054f009f7ef2250fe"
+    },
+    {
+      "path": "skills/api-documentation-author/SKILL.md",
+      "mode": "100644",
+      "sha256": "fad98018d316fd8f0ab092f0cbe184a597f087d4b0c8b112bea01f4f0ae577f7"
+    },
+    {
+      "path": "skills/api-documentation-author/templates/endpoint-folder-readme.md",
+      "mode": "100644",
+      "sha256": "0a73d89640a0ca66815db20bdc5b99befba5ff3a05209073cc891846dfd274dd"
+    },
+    {
+      "path": "skills/api-documentation-author/templates/endpoint-single-file.md",
+      "mode": "100644",
+      "sha256": "c018c304e27bbad17ef5a5cac719aee642d9e9eccaacea8a117b6a5d25279a61"
+    },
+    {
+      "path": "skills/api-documentation-author/tests/test_validate_api_doc.py",
+      "mode": "100644",
+      "sha256": "e896802088988ecca18ab8abbe8a44dc596a1de6d1eff2e5c47b10bc65f2687f"
+    },
+    {
+      "path": "skills/documentation-author/references/ascii-art-standards.md",
+      "mode": "100644",
+      "sha256": "22676da5038c57959704fc08e785b7d74d0f75a2dad8674afbb52ae868a7fb24"
+    },
+    {
+      "path": "skills/documentation-author/references/guide-access-runbook.md",
+      "mode": "100644",
+      "sha256": "39243db17512cb421c95f2cc7e315279a56c0b04b429199621183e5f50cb8d42"
+    },
+    {
+      "path": "skills/documentation-author/references/guide-agent-ops-docs.md",
+      "mode": "100644",
+      "sha256": "3e763e22983ac6fff4902637a0a45816d53d9ce5e6f1dae0f95a563c993eaa51"
+    },
+    {
+      "path": "skills/documentation-author/references/guide-ai-ingestion.md",
+      "mode": "100644",
+      "sha256": "4854d52e1c49359f49d762c11780e58e016a69a658c898f394c631772786aa34"
+    },
+    {
+      "path": "skills/documentation-author/references/guide-architecture.md",
+      "mode": "100644",
+      "sha256": "b6a205b51a00f72e0752bbb667a1a11901b570594512c47a0cdda9510a53b77c"
+    },
+    {
+      "path": "skills/documentation-author/references/guide-changelog.md",
+      "mode": "100644",
+      "sha256": "5e5c0108770c343cc17e8e33559aa9bfaa9ce179168612e223aecf3441bc5900"
+    },
+    {
+      "path": "skills/documentation-author/references/guide-ctf-handoff.md",
+      "mode": "100644",
+      "sha256": "4c26dc3e25c989e32d23c97932a6d3e11c2a73aae543b8a540573362bc3d6d25"
+    },
+    {
+      "path": "skills/documentation-author/references/guide-diagrams.md",
+      "mode": "100644",
+      "sha256": "e5e8d020495430cf273d5ac43d26436a3ed501517afd21c7d6f00c0e27286e2b"
+    },
+    {
+      "path": "skills/documentation-author/references/guide-install-runbook.md",
+      "mode": "100644",
+      "sha256": "1801cc23fb5ac20192f275f9fef00af98b43f1a8fad59ef65d22e2adb1873a75"
+    },
+    {
+      "path": "skills/documentation-author/references/guide-notebook-documentation.md",
+      "mode": "100644",
+      "sha256": "ba64ea80f261e26a900f71fdde7b983b7809236e089ebe4c206edfc7ba0cd4f2"
+    },
+    {
+      "path": "skills/documentation-author/references/guide-readme.md",
+      "mode": "100644",
+      "sha256": "f4108fec57d3aaf3e567e7ed7cc06d228a2338a36a309d740f3a2ec4b8b6b7fc"
+    },
+    {
+      "path": "skills/documentation-author/references/guide-security-article.md",
+      "mode": "100644",
+      "sha256": "188e8d909e9b6b80030e2c2e95c58aaea89c58713439e3333a3cdcba8dcb36a4"
+    },
+    {
+      "path": "skills/documentation-author/references/review-checklist.md",
+      "mode": "100644",
+      "sha256": "9296c156b330373b8bc23fab0be3b31727d43ae2bbc5479eebd739a5f1c538e3"
+    },
+    {
+      "path": "skills/documentation-author/references/source-discovery-and-heading-stability.md",
+      "mode": "100644",
+      "sha256": "9454f079acba917ec35f82ddf8d3510f3271ca2ddbc58be0980abbc6fc33c09a"
+    },
+    {
+      "path": "skills/documentation-author/scripts/audit_documentation.py",
+      "mode": "100644",
+      "sha256": "d69495c99fba9fbdfd74d2f8f053d6dac0c9632e7e87b6860772d7eed04f8aaf"
+    },
+    {
+      "path": "skills/documentation-author/SKILL.md",
+      "mode": "100644",
+      "sha256": "4e669defc670e5ab94754bbf65176e53c50022ba5a62980b146737b8c0d2f3f9"
+    },
+    {
+      "path": "skills/documentation-author/tests/test_audit_documentation.py",
+      "mode": "100644",
+      "sha256": "5e7576d837d415cf6c5d3ae96189015d31a59864d7c79523a637bc6827c99485"
+    }
+  ],
+  "generatedFiles": [
+    "skills/agents-md/agents/openai.yaml",
+    "skills/agents-md/assets/agentsmd-contract-bearing.md",
+    "skills/agents-md/assets/agentsmd-full.md",
+    "skills/agents-md/assets/agentsmd-minimal.md",
+    "skills/agents-md/assets/agentsmd-operational.md",
+    "skills/agents-md/assets/example-contract-bearing-agentsmd.md",
+    "skills/agents-md/assets/example-operational-agentsmd.md",
+    "skills/agents-md/assets/example-validated-agentsmd.md",
+    "skills/agents-md/assets/writing-tips.md",
+    "skills/agents-md/pytest.ini",
+    "skills/agents-md/references/contract-bearing-agentsmd.md",
+    "skills/agents-md/references/degraded-tool-surface.md",
+    "skills/agents-md/references/domain-specific/databricks-spark.md",
+    "skills/agents-md/references/domain-specific/ml-projects.md",
+    "skills/agents-md/references/evidence-invalidation.md",
+    "skills/agents-md/references/language-specific/other-stack-guidance.md",
+    "skills/agents-md/references/language-specific/python-guidance.md",
+    "skills/agents-md/references/language-specific/typescript-guidance.md",
+    "skills/agents-md/references/manual-audit.md",
+    "skills/agents-md/references/normal-authoring.md",
+    "skills/agents-md/references/subagent-coordination-patterns.md",
+    "skills/agents-md/references/template-selection.md",
+    "skills/agents-md/references/tool-contracts.md",
+    "skills/agents-md/references/topology-and-handoff-guidance.md",
+    "skills/agents-md/scripts/analyze_project.py",
+    "skills/agents-md/scripts/bounded_io.py",
+    "skills/agents-md/scripts/check_agentsmd_templates.py",
+    "skills/agents-md/scripts/codex_instruction_sources.py",
+    "skills/agents-md/scripts/run_agentsmd_fixture_checks.py",
+    "skills/agents-md/scripts/semantic_check_agentsmd.py",
+    "skills/agents-md/scripts/validate_agentsmd.py",
+    "skills/agents-md/SKILL.md",
+    "skills/agents-md/spec.md",
+    "skills/agents-md/tests/conftest.py",
+    "skills/agents-md/tests/fixtures/bad-broken-link/AGENTS.md",
+    "skills/agents-md/tests/fixtures/bad-nested-conflict/AGENTS.md",
+    "skills/agents-md/tests/fixtures/bad-nested-conflict/packages/api/AGENTS.md",
+    "skills/agents-md/tests/fixtures/bad-nested-conflict/packages/api/src/routes/.gitkeep",
+    "skills/agents-md/tests/fixtures/bad-placeholders/AGENTS.md",
+    "skills/agents-md/tests/fixtures/bad-stale-path/AGENTS.md",
+    "skills/agents-md/tests/fixtures/bad-stale-path/pyproject.toml",
+    "skills/agents-md/tests/fixtures/bad-stale-path/src/current/__init__.py",
+    "skills/agents-md/tests/fixtures/bad-unsafe-command/AGENTS.md",
+    "skills/agents-md/tests/fixtures/contract-bearing/AGENTS.md",
+    "skills/agents-md/tests/fixtures/contract-bearing/api/openapi.yaml",
+    "skills/agents-md/tests/fixtures/contract-bearing/cmd/gateway/main.go",
+    "skills/agents-md/tests/fixtures/contract-bearing/docs/operations.md",
+    "skills/agents-md/tests/fixtures/contract-bearing/go.mod",
+    "skills/agents-md/tests/fixtures/contract-bearing/internal/generated/client.go",
+    "skills/agents-md/tests/fixtures/contract-bearing/internal/handlers/handler_test.go",
+    "skills/agents-md/tests/fixtures/contract-bearing/internal/handlers/testdata/sample.json",
+    "skills/agents-md/tests/fixtures/contract-bearing/Makefile",
+    "skills/agents-md/tests/fixtures/contract-bearing/migrations/001_init.sql",
+    "skills/agents-md/tests/fixtures/dynamic-paths/AGENTS.md",
+    "skills/agents-md/tests/fixtures/dynamic-paths/configs/train/base.yaml",
+    "skills/agents-md/tests/fixtures/fixture-manifest.json",
+    "skills/agents-md/tests/fixtures/good-maintainer-only-command/AGENTS.md",
+    "skills/agents-md/tests/fixtures/minimal-python/AGENTS.md",
+    "skills/agents-md/tests/fixtures/minimal-python/pyproject.toml",
+    "skills/agents-md/tests/fixtures/minimal-python/src/ledger_cli/cli.py",
+    "skills/agents-md/tests/fixtures/minimal-python/tests/fixtures/small-ledger.csv",
+    "skills/agents-md/tests/fixtures/minimal-python/tests/test_cli.py",
+    "skills/agents-md/tests/fixtures/nested-agents/AGENTS.md",
+    "skills/agents-md/tests/fixtures/nested-agents/packages/api/AGENTS.md",
+    "skills/agents-md/tests/fixtures/nested-agents/packages/api/package.json",
+    "skills/agents-md/tests/fixtures/operational/.gitignore",
+    "skills/agents-md/tests/fixtures/operational/AGENTS.md",
+    "skills/agents-md/tests/fixtures/operational/compose.yaml",
+    "skills/agents-md/tests/fixtures/operational/docs/lab-contract.md",
+    "skills/agents-md/tests/fixtures/operational/evidence/sample.json",
+    "skills/agents-md/tests/fixtures/operational/pyproject.toml",
+    "skills/agents-md/tests/fixtures/operational/scripts/replay_lab.py",
+    "skills/agents-md/tests/fixtures/operational/status/active.md",
+    "skills/agents-md/tests/README.md",
+    "skills/agents-md/tests/test_analyze_project.py",
+    "skills/agents-md/tests/test_bounded_io.py",
+    "skills/agents-md/tests/test_codex_instruction_sources.py",
+    "skills/agents-md/tests/test_fixture_harness.py",
+    "skills/agents-md/tests/test_semantic_check_agentsmd.py",
+    "skills/agents-md/tests/test_validate_agentsmd.py",
+    "skills/api-documentation-author/references/agent-readable-docs.md",
+    "skills/api-documentation-author/references/auth-patterns.md",
+    "skills/api-documentation-author/references/common-patterns.md",
+    "skills/api-documentation-author/references/endpoint-template.md",
+    "skills/api-documentation-author/references/formatting-rules.md",
+    "skills/api-documentation-author/references/organization-guide.md",
+    "skills/api-documentation-author/references/query-artifact-patterns.md",
+    "skills/api-documentation-author/references/request-template-checklist.md",
+    "skills/api-documentation-author/references/response-schema-tables.md",
+    "skills/api-documentation-author/references/tool-interface-patterns.md",
+    "skills/api-documentation-author/scripts/validate_api_doc.py",
+    "skills/api-documentation-author/SKILL.md",
+    "skills/api-documentation-author/templates/endpoint-folder-readme.md",
+    "skills/api-documentation-author/templates/endpoint-single-file.md",
+    "skills/api-documentation-author/tests/test_validate_api_doc.py",
+    "skills/documentation-author/references/ascii-art-standards.md",
+    "skills/documentation-author/references/guide-access-runbook.md",
+    "skills/documentation-author/references/guide-agent-ops-docs.md",
+    "skills/documentation-author/references/guide-ai-ingestion.md",
+    "skills/documentation-author/references/guide-architecture.md",
+    "skills/documentation-author/references/guide-changelog.md",
+    "skills/documentation-author/references/guide-ctf-handoff.md",
+    "skills/documentation-author/references/guide-diagrams.md",
+    "skills/documentation-author/references/guide-install-runbook.md",
+    "skills/documentation-author/references/guide-notebook-documentation.md",
+    "skills/documentation-author/references/guide-readme.md",
+    "skills/documentation-author/references/guide-security-article.md",
+    "skills/documentation-author/references/review-checklist.md",
+    "skills/documentation-author/references/source-discovery-and-heading-stability.md",
+    "skills/documentation-author/scripts/audit_documentation.py",
+    "skills/documentation-author/SKILL.md",
+    "skills/documentation-author/tests/test_audit_documentation.py",
+    "source-lock.json"
+  ],
+  "generatedOutputs": [
+    {
+      "path": "skills/agents-md/agents/openai.yaml",
+      "mode": "100644",
+      "sha256": "9cb03e4b14ae9b11c498eabd68a086e33591423ebb5475eb2186017db7fde41b"
+    },
+    {
+      "path": "skills/agents-md/assets/agentsmd-contract-bearing.md",
+      "mode": "100644",
+      "sha256": "bc53f2a1ac24bc4ec32b1895d8c6a8e7c6cbd16a30e06e8c7cc750e1154d0632"
+    },
+    {
+      "path": "skills/agents-md/assets/agentsmd-full.md",
+      "mode": "100644",
+      "sha256": "1d59cb6275d1b8817849ff05519ff313adb727c72c9769cc0e7450375a7bec27"
+    },
+    {
+      "path": "skills/agents-md/assets/agentsmd-minimal.md",
+      "mode": "100644",
+      "sha256": "7c613af17ce1010ec5562aac9623f144c38b9aef52b0c5d045e08f45eec902e1"
+    },
+    {
+      "path": "skills/agents-md/assets/agentsmd-operational.md",
+      "mode": "100644",
+      "sha256": "14a372faf382f8d5882e04f46194c9d856b3e20ca2b7962607b6b52e0bdf5d85"
+    },
+    {
+      "path": "skills/agents-md/assets/example-contract-bearing-agentsmd.md",
+      "mode": "100644",
+      "sha256": "11c127ff8bfe6fcc21ba5d4fb9dedd6ebc73d9c641ee95998cd871ed95ed3886"
+    },
+    {
+      "path": "skills/agents-md/assets/example-operational-agentsmd.md",
+      "mode": "100644",
+      "sha256": "1ac183405f0c2ba4072302db50b2120b1d3b3bec1b8f08455299cff972109f53"
+    },
+    {
+      "path": "skills/agents-md/assets/example-validated-agentsmd.md",
+      "mode": "100644",
+      "sha256": "871839998177bfc1d579c249afc36562f11bc4c8a7d6776c956b2322d0e88531"
+    },
+    {
+      "path": "skills/agents-md/assets/writing-tips.md",
+      "mode": "100644",
+      "sha256": "b3575e1b942e9a5f1cbe580fa203b4308e02ad7ffc348d86d6abfe9116ca8f74"
+    },
+    {
+      "path": "skills/agents-md/pytest.ini",
+      "mode": "100644",
+      "sha256": "07ccbc44497c0704d083a4d59aa7661683928abf7f25e25792d9d83ef000d72f"
+    },
+    {
+      "path": "skills/agents-md/references/contract-bearing-agentsmd.md",
+      "mode": "100644",
+      "sha256": "10dc9fcbe4dad85ec7238dc5edb8f8589e242f0b2d070362ee84b9ffdda88fcf"
+    },
+    {
+      "path": "skills/agents-md/references/degraded-tool-surface.md",
+      "mode": "100644",
+      "sha256": "b1aa6607e7389047e634bbc678c696195827126f5356de0737f85ada0e6e9ae1"
+    },
+    {
+      "path": "skills/agents-md/references/domain-specific/databricks-spark.md",
+      "mode": "100644",
+      "sha256": "21c97452bc79bb2c51ac44a667c4e30be8b9f62771329af5bf765bd04390a04e"
+    },
+    {
+      "path": "skills/agents-md/references/domain-specific/ml-projects.md",
+      "mode": "100644",
+      "sha256": "953fd1482a8a9513f470335cf7e00135fa511d0827228282c325e224bd04e589"
+    },
+    {
+      "path": "skills/agents-md/references/evidence-invalidation.md",
+      "mode": "100644",
+      "sha256": "fddb948782cdb42f1e3c9f3b277dc03c4be58525699c6a5f53398d4eb634f18a"
+    },
+    {
+      "path": "skills/agents-md/references/language-specific/other-stack-guidance.md",
+      "mode": "100644",
+      "sha256": "39262a7e84ac80390eb29f8bac14b61a1e06c964b72c886f4067b634f3dcf3ea"
+    },
+    {
+      "path": "skills/agents-md/references/language-specific/python-guidance.md",
+      "mode": "100644",
+      "sha256": "186c23c2b8d33a50073bc32184a9b3d0ebc8c51c9470ebcf4ee9b6f0604cf875"
+    },
+    {
+      "path": "skills/agents-md/references/language-specific/typescript-guidance.md",
+      "mode": "100644",
+      "sha256": "fe35179604cce4a7a827968befa67578405067896bd9a3ee108e6c4fc451b0c4"
+    },
+    {
+      "path": "skills/agents-md/references/manual-audit.md",
+      "mode": "100644",
+      "sha256": "2444bb269b8c835858894864e12ec2e94fde838e6f3f31c511252edbe9e23aba"
+    },
+    {
+      "path": "skills/agents-md/references/normal-authoring.md",
+      "mode": "100644",
+      "sha256": "482601eb53968509454fdfd71a2f6a22f30e7c89f06bf869581a4e1c0fe8bcb4"
+    },
+    {
+      "path": "skills/agents-md/references/subagent-coordination-patterns.md",
+      "mode": "100644",
+      "sha256": "fc31f03d53ab6eb4c884280b7f030f1be765d3751b06890679777de1bf5e12c2"
+    },
+    {
+      "path": "skills/agents-md/references/template-selection.md",
+      "mode": "100644",
+      "sha256": "a63e5cd8349b249073ae16cbfcf5ab7de5065e72bcace7b9731199fc0c5a9843"
+    },
+    {
+      "path": "skills/agents-md/references/tool-contracts.md",
+      "mode": "100644",
+      "sha256": "d4ce0e75a522434d01ffd21f7892a243433894e8fefb25a1ebf386cf0fa7fd3f"
+    },
+    {
+      "path": "skills/agents-md/references/topology-and-handoff-guidance.md",
+      "mode": "100644",
+      "sha256": "85d35692292d4892eadc510fe1cf7c28c8faf34beec41326284ca273f29b5ff2"
+    },
+    {
+      "path": "skills/agents-md/scripts/analyze_project.py",
+      "mode": "100644",
+      "sha256": "acf43273d90af6ccad6030d3e1af203baac6465b4d4e7c8b93e2e52a382dc18b"
+    },
+    {
+      "path": "skills/agents-md/scripts/bounded_io.py",
+      "mode": "100644",
+      "sha256": "a1e41540925608e419aaeea783d508c15dacababe24c5b7ca48fe4034ea7d0fd"
+    },
+    {
+      "path": "skills/agents-md/scripts/check_agentsmd_templates.py",
+      "mode": "100644",
+      "sha256": "4898273df7e9bec0438619f67aebe1d666287886274ba3db280f2616826b3515"
+    },
+    {
+      "path": "skills/agents-md/scripts/codex_instruction_sources.py",
+      "mode": "100644",
+      "sha256": "ebe643ca965e16a9173a81c53ccc8f9e36d090f5b1c7770fbb3f34b4773b063c"
+    },
+    {
+      "path": "skills/agents-md/scripts/run_agentsmd_fixture_checks.py",
+      "mode": "100644",
+      "sha256": "7c1855999b417d91f83ac672a18ae85df7a7afa0b92388242653adc2d23e9c14"
+    },
+    {
+      "path": "skills/agents-md/scripts/semantic_check_agentsmd.py",
+      "mode": "100644",
+      "sha256": "b0f7bb8f4ec00d204f8f14875ac0e5349cf8cca9f610bca36879450fa9501d77"
+    },
+    {
+      "path": "skills/agents-md/scripts/validate_agentsmd.py",
+      "mode": "100644",
+      "sha256": "ccf7ae4eca5e17bf565c14e291bbbc81042f308170cef34f59670f91119407dc"
+    },
+    {
+      "path": "skills/agents-md/SKILL.md",
+      "mode": "100644",
+      "sha256": "edf59d55e78926af74af69d45c4775cc77e9504d61a6ad3335eac2459d4adec6"
+    },
+    {
+      "path": "skills/agents-md/spec.md",
+      "mode": "100644",
+      "sha256": "3ec39ccc621785cc60d5f32cb452e17f0aad1b83fa200c7cd8b9bd4b8b6dd3ba"
+    },
+    {
+      "path": "skills/agents-md/tests/conftest.py",
+      "mode": "100644",
+      "sha256": "20e04bbeb22512812fd63c18ad1a245648ccbe9d4af5a897013f4c19a85fe358"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/bad-broken-link/AGENTS.md",
+      "mode": "100644",
+      "sha256": "96f3fb839b2f4bef352749db3d1d78970c291035b4d0dfd88e89d70e83dbce6c"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/bad-nested-conflict/AGENTS.md",
+      "mode": "100644",
+      "sha256": "269c42757ac1cda50f5d9b5a7830f3d1abc90f82ba8f23a84484dd0f68a68aec"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/bad-nested-conflict/packages/api/AGENTS.md",
+      "mode": "100644",
+      "sha256": "74672a1162a844b6b674df5a681ee71330152c5523a90feb5d64c1397f9e363d"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/bad-nested-conflict/packages/api/src/routes/.gitkeep",
+      "mode": "100644",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/bad-placeholders/AGENTS.md",
+      "mode": "100644",
+      "sha256": "36a54ad0af5b26231e57c064f77259277e064f7a1368b0616b922ecfddc0219b"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/bad-stale-path/AGENTS.md",
+      "mode": "100644",
+      "sha256": "af5a0a35f744579ad23b79699eaeb96674806d298f24cc4ed259be8ab2cc1ab4"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/bad-stale-path/pyproject.toml",
+      "mode": "100644",
+      "sha256": "9d430a3eab45161cbdb2190d2a6084ff083c0b3847c3af3b22b2e61e5712ca4f"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/bad-stale-path/src/current/__init__.py",
+      "mode": "100644",
+      "sha256": "86ffb0db97537319ca64b9c43b7c44e0d0c423438ee0ec10ef18addf4985e744"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/bad-unsafe-command/AGENTS.md",
+      "mode": "100644",
+      "sha256": "3fd792c1076215d8b0bc927e505dad5e7f1f9ace74a2381688902ce1198158e0"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/contract-bearing/AGENTS.md",
+      "mode": "100644",
+      "sha256": "25db0f0db706a314ae1f777a6d98fffc6e03a9b978ba57a3f9cbdfafdea46d60"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/contract-bearing/api/openapi.yaml",
+      "mode": "100644",
+      "sha256": "c3edf33828c0d9db632c08ed9ba245a94ac2be0195fa11aac5d2ca6be76741b0"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/contract-bearing/cmd/gateway/main.go",
+      "mode": "100644",
+      "sha256": "55a60bb97151b2b4b680462447ce60ec34511b14fa10d77440c97b9777101566"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/contract-bearing/docs/operations.md",
+      "mode": "100644",
+      "sha256": "1f7e79e19430a22e9f59aed9e670d4284e094855f98f7e28acb6065db598cb1f"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/contract-bearing/go.mod",
+      "mode": "100644",
+      "sha256": "44c2f2c9e11c155e971a9c0ea03b944bf74698831b5abc44d9d7dc65445162c3"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/contract-bearing/internal/generated/client.go",
+      "mode": "100644",
+      "sha256": "1484d9e0ee18af124262a66904ce81c7f37a9a092523b664ba24561c5b335d1d"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/contract-bearing/internal/handlers/handler_test.go",
+      "mode": "100644",
+      "sha256": "892d8ebedd87f9b5d332159f86fc652c10ed8d8ba9bd8d50c2b51841630b736b"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/contract-bearing/internal/handlers/testdata/sample.json",
+      "mode": "100644",
+      "sha256": "29f629a64796aea58e769c021a74cc277ee12d0ee7c4f9546534189cea399e6b"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/contract-bearing/Makefile",
+      "mode": "100644",
+      "sha256": "37a1ae411aa9b2463356c6787994685c31bc365230844aa997a6cd6c9fa1ad9c"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/contract-bearing/migrations/001_init.sql",
+      "mode": "100644",
+      "sha256": "d932f861335a1552bbfc6d6a90ecd1af6f255ef23b5bc89101ef5850dc3aa09a"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/dynamic-paths/AGENTS.md",
+      "mode": "100644",
+      "sha256": "cd13bd6e5afae2fc5ed40e0d2ecc45b6eb13f138138dc21f6d274c93a5200917"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/dynamic-paths/configs/train/base.yaml",
+      "mode": "100644",
+      "sha256": "156e23091c7992d3fc71d9cb29964c551aae2f1b31f4b7be8a1a30ccedbfaf6a"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/fixture-manifest.json",
+      "mode": "100644",
+      "sha256": "569d252dcd3f22554b78eeb04bae69c1176137b183823a82a5ad9faa102264eb"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/good-maintainer-only-command/AGENTS.md",
+      "mode": "100644",
+      "sha256": "7e536c7ef3e80075eed6d38bf161572070cb0f8244e2af41029e2e8386f8fc76"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/minimal-python/AGENTS.md",
+      "mode": "100644",
+      "sha256": "93fb2a69761993e75e791985d0bee3e0d3ea500786bca9d01f638fda578852b4"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/minimal-python/pyproject.toml",
+      "mode": "100644",
+      "sha256": "cf35273885998349eba71083cc5d3ebb94f22c4964f9bceb42e4e73986a31772"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/minimal-python/src/ledger_cli/cli.py",
+      "mode": "100644",
+      "sha256": "09307eac0efcbf215d8205a04b4824853f781470cd78781481d9d4ea441f9914"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/minimal-python/tests/fixtures/small-ledger.csv",
+      "mode": "100644",
+      "sha256": "246f53bbf26ec4f082a3bddd50e7628181b7506a025b81fb2a43d6536f76b1b9"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/minimal-python/tests/test_cli.py",
+      "mode": "100644",
+      "sha256": "16457a6bd3a446d3005951e4a2c50187ed390e58d44e923022d6cde6615e0307"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/nested-agents/AGENTS.md",
+      "mode": "100644",
+      "sha256": "d40ad1757c2a32f40a51b6c537cf79d5265afb8a9cc2b4cc694d8f5694706a83"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/nested-agents/packages/api/AGENTS.md",
+      "mode": "100644",
+      "sha256": "e7ae99252b91f7c41cc44e8e67f301b2f32b3ce28a183b318f5b2497aeb4b02d"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/nested-agents/packages/api/package.json",
+      "mode": "100644",
+      "sha256": "bf6fe42e143f47ece742de43dac5d7376b77a0b9ddd0317b4d4f4a93dcd52317"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/operational/.gitignore",
+      "mode": "100644",
+      "sha256": "f3540e04f42a695047cd3b330e8cfbbf35ceef8bb8a3dd0dbc3421d16557d83e"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/operational/AGENTS.md",
+      "mode": "100644",
+      "sha256": "7cc3c82f9c2c966936d850ada790cac7c506fe39e7e402106a26204035d8a6eb"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/operational/compose.yaml",
+      "mode": "100644",
+      "sha256": "de006f6e577ad70a3437be2a3d589d22cd5befaed9ac3fc457e2cc1280812b2c"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/operational/docs/lab-contract.md",
+      "mode": "100644",
+      "sha256": "a56a5fd469b42a3e56c48be4b6b322b7b35d7e371877d19fe32455eb05c950c8"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/operational/evidence/sample.json",
+      "mode": "100644",
+      "sha256": "785623f5524f15a487dec463b48329b2846c37bf7c01f1d6457bb04129258403"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/operational/pyproject.toml",
+      "mode": "100644",
+      "sha256": "199e79547c55b15475f222cda0e052e37bdf987ab49397d902944445d809b9d6"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/operational/scripts/replay_lab.py",
+      "mode": "100644",
+      "sha256": "b21a870f8a64f666cfa218d063bc70a6fb4db7ec562661d56484d96f33eee60c"
+    },
+    {
+      "path": "skills/agents-md/tests/fixtures/operational/status/active.md",
+      "mode": "100644",
+      "sha256": "ee70a57fa473cdeebc4426f3d7a9f50f6c20860d05c5b4d07a514480cef02e8d"
+    },
+    {
+      "path": "skills/agents-md/tests/README.md",
+      "mode": "100644",
+      "sha256": "f55b54c68fd0e6efc6edcf891e30a54e8f63b19cc3ef1a0165f9351d6a03ac1e"
+    },
+    {
+      "path": "skills/agents-md/tests/test_analyze_project.py",
+      "mode": "100644",
+      "sha256": "6ee117055b450587dac2546a6a65af0c68df5ee0d144be791756a8536cfcc3f0"
+    },
+    {
+      "path": "skills/agents-md/tests/test_bounded_io.py",
+      "mode": "100644",
+      "sha256": "0cdffc3170a6008131be99293627fe56de9833b5500de9be18b7b52cc047392f"
+    },
+    {
+      "path": "skills/agents-md/tests/test_codex_instruction_sources.py",
+      "mode": "100644",
+      "sha256": "eb3c9a7c408393d0a7f5c89440bc5f78aaa29bdc652cf83ca0ecf16938af9d93"
+    },
+    {
+      "path": "skills/agents-md/tests/test_fixture_harness.py",
+      "mode": "100644",
+      "sha256": "01cff5053ba38303c70308c8d64b72f4d1d3ff52812c4bd95c5ea1874ad7d2ce"
+    },
+    {
+      "path": "skills/agents-md/tests/test_semantic_check_agentsmd.py",
+      "mode": "100644",
+      "sha256": "72ceef3f009504b35c45d109cd2b724c3921779cb9a94fdb65a538da814c4c91"
+    },
+    {
+      "path": "skills/agents-md/tests/test_validate_agentsmd.py",
+      "mode": "100644",
+      "sha256": "5ed1f852ac9d7ca68c80b17bcdab18209838873a97586dc2c3b59bc63f6be5f8"
+    },
+    {
+      "path": "skills/api-documentation-author/references/agent-readable-docs.md",
+      "mode": "100644",
+      "sha256": "4e868f76a2032a134a6f1f018183058050b4e2844e748adb2c2d61c8f01f8d86"
+    },
+    {
+      "path": "skills/api-documentation-author/references/auth-patterns.md",
+      "mode": "100644",
+      "sha256": "d0da4913903016a5878d1a9c24004df8e17eb65bc07114246c136bfc70749d4c"
+    },
+    {
+      "path": "skills/api-documentation-author/references/common-patterns.md",
+      "mode": "100644",
+      "sha256": "516ab38ad480a1d7811675c256d40abbe64c697684642bb0e2c6fca170055453"
+    },
+    {
+      "path": "skills/api-documentation-author/references/endpoint-template.md",
+      "mode": "100644",
+      "sha256": "79a34538cf1ed25156b45af951409475c0c978f0bdacdd35b683f788d1e89cff"
+    },
+    {
+      "path": "skills/api-documentation-author/references/formatting-rules.md",
+      "mode": "100644",
+      "sha256": "de3ec0abb6e40da64123410d9d4485bbb6f3ba9c1cb675df24acc26bb20b1612"
+    },
+    {
+      "path": "skills/api-documentation-author/references/organization-guide.md",
+      "mode": "100644",
+      "sha256": "b4330f30e70df4f001ea63eca32790b33cfe33ef47829930bf421bb2693b5b40"
+    },
+    {
+      "path": "skills/api-documentation-author/references/query-artifact-patterns.md",
+      "mode": "100644",
+      "sha256": "f8c1a087134d7bb215de9a9a49d1112ea8d622f19b2f194b0ca575fe5adc665e"
+    },
+    {
+      "path": "skills/api-documentation-author/references/request-template-checklist.md",
+      "mode": "100644",
+      "sha256": "8b4f7a14ed43d95f1456ff9988313b4debf4dc95be26a761ff519ab9ed0e8df2"
+    },
+    {
+      "path": "skills/api-documentation-author/references/response-schema-tables.md",
+      "mode": "100644",
+      "sha256": "6697d49cbe10d19f21037d89ef51fd6db7b05ce1d41f0badd4bd08cc4b7dab08"
+    },
+    {
+      "path": "skills/api-documentation-author/references/tool-interface-patterns.md",
+      "mode": "100644",
+      "sha256": "49b9cf691a8180a8b4af8415049816d5943b97c5cc5a54520b9f9ba81617bd65"
+    },
+    {
+      "path": "skills/api-documentation-author/scripts/validate_api_doc.py",
+      "mode": "100644",
+      "sha256": "8df02e2ab43d8f4895680761c9ad015c8fed3cb9fd8cab3054f009f7ef2250fe"
+    },
+    {
+      "path": "skills/api-documentation-author/SKILL.md",
+      "mode": "100644",
+      "sha256": "fad98018d316fd8f0ab092f0cbe184a597f087d4b0c8b112bea01f4f0ae577f7"
+    },
+    {
+      "path": "skills/api-documentation-author/templates/endpoint-folder-readme.md",
+      "mode": "100644",
+      "sha256": "0a73d89640a0ca66815db20bdc5b99befba5ff3a05209073cc891846dfd274dd"
+    },
+    {
+      "path": "skills/api-documentation-author/templates/endpoint-single-file.md",
+      "mode": "100644",
+      "sha256": "c018c304e27bbad17ef5a5cac719aee642d9e9eccaacea8a117b6a5d25279a61"
+    },
+    {
+      "path": "skills/api-documentation-author/tests/test_validate_api_doc.py",
+      "mode": "100644",
+      "sha256": "e896802088988ecca18ab8abbe8a44dc596a1de6d1eff2e5c47b10bc65f2687f"
+    },
+    {
+      "path": "skills/documentation-author/references/ascii-art-standards.md",
+      "mode": "100644",
+      "sha256": "22676da5038c57959704fc08e785b7d74d0f75a2dad8674afbb52ae868a7fb24"
+    },
+    {
+      "path": "skills/documentation-author/references/guide-access-runbook.md",
+      "mode": "100644",
+      "sha256": "39243db17512cb421c95f2cc7e315279a56c0b04b429199621183e5f50cb8d42"
+    },
+    {
+      "path": "skills/documentation-author/references/guide-agent-ops-docs.md",
+      "mode": "100644",
+      "sha256": "3e763e22983ac6fff4902637a0a45816d53d9ce5e6f1dae0f95a563c993eaa51"
+    },
+    {
+      "path": "skills/documentation-author/references/guide-ai-ingestion.md",
+      "mode": "100644",
+      "sha256": "4854d52e1c49359f49d762c11780e58e016a69a658c898f394c631772786aa34"
+    },
+    {
+      "path": "skills/documentation-author/references/guide-architecture.md",
+      "mode": "100644",
+      "sha256": "b6a205b51a00f72e0752bbb667a1a11901b570594512c47a0cdda9510a53b77c"
+    },
+    {
+      "path": "skills/documentation-author/references/guide-changelog.md",
+      "mode": "100644",
+      "sha256": "5e5c0108770c343cc17e8e33559aa9bfaa9ce179168612e223aecf3441bc5900"
+    },
+    {
+      "path": "skills/documentation-author/references/guide-ctf-handoff.md",
+      "mode": "100644",
+      "sha256": "4c26dc3e25c989e32d23c97932a6d3e11c2a73aae543b8a540573362bc3d6d25"
+    },
+    {
+      "path": "skills/documentation-author/references/guide-diagrams.md",
+      "mode": "100644",
+      "sha256": "e5e8d020495430cf273d5ac43d26436a3ed501517afd21c7d6f00c0e27286e2b"
+    },
+    {
+      "path": "skills/documentation-author/references/guide-install-runbook.md",
+      "mode": "100644",
+      "sha256": "1801cc23fb5ac20192f275f9fef00af98b43f1a8fad59ef65d22e2adb1873a75"
+    },
+    {
+      "path": "skills/documentation-author/references/guide-notebook-documentation.md",
+      "mode": "100644",
+      "sha256": "ba64ea80f261e26a900f71fdde7b983b7809236e089ebe4c206edfc7ba0cd4f2"
+    },
+    {
+      "path": "skills/documentation-author/references/guide-readme.md",
+      "mode": "100644",
+      "sha256": "f4108fec57d3aaf3e567e7ed7cc06d228a2338a36a309d740f3a2ec4b8b6b7fc"
+    },
+    {
+      "path": "skills/documentation-author/references/guide-security-article.md",
+      "mode": "100644",
+      "sha256": "188e8d909e9b6b80030e2c2e95c58aaea89c58713439e3333a3cdcba8dcb36a4"
+    },
+    {
+      "path": "skills/documentation-author/references/review-checklist.md",
+      "mode": "100644",
+      "sha256": "9296c156b330373b8bc23fab0be3b31727d43ae2bbc5479eebd739a5f1c538e3"
+    },
+    {
+      "path": "skills/documentation-author/references/source-discovery-and-heading-stability.md",
+      "mode": "100644",
+      "sha256": "9454f079acba917ec35f82ddf8d3510f3271ca2ddbc58be0980abbc6fc33c09a"
+    },
+    {
+      "path": "skills/documentation-author/scripts/audit_documentation.py",
+      "mode": "100644",
+      "sha256": "d69495c99fba9fbdfd74d2f8f053d6dac0c9632e7e87b6860772d7eed04f8aaf"
+    },
+    {
+      "path": "skills/documentation-author/SKILL.md",
+      "mode": "100644",
+      "sha256": "4e669defc670e5ab94754bbf65176e53c50022ba5a62980b146737b8c0d2f3f9"
+    },
+    {
+      "path": "skills/documentation-author/tests/test_audit_documentation.py",
+      "mode": "100644",
+      "sha256": "5e7576d837d415cf6c5d3ae96189015d31a59864d7c79523a637bc6827c99485"
+    }
+  ],
+  "generatedManifestFields": [
+    "version"
+  ]
+}

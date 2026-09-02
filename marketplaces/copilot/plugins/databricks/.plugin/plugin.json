@@ -1,0 +1,16 @@
+{
+  "name": "databricks",
+  "version": "0.1.1+agents.2100b6024f56",
+  "description": "Databricks, Spark, Delta, MLflow, project health, training, serving, deployment, and runtime workflows projected from the canonical AGENTS repository.",
+  "author": {
+    "name": "Callicrate",
+    "url": "https://github.com/Callicrate"
+  },
+  "keywords": [
+    "databricks",
+    "spark",
+    "delta-lake",
+    "mlflow"
+  ],
+  "skills": "./skills/"
+}

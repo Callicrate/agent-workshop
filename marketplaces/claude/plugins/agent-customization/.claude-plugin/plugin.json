@@ -1,0 +1,16 @@
+{
+  "name": "agent-customization",
+  "version": "0.2.0+agents.313233a8f5c2",
+  "description": "Agent Skill and prompt authoring workflows projected from the canonical AGENTS repository.",
+  "author": {
+    "name": "Callicrate",
+    "url": "https://github.com/Callicrate"
+  },
+  "keywords": [
+    "agent-skills",
+    "prompts",
+    "instructions",
+    "agent-customization"
+  ],
+  "skills": "./skills/"
+}
