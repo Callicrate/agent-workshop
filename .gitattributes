@@ -1,0 +1,45 @@
+marketplaces/*/plugins/*/skills/** linguist-generated=true
+marketplaces/*/plugins/*/source-lock.json linguist-generated=true
+.claude-plugin/marketplace.json linguist-generated=true
+marketplaces/claude/plugins/*/.claude-plugin/plugin.json linguist-generated=true
+.github/plugin/marketplace.json linguist-generated=true
+marketplaces/copilot/plugins/*/.plugin/plugin.json linguist-generated=true
+README.md whitespace=cr-at-eol
+
+# Projected marketplace payloads must normalize to the SAME line endings the
+# projector computes from the canonical skills/ tree, or Sync-Plugins.ps1 -Check
+# drifts on a fresh clone (checkout EOL != hashed EOL). These rules mirror
+# skills/.gitattributes for every generated tree under marketplaces/.
+marketplaces/** text=auto
+marketplaces/**/*.sh text eol=lf
+marketplaces/**/*.bash text eol=lf
+marketplaces/**/*.py text eol=lf
+marketplaces/**/*.md text eol=lf
+marketplaces/**/*.yml text eol=lf
+marketplaces/**/*.yaml text eol=lf
+marketplaces/**/*.json text eol=lf
+marketplaces/**/*.sql text eol=lf
+marketplaces/**/*.ps1 text eol=crlf
+marketplaces/**/*.bat text eol=crlf
+marketplaces/**/*.cmd text eol=crlf
+
+# Binary assets must never be EOL-normalized. The `text=auto` rule above lets
+# git's heuristic touch some PNGs on a fresh clone (repository-docs.png in
+# particular), which changes the bytes the projector hashes and drifts
+# Sync-Plugins.ps1 -Check on clone. Mark all binary asset types explicitly.
+marketplaces/**/*.png binary
+marketplaces/**/*.jpg binary
+marketplaces/**/*.jpeg binary
+marketplaces/**/*.gif binary
+marketplaces/**/*.webp binary
+marketplaces/**/*.ico binary
+marketplaces/**/*.pdf binary
+marketplaces/**/*.zip binary
+marketplaces/**/*.gz binary
+marketplaces/**/*.woff binary
+marketplaces/**/*.woff2 binary
+marketplaces/**/*.ttf binary
+marketplaces/**/*.otf binary
+marketplaces/**/*.eot binary
+marketplaces/**/*.mp4 binary
+marketplaces/**/*.mov binary

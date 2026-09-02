@@ -1,0 +1,16 @@
+{
+  "name": "review-and-learning",
+  "version": "0.2.0+agents.2e72885c9773",
+  "description": "Critical review, AI retrospective, and lessons-learned workflows projected from the canonical AGENTS repository.",
+  "author": {
+    "name": "Callicrate",
+    "url": "https://github.com/Callicrate"
+  },
+  "keywords": [
+    "critical-review",
+    "retrospective",
+    "lessons-learned",
+    "evidence"
+  ],
+  "skills": "./skills/"
+}
