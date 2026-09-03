@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Critical Review Report",
+  "type": "object",
+  "required": ["document", "scope", "strengths", "findings", "omissions", "open_questions", "overall_assessment"],
+  "properties": {
+    "document": {"$ref": "#/$defs/document"},
+    "scope": {
+      "type": "object",
+      "required": ["materials_reviewed", "research_performed", "limitations"],
+      "properties": {
+        "materials_reviewed": {"$ref": "#/$defs/text-list"},
+        "research_performed": {"type": "boolean"},
+        "limitations": {"$ref": "#/$defs/text-list"}
+      },
+      "additionalProperties": false
+    },
+    "strengths": {"$ref": "#/$defs/text-list"},
+    "findings": {"type": "array", "maxItems": 500, "items": {"$ref": "finding.schema.json"}},
+    "omissions": {"$ref": "#/$defs/text-list"},
+    "open_questions": {"$ref": "#/$defs/classified-unknown-list"},
+    "overall_assessment": {"$ref": "#/$defs/assessment"},
+    "source_reports": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 64,
+      "items": {
+        "type": "object",
+        "required": ["source_id", "source", "document", "overall_assessment"],
+        "properties": {
+          "source_id": {"type": "string", "pattern": "^source-[a-f0-9]{16}$"},
+          "source": {"type": "string", "pattern": "^[^/\\\\\r\n]{1,128}$"},
+          "document": {"$ref": "#/$defs/document"},
+          "overall_assessment": {"$ref": "#/$defs/assessment"}
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "$defs": {
+    "text": {"type": "string", "maxLength": 10000},
+    "decision-summary": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 10000,
+      "pattern": "^(proceed|revise|stop|insufficient-evidence):[ \\t]+\\S[^\\r\\n]*$(?![\\r\\n])"
+    },
+    "decision-impact": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 10000,
+      "pattern": "^Next action:[ \\t]+\\S[^\\r\\n]*\\nValidation gate:[ \\t]+\\S[^\\r\\n]*$(?![\\r\\n])"
+    },
+    "text-list": {"type": "array", "maxItems": 500, "items": {"$ref": "#/$defs/text"}},
+    "classified-unknown-list": {
+      "type": "array",
+      "maxItems": 500,
+      "items": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 10000,
+        "pattern": "^\\[(blocking|nonblocking)\\]\\s+\\S"
+      }
+    },
+    "document": {
+      "type": "object",
+      "required": ["title", "artifact_type", "domain", "review_mode"],
+      "properties": {
+        "title": {"$ref": "#/$defs/text"},
+        "artifact_type": {"$ref": "#/$defs/text"},
+        "domain": {"$ref": "#/$defs/text"},
+        "review_mode": {"type": "string", "enum": ["triage", "standard", "exhaustive", "technical-deep-dive", "first-look", "delta-review", "implementation-readiness", "public-surface-review", "evidence-slice-review"]}
+      },
+      "additionalProperties": false
+    },
+    "assessment": {
+      "type": "object",
+      "required": ["summary", "decision_impact", "confidence"],
+      "properties": {
+        "summary": {"$ref": "#/$defs/decision-summary"},
+        "decision_impact": {"$ref": "#/$defs/decision-impact"},
+        "confidence": {"type": "string", "enum": ["high", "medium", "low"]}
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

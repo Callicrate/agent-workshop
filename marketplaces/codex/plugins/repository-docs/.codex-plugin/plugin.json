@@ -1,0 +1,35 @@
+{
+  "name": "repository-docs",
+  "version": "0.1.0+agents.48064cbc6b5e",
+  "description": "Repository, API, CLI, and AGENTS.md documentation workflows projected from the canonical AGENTS repository.",
+  "author": {
+    "name": "Callicrate",
+    "url": "https://github.com/Callicrate"
+  },
+  "keywords": [
+    "documentation",
+    "readme",
+    "api-docs",
+    "agents-md"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Repository Docs",
+    "shortDescription": "Repository, API, and agent documentation.",
+    "longDescription": "Adds evidence-backed workflows for READMEs, architecture and runbooks, API and CLI documentation, and scoped repository AGENTS.md guidance.",
+    "developerName": "Callicrate",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Create or update this repository's README.",
+      "Document this API or CLI.",
+      "Create concise repository AGENTS.md guidance."
+    ],
+    "composerIcon": "./assets/repository-docs.png",
+    "logo": "./assets/repository-docs.png",
+    "logoDark": "./assets/repository-docs.png"
+  }
+}

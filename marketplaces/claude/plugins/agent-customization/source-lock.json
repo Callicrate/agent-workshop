@@ -1,0 +1,596 @@
+{
+  "schemaVersion": 4,
+  "plugin": "agent-customization",
+  "sourceRoot": "skills/",
+  "sourceDigest": "e3f3e2bd164e284f3699c8fb507f36071df6fcb1f76e1030f434e33be4e27783",
+  "projectionManifestDigest": "036b04470dd36724f08d1ba007c3d6fdf3049219022c3d2f53848bec0ff61d1b",
+  "projectionDigest": "313233a8f5c26600250d10c74e0fbfb6cae0ad70a674f025b2a058efe471c1b7",
+  "cachebuster": "313233a8f5c2",
+  "sourceSkills": [
+    "agent-prompt-engineering",
+    "skill-author"
+  ],
+  "excludedSourcePrefixes": [],
+  "sourceFiles": [
+    {
+      "path": "skills/agent-prompt-engineering/assets/iteration-evidence.schema.json",
+      "mode": "100644",
+      "sha256": "f236c1a2c5b8e41dd24d09343e40c786135b7f3f3023cf7e15305886fef36aea"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/references/agent-facing-abstraction-patterns.md",
+      "mode": "100644",
+      "sha256": "d59618633d9603e29ac244ca8a5679f184020ee09172b5f68babff0fa57b616b"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/references/agent-system-runtime.md",
+      "mode": "100644",
+      "sha256": "6b6aa8f47b499a4a4881b47b188111834f00efd5d879811211329b8016ecc630"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/references/fallback-path-audit.md",
+      "mode": "100644",
+      "sha256": "ebe92a0d58dac3bcb1d3d06f11cfaf780f3e1d9149e42d55e8b33df7bdcd340e"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/references/multi-agent-coordination.md",
+      "mode": "100644",
+      "sha256": "388e0566b229d393a7263836f9e47fc5fdb18fe4a58fbb236f845581b4387447"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/references/persona-overlay-composition.md",
+      "mode": "100644",
+      "sha256": "13b15b6c00aa4c491ebfc5166f8d4c55cf733484616fb0edb0804893d4945436"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/references/prompt-contract-guardrails.md",
+      "mode": "100644",
+      "sha256": "af91e4ec42a6b9e10be5ec69824c9acd567f7c6506e4aa021bc9031b44c49194"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/references/prompt-iteration-workflow.md",
+      "mode": "100644",
+      "sha256": "264a6e85b000898390d26a103bfc5ffede34d510b5ae2ecbd0547f074209660c"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/references/prompt-size-versioning.md",
+      "mode": "100644",
+      "sha256": "feb47f95e69e564c965b8e2c1740d026686aa0ab81618d57469a1dcf1382480d"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/references/role-design-patterns.md",
+      "mode": "100644",
+      "sha256": "287557dfbc66effe47d0319346a35e75ec929e9b561f27214bed6efb87756eaa"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/references/skill-choreography.md",
+      "mode": "100644",
+      "sha256": "bc5bd72aeee627b567fcb0287d8abef71eda514de3bbde47724395799bd2a69c"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/references/system-prompt-patterns.md",
+      "mode": "100644",
+      "sha256": "8747a5a8f3f2e74bee3c96be69a6baabdce8ffa869d2962e4937bd38ea1e8653"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/references/tool-security-patterns.md",
+      "mode": "100644",
+      "sha256": "c609b364e38cc3592c745d4ec043d873fabe98ad8542bf64babd69ae744b62e5"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/references/work-lifecycle-contracts.md",
+      "mode": "100644",
+      "sha256": "222af94478fbf55a56478b7c1f2332ea0e6de86389ec5c2f476976aa4bd023d2"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/references/worked-example.md",
+      "mode": "100644",
+      "sha256": "f6c50f457cee737ed0c834df3c8eb8b18774d0ec17c26dda23f748f7f15efc94"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/scripts/audit_prompt_structure.py",
+      "mode": "100644",
+      "sha256": "0a6131fc22cec05063c09f5ba58632814e014dcf4b8f412a576c0a7672328685"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/SKILL.md",
+      "mode": "100644",
+      "sha256": "e1d867c4a9384200cfb794213e562d5bf662795da135e633d6b828e75ace0a86"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/templates/agent-role-template.md",
+      "mode": "100644",
+      "sha256": "8a615d19125c9c9080eaeb7e85f65c242b15969e32a6195740f14fb9549e40cd"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/templates/multi-agent-contract-template.md",
+      "mode": "100644",
+      "sha256": "44850b1aa79778dddd96e03322ec591a4ddaeaa47791fbaaae3b6c55432e1984"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/templates/runtime-contract-template.md",
+      "mode": "100644",
+      "sha256": "93c1b3d0ac20ac91257de30527d8ed839bfba1753c577e6014ae5151c0b5c4e6"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/templates/system-prompt-template.md",
+      "mode": "100644",
+      "sha256": "81ed320879d173a9a7c41264e89de0e6ec2bd7ceaf16b13fbe5bec1a1a4ec653"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/templates/work-lifecycle-template.md",
+      "mode": "100644",
+      "sha256": "41fd835dbc9b88883abd6e01c9951d76cb156b7060705ea87ffa3fd6c32be7ab"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/tests/test_audit_prompt_structure.py",
+      "mode": "100644",
+      "sha256": "2b465167977ea94586a83c7561b5c1aaf1536035bc439b65b131a76c627caac6"
+    },
+    {
+      "path": "skills/skill-author/assets/routing-cases.json",
+      "mode": "100644",
+      "sha256": "b37e9a60965ac36c7216f5408c414ed785604f02934e5b88dab6d25046bbee16"
+    },
+    {
+      "path": "skills/skill-author/references/agents-openai-yaml.md",
+      "mode": "100644",
+      "sha256": "dd91e5c765ef7defd343f6091d0ec6a689e75d167988c5eed4651dc5173db691"
+    },
+    {
+      "path": "skills/skill-author/references/artifact-ownership-triage.md",
+      "mode": "100644",
+      "sha256": "9ea6a5673a9e01b1980d1b8f2567db7ee1801fbed60ccea8369ee87a5b5194ec"
+    },
+    {
+      "path": "skills/skill-author/references/behavioral-forward-testing.md",
+      "mode": "100644",
+      "sha256": "fec3223c4f7a1090bf8c5846c68f627a51a54ff93b18830ffe587336d9d2f290"
+    },
+    {
+      "path": "skills/skill-author/references/project-specific-skills.md",
+      "mode": "100644",
+      "sha256": "e28078d91e3d3ac7778e73c5d4f7601442ecd720391363b168a737e357de061b"
+    },
+    {
+      "path": "skills/skill-author/references/propagation-rules.md",
+      "mode": "100644",
+      "sha256": "a7c16c05807086a1c64db561d65346e9490d9223603d4cc2d4099709b0b83ee4"
+    },
+    {
+      "path": "skills/skill-author/references/public-surface-simplification.md",
+      "mode": "100644",
+      "sha256": "0f113bfdbf689581a5f217379124235bf465aa12de0e715be29835b272b85f6a"
+    },
+    {
+      "path": "skills/skill-author/references/skill-authoring-rules.md",
+      "mode": "100644",
+      "sha256": "d708b15cbae08ddbc3c29e9df455ea165086f4f84006992471b6aadee4d5ea78"
+    },
+    {
+      "path": "skills/skill-author/references/skill-packaging-contract.md",
+      "mode": "100644",
+      "sha256": "a1187f40f905f2d9d08b01f21083dba5709f7a70decc5bf9d54d235dac0948c3"
+    },
+    {
+      "path": "skills/skill-author/references/validation-assets-checklist.md",
+      "mode": "100644",
+      "sha256": "b29141c5894b7681a89c3ee9e9093b4c4e2d2066a5322af3680298c34f4a043e"
+    },
+    {
+      "path": "skills/skill-author/references/workflow-create-new.md",
+      "mode": "100644",
+      "sha256": "a817824aa2e13ddac32cfba17261beeddda2a9a16fc0c00ea8b351edc6d41d5f"
+    },
+    {
+      "path": "skills/skill-author/references/workflow-evidence-backed-update.md",
+      "mode": "100644",
+      "sha256": "dcc9ece62c04c9bb0efdf8e395b5a145f03e04748c26a15febae853956cfd3c0"
+    },
+    {
+      "path": "skills/skill-author/references/workflow-finalize-skill.md",
+      "mode": "100644",
+      "sha256": "42bc6182ce344f80646778ee976dfe7b1eb2d6b5e646ed0e5776e89cfd85887c"
+    },
+    {
+      "path": "skills/skill-author/references/workflow-large-batch-skill-work.md",
+      "mode": "100644",
+      "sha256": "ce0163b90f7f6c6c1fa10b052dfc9c79e3289412b2e07a1d499878721c9c9227"
+    },
+    {
+      "path": "skills/skill-author/references/workflow-review-existing.md",
+      "mode": "100644",
+      "sha256": "06b57929ff6321f9732e4f6474ad3c1906ed7f5ec247ddbdac2dd7a28543cd2a"
+    },
+    {
+      "path": "skills/skill-author/references/workflow-update-existing.md",
+      "mode": "100644",
+      "sha256": "b3ac70b29994981b2dca2e1ea3a4cdd2b9ea338758339cb2fe7e827e3a2d3dd4"
+    },
+    {
+      "path": "skills/skill-author/scripts/audit_skill_overlap.py",
+      "mode": "100644",
+      "sha256": "ee585af49eb1affa278877a5620bd358fa5b86a3fda16133b121fb8ac7d209ac"
+    },
+    {
+      "path": "skills/skill-author/scripts/inventory_skills.py",
+      "mode": "100644",
+      "sha256": "4515aaa82fa0063e24e3a5c3afd6d1d0a06d7d1ce59554270d18f18be922b9ac"
+    },
+    {
+      "path": "skills/skill-author/scripts/project_specific.py",
+      "mode": "100644",
+      "sha256": "710b9b0468a27064e25f7e2f7692829bcb007f7c55a105b553751719b6241c71"
+    },
+    {
+      "path": "skills/skill-author/scripts/routing_probe.py",
+      "mode": "100644",
+      "sha256": "e5a18862c50244de100b52af911d97c195e14942a0bbd1c79d3f9279683f6147"
+    },
+    {
+      "path": "skills/skill-author/scripts/scaffold_skill.py",
+      "mode": "100644",
+      "sha256": "3205ccd14e945880a22969bdc6008d8439de81c94595a7f0c25670ddd7b6ed93"
+    },
+    {
+      "path": "skills/skill-author/scripts/validate_skill.py",
+      "mode": "100644",
+      "sha256": "f33450e53e3639cbb6627d8b46ace8843c385ea01edd42fdd0e42eea10280c19"
+    },
+    {
+      "path": "skills/skill-author/SKILL.md",
+      "mode": "100644",
+      "sha256": "12ffebadfbd2026b15f012d34c1227f932ced972e190cdba3e6146f980f3fc12"
+    },
+    {
+      "path": "skills/skill-author/templates/openai-agent-metadata.yaml",
+      "mode": "100644",
+      "sha256": "38aab102f7e122d98ed7556e2e0d8dd037c4260ab85a3a33f4670a0e4abae682"
+    },
+    {
+      "path": "skills/skill-author/templates/skill-minimal.md",
+      "mode": "100644",
+      "sha256": "584a22ed8def5f91010e08568e79adaedfb5ee998806e04d0a413d07ac6b9cad"
+    },
+    {
+      "path": "skills/skill-author/tests/test_inventory_and_overlap.py",
+      "mode": "100644",
+      "sha256": "7eec69db9bf0c8710685ea6f58d6748fb750a9cd39a8c6a539ae6a6f9cd3e7a5"
+    },
+    {
+      "path": "skills/skill-author/tests/test_project_specific_skills.py",
+      "mode": "100644",
+      "sha256": "dafb37aa4b800f44e4d5753a71d331e3d51be2c2da0ebd1cc53c7e6aad25c2f8"
+    },
+    {
+      "path": "skills/skill-author/tests/test_routing_probe.py",
+      "mode": "100644",
+      "sha256": "8e87759f95cccb8c1ec8e597bba8ff34c32a0a9ad4dac137278797b30373537e"
+    },
+    {
+      "path": "skills/skill-author/tests/test_validate_skill.py",
+      "mode": "100644",
+      "sha256": "231b8d3e4842577fae1560fe33f2c6e13f5c3138e07ac0bae3b16e770d465762"
+    }
+  ],
+  "generatedFiles": [
+    "skills/agent-prompt-engineering/assets/iteration-evidence.schema.json",
+    "skills/agent-prompt-engineering/references/agent-facing-abstraction-patterns.md",
+    "skills/agent-prompt-engineering/references/agent-system-runtime.md",
+    "skills/agent-prompt-engineering/references/fallback-path-audit.md",
+    "skills/agent-prompt-engineering/references/multi-agent-coordination.md",
+    "skills/agent-prompt-engineering/references/persona-overlay-composition.md",
+    "skills/agent-prompt-engineering/references/prompt-contract-guardrails.md",
+    "skills/agent-prompt-engineering/references/prompt-iteration-workflow.md",
+    "skills/agent-prompt-engineering/references/prompt-size-versioning.md",
+    "skills/agent-prompt-engineering/references/role-design-patterns.md",
+    "skills/agent-prompt-engineering/references/skill-choreography.md",
+    "skills/agent-prompt-engineering/references/system-prompt-patterns.md",
+    "skills/agent-prompt-engineering/references/tool-security-patterns.md",
+    "skills/agent-prompt-engineering/references/work-lifecycle-contracts.md",
+    "skills/agent-prompt-engineering/references/worked-example.md",
+    "skills/agent-prompt-engineering/scripts/audit_prompt_structure.py",
+    "skills/agent-prompt-engineering/SKILL.md",
+    "skills/agent-prompt-engineering/templates/agent-role-template.md",
+    "skills/agent-prompt-engineering/templates/multi-agent-contract-template.md",
+    "skills/agent-prompt-engineering/templates/runtime-contract-template.md",
+    "skills/agent-prompt-engineering/templates/system-prompt-template.md",
+    "skills/agent-prompt-engineering/templates/work-lifecycle-template.md",
+    "skills/agent-prompt-engineering/tests/test_audit_prompt_structure.py",
+    "skills/skill-author/assets/routing-cases.json",
+    "skills/skill-author/references/agents-openai-yaml.md",
+    "skills/skill-author/references/artifact-ownership-triage.md",
+    "skills/skill-author/references/behavioral-forward-testing.md",
+    "skills/skill-author/references/project-specific-skills.md",
+    "skills/skill-author/references/propagation-rules.md",
+    "skills/skill-author/references/public-surface-simplification.md",
+    "skills/skill-author/references/skill-authoring-rules.md",
+    "skills/skill-author/references/skill-packaging-contract.md",
+    "skills/skill-author/references/validation-assets-checklist.md",
+    "skills/skill-author/references/workflow-create-new.md",
+    "skills/skill-author/references/workflow-evidence-backed-update.md",
+    "skills/skill-author/references/workflow-finalize-skill.md",
+    "skills/skill-author/references/workflow-large-batch-skill-work.md",
+    "skills/skill-author/references/workflow-review-existing.md",
+    "skills/skill-author/references/workflow-update-existing.md",
+    "skills/skill-author/scripts/audit_skill_overlap.py",
+    "skills/skill-author/scripts/inventory_skills.py",
+    "skills/skill-author/scripts/project_specific.py",
+    "skills/skill-author/scripts/routing_probe.py",
+    "skills/skill-author/scripts/scaffold_skill.py",
+    "skills/skill-author/scripts/validate_skill.py",
+    "skills/skill-author/SKILL.md",
+    "skills/skill-author/templates/openai-agent-metadata.yaml",
+    "skills/skill-author/templates/skill-minimal.md",
+    "skills/skill-author/tests/test_inventory_and_overlap.py",
+    "skills/skill-author/tests/test_project_specific_skills.py",
+    "skills/skill-author/tests/test_routing_probe.py",
+    "skills/skill-author/tests/test_validate_skill.py",
+    "source-lock.json"
+  ],
+  "generatedOutputs": [
+    {
+      "path": "skills/agent-prompt-engineering/assets/iteration-evidence.schema.json",
+      "mode": "100644",
+      "sha256": "f236c1a2c5b8e41dd24d09343e40c786135b7f3f3023cf7e15305886fef36aea"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/references/agent-facing-abstraction-patterns.md",
+      "mode": "100644",
+      "sha256": "d59618633d9603e29ac244ca8a5679f184020ee09172b5f68babff0fa57b616b"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/references/agent-system-runtime.md",
+      "mode": "100644",
+      "sha256": "6b6aa8f47b499a4a4881b47b188111834f00efd5d879811211329b8016ecc630"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/references/fallback-path-audit.md",
+      "mode": "100644",
+      "sha256": "ebe92a0d58dac3bcb1d3d06f11cfaf780f3e1d9149e42d55e8b33df7bdcd340e"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/references/multi-agent-coordination.md",
+      "mode": "100644",
+      "sha256": "388e0566b229d393a7263836f9e47fc5fdb18fe4a58fbb236f845581b4387447"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/references/persona-overlay-composition.md",
+      "mode": "100644",
+      "sha256": "13b15b6c00aa4c491ebfc5166f8d4c55cf733484616fb0edb0804893d4945436"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/references/prompt-contract-guardrails.md",
+      "mode": "100644",
+      "sha256": "af91e4ec42a6b9e10be5ec69824c9acd567f7c6506e4aa021bc9031b44c49194"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/references/prompt-iteration-workflow.md",
+      "mode": "100644",
+      "sha256": "264a6e85b000898390d26a103bfc5ffede34d510b5ae2ecbd0547f074209660c"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/references/prompt-size-versioning.md",
+      "mode": "100644",
+      "sha256": "feb47f95e69e564c965b8e2c1740d026686aa0ab81618d57469a1dcf1382480d"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/references/role-design-patterns.md",
+      "mode": "100644",
+      "sha256": "287557dfbc66effe47d0319346a35e75ec929e9b561f27214bed6efb87756eaa"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/references/skill-choreography.md",
+      "mode": "100644",
+      "sha256": "bc5bd72aeee627b567fcb0287d8abef71eda514de3bbde47724395799bd2a69c"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/references/system-prompt-patterns.md",
+      "mode": "100644",
+      "sha256": "8747a5a8f3f2e74bee3c96be69a6baabdce8ffa869d2962e4937bd38ea1e8653"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/references/tool-security-patterns.md",
+      "mode": "100644",
+      "sha256": "c609b364e38cc3592c745d4ec043d873fabe98ad8542bf64babd69ae744b62e5"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/references/work-lifecycle-contracts.md",
+      "mode": "100644",
+      "sha256": "222af94478fbf55a56478b7c1f2332ea0e6de86389ec5c2f476976aa4bd023d2"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/references/worked-example.md",
+      "mode": "100644",
+      "sha256": "f6c50f457cee737ed0c834df3c8eb8b18774d0ec17c26dda23f748f7f15efc94"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/scripts/audit_prompt_structure.py",
+      "mode": "100644",
+      "sha256": "0a6131fc22cec05063c09f5ba58632814e014dcf4b8f412a576c0a7672328685"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/SKILL.md",
+      "mode": "100644",
+      "sha256": "e1d867c4a9384200cfb794213e562d5bf662795da135e633d6b828e75ace0a86"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/templates/agent-role-template.md",
+      "mode": "100644",
+      "sha256": "8a615d19125c9c9080eaeb7e85f65c242b15969e32a6195740f14fb9549e40cd"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/templates/multi-agent-contract-template.md",
+      "mode": "100644",
+      "sha256": "44850b1aa79778dddd96e03322ec591a4ddaeaa47791fbaaae3b6c55432e1984"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/templates/runtime-contract-template.md",
+      "mode": "100644",
+      "sha256": "93c1b3d0ac20ac91257de30527d8ed839bfba1753c577e6014ae5151c0b5c4e6"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/templates/system-prompt-template.md",
+      "mode": "100644",
+      "sha256": "81ed320879d173a9a7c41264e89de0e6ec2bd7ceaf16b13fbe5bec1a1a4ec653"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/templates/work-lifecycle-template.md",
+      "mode": "100644",
+      "sha256": "41fd835dbc9b88883abd6e01c9951d76cb156b7060705ea87ffa3fd6c32be7ab"
+    },
+    {
+      "path": "skills/agent-prompt-engineering/tests/test_audit_prompt_structure.py",
+      "mode": "100644",
+      "sha256": "2b465167977ea94586a83c7561b5c1aaf1536035bc439b65b131a76c627caac6"
+    },
+    {
+      "path": "skills/skill-author/assets/routing-cases.json",
+      "mode": "100644",
+      "sha256": "b37e9a60965ac36c7216f5408c414ed785604f02934e5b88dab6d25046bbee16"
+    },
+    {
+      "path": "skills/skill-author/references/agents-openai-yaml.md",
+      "mode": "100644",
+      "sha256": "dd91e5c765ef7defd343f6091d0ec6a689e75d167988c5eed4651dc5173db691"
+    },
+    {
+      "path": "skills/skill-author/references/artifact-ownership-triage.md",
+      "mode": "100644",
+      "sha256": "9ea6a5673a9e01b1980d1b8f2567db7ee1801fbed60ccea8369ee87a5b5194ec"
+    },
+    {
+      "path": "skills/skill-author/references/behavioral-forward-testing.md",
+      "mode": "100644",
+      "sha256": "fec3223c4f7a1090bf8c5846c68f627a51a54ff93b18830ffe587336d9d2f290"
+    },
+    {
+      "path": "skills/skill-author/references/project-specific-skills.md",
+      "mode": "100644",
+      "sha256": "e28078d91e3d3ac7778e73c5d4f7601442ecd720391363b168a737e357de061b"
+    },
+    {
+      "path": "skills/skill-author/references/propagation-rules.md",
+      "mode": "100644",
+      "sha256": "a7c16c05807086a1c64db561d65346e9490d9223603d4cc2d4099709b0b83ee4"
+    },
+    {
+      "path": "skills/skill-author/references/public-surface-simplification.md",
+      "mode": "100644",
+      "sha256": "0f113bfdbf689581a5f217379124235bf465aa12de0e715be29835b272b85f6a"
+    },
+    {
+      "path": "skills/skill-author/references/skill-authoring-rules.md",
+      "mode": "100644",
+      "sha256": "d708b15cbae08ddbc3c29e9df455ea165086f4f84006992471b6aadee4d5ea78"
+    },
+    {
+      "path": "skills/skill-author/references/skill-packaging-contract.md",
+      "mode": "100644",
+      "sha256": "a1187f40f905f2d9d08b01f21083dba5709f7a70decc5bf9d54d235dac0948c3"
+    },
+    {
+      "path": "skills/skill-author/references/validation-assets-checklist.md",
+      "mode": "100644",
+      "sha256": "b29141c5894b7681a89c3ee9e9093b4c4e2d2066a5322af3680298c34f4a043e"
+    },
+    {
+      "path": "skills/skill-author/references/workflow-create-new.md",
+      "mode": "100644",
+      "sha256": "a817824aa2e13ddac32cfba17261beeddda2a9a16fc0c00ea8b351edc6d41d5f"
+    },
+    {
+      "path": "skills/skill-author/references/workflow-evidence-backed-update.md",
+      "mode": "100644",
+      "sha256": "dcc9ece62c04c9bb0efdf8e395b5a145f03e04748c26a15febae853956cfd3c0"
+    },
+    {
+      "path": "skills/skill-author/references/workflow-finalize-skill.md",
+      "mode": "100644",
+      "sha256": "42bc6182ce344f80646778ee976dfe7b1eb2d6b5e646ed0e5776e89cfd85887c"
+    },
+    {
+      "path": "skills/skill-author/references/workflow-large-batch-skill-work.md",
+      "mode": "100644",
+      "sha256": "ce0163b90f7f6c6c1fa10b052dfc9c79e3289412b2e07a1d499878721c9c9227"
+    },
+    {
+      "path": "skills/skill-author/references/workflow-review-existing.md",
+      "mode": "100644",
+      "sha256": "06b57929ff6321f9732e4f6474ad3c1906ed7f5ec247ddbdac2dd7a28543cd2a"
+    },
+    {
+      "path": "skills/skill-author/references/workflow-update-existing.md",
+      "mode": "100644",
+      "sha256": "b3ac70b29994981b2dca2e1ea3a4cdd2b9ea338758339cb2fe7e827e3a2d3dd4"
+    },
+    {
+      "path": "skills/skill-author/scripts/audit_skill_overlap.py",
+      "mode": "100644",
+      "sha256": "ee585af49eb1affa278877a5620bd358fa5b86a3fda16133b121fb8ac7d209ac"
+    },
+    {
+      "path": "skills/skill-author/scripts/inventory_skills.py",
+      "mode": "100644",
+      "sha256": "4515aaa82fa0063e24e3a5c3afd6d1d0a06d7d1ce59554270d18f18be922b9ac"
+    },
+    {
+      "path": "skills/skill-author/scripts/project_specific.py",
+      "mode": "100644",
+      "sha256": "710b9b0468a27064e25f7e2f7692829bcb007f7c55a105b553751719b6241c71"
+    },
+    {
+      "path": "skills/skill-author/scripts/routing_probe.py",
+      "mode": "100644",
+      "sha256": "e5a18862c50244de100b52af911d97c195e14942a0bbd1c79d3f9279683f6147"
+    },
+    {
+      "path": "skills/skill-author/scripts/scaffold_skill.py",
+      "mode": "100644",
+      "sha256": "3205ccd14e945880a22969bdc6008d8439de81c94595a7f0c25670ddd7b6ed93"
+    },
+    {
+      "path": "skills/skill-author/scripts/validate_skill.py",
+      "mode": "100644",
+      "sha256": "f33450e53e3639cbb6627d8b46ace8843c385ea01edd42fdd0e42eea10280c19"
+    },
+    {
+      "path": "skills/skill-author/SKILL.md",
+      "mode": "100644",
+      "sha256": "12ffebadfbd2026b15f012d34c1227f932ced972e190cdba3e6146f980f3fc12"
+    },
+    {
+      "path": "skills/skill-author/templates/openai-agent-metadata.yaml",
+      "mode": "100644",
+      "sha256": "38aab102f7e122d98ed7556e2e0d8dd037c4260ab85a3a33f4670a0e4abae682"
+    },
+    {
+      "path": "skills/skill-author/templates/skill-minimal.md",
+      "mode": "100644",
+      "sha256": "584a22ed8def5f91010e08568e79adaedfb5ee998806e04d0a413d07ac6b9cad"
+    },
+    {
+      "path": "skills/skill-author/tests/test_inventory_and_overlap.py",
+      "mode": "100644",
+      "sha256": "7eec69db9bf0c8710685ea6f58d6748fb750a9cd39a8c6a539ae6a6f9cd3e7a5"
+    },
+    {
+      "path": "skills/skill-author/tests/test_project_specific_skills.py",
+      "mode": "100644",
+      "sha256": "dafb37aa4b800f44e4d5753a71d331e3d51be2c2da0ebd1cc53c7e6aad25c2f8"
+    },
+    {
+      "path": "skills/skill-author/tests/test_routing_probe.py",
+      "mode": "100644",
+      "sha256": "8e87759f95cccb8c1ec8e597bba8ff34c32a0a9ad4dac137278797b30373537e"
+    },
+    {
+      "path": "skills/skill-author/tests/test_validate_skill.py",
+      "mode": "100644",
+      "sha256": "231b8d3e4842577fae1560fe33f2c6e13f5c3138e07ac0bae3b16e770d465762"
+    }
+  ],
+  "generatedManifestFields": [
+    "version"
+  ]
+}

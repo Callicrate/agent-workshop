@@ -1,0 +1,37 @@
+{
+  "name": "databricks",
+  "version": "0.1.1+agents.2100b6024f56",
+  "description": "Databricks, Spark, Delta, MLflow, project health, training, serving, deployment, and runtime workflows projected from the canonical AGENTS repository.",
+  "author": {
+    "name": "Callicrate",
+    "url": "https://github.com/Callicrate"
+  },
+  "keywords": [
+    "databricks",
+    "spark",
+    "delta-lake",
+    "mlflow"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Databricks",
+    "shortDescription": "Databricks engineering and ML workflows.",
+    "longDescription": "Adds coordinated Databricks API, bundle, Spark, Delta, MLflow, project health, training, serving, batch inference, deployment, and runtime-diagnostic skills.",
+    "developerName": "Callicrate",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Diagnose this Databricks job or runtime failure.",
+      "Review this Spark or Delta pipeline.",
+      "Assess this Databricks project's health and write a status report.",
+      "Plan this model training or serving change."
+    ],
+    "composerIcon": "./assets/databricks.svg",
+    "logo": "./assets/databricks.svg",
+    "logoDark": "./assets/databricks.svg",
+    "brandColor": "#FF3621"
+  }
+}
