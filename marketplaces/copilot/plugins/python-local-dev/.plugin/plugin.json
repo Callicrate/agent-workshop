@@ -1,0 +1,16 @@
+{
+  "name": "python-local-dev",
+  "version": "0.1.1+agents.3aa0beb1ef37",
+  "description": "Python debugging and local command-surface workflows projected from the canonical AGENTS repository.",
+  "author": {
+    "name": "Callicrate",
+    "url": "https://github.com/Callicrate"
+  },
+  "keywords": [
+    "python",
+    "debugging",
+    "local-development",
+    "test-execution"
+  ],
+  "skills": "./skills/"
+}
