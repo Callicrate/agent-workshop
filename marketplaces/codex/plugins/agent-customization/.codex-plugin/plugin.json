@@ -1,0 +1,34 @@
+{
+  "name": "agent-customization",
+  "version": "0.2.0+agents.313233a8f5c2",
+  "description": "Agent Skill and prompt authoring workflows projected from the canonical AGENTS repository.",
+  "author": {
+    "name": "Callicrate",
+    "url": "https://github.com/Callicrate"
+  },
+  "keywords": [
+    "agent-skills",
+    "prompts",
+    "instructions",
+    "agent-customization"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Agent Customization",
+    "shortDescription": "Author skills, prompts, and agent instructions.",
+    "longDescription": "Adds structured workflows and deterministic validation for Agent Skills, prompts, role specifications, handoffs, and standalone agent instructions.",
+    "developerName": "Callicrate",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Create or improve an Agent Skill.",
+      "Write a reusable agent prompt or instruction."
+    ],
+    "composerIcon": "./assets/agent-customization.png",
+    "logo": "./assets/agent-customization.png",
+    "logoDark": "./assets/agent-customization.png"
+  }
+}

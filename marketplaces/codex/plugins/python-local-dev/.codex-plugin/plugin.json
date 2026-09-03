@@ -1,0 +1,34 @@
+{
+  "name": "python-local-dev",
+  "version": "0.1.1+agents.3aa0beb1ef37",
+  "description": "Python debugging and local command-surface workflows projected from the canonical AGENTS repository.",
+  "author": {
+    "name": "Callicrate",
+    "url": "https://github.com/Callicrate"
+  },
+  "keywords": [
+    "python",
+    "debugging",
+    "local-development",
+    "test-execution"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Python Local Development",
+    "shortDescription": "Debug Python and local project execution.",
+    "longDescription": "Adds workflows for localizing Python failures and choosing or repairing the correct shell, interpreter, package manager, build, and test command surface.",
+    "developerName": "Callicrate",
+    "category": "Productivity",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Diagnose this Python failure.",
+      "Find the correct local build or test command."
+    ],
+    "composerIcon": "./assets/python-local-dev.png",
+    "logo": "./assets/python-local-dev.png",
+    "logoDark": "./assets/python-local-dev.png"
+  }
+}

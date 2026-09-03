@@ -1,0 +1,16 @@
+{
+  "name": "repository-docs",
+  "version": "0.1.0+agents.48064cbc6b5e",
+  "description": "Repository, API, CLI, and AGENTS.md documentation workflows projected from the canonical AGENTS repository.",
+  "author": {
+    "name": "Callicrate",
+    "url": "https://github.com/Callicrate"
+  },
+  "keywords": [
+    "documentation",
+    "readme",
+    "api-docs",
+    "agents-md"
+  ],
+  "skills": "./skills/"
+}

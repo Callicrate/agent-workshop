@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "fixtures": [
+    {"id": "minimal-python-structural", "label": "minimal-python structural", "validator": "validate", "fixture": "minimal-python", "repo_root": true, "arguments": ["--mode", "standard"], "expected_exit": 0},
+    {"id": "minimal-python-semantic", "label": "minimal-python semantic", "validator": "semantic", "fixture": "minimal-python", "repo_root": true, "arguments": [], "expected_exit": 0},
+    {"id": "minimal-python-structural-json", "label": "minimal-python structural json", "validator": "validate", "fixture": "minimal-python", "repo_root": true, "arguments": ["--mode", "standard", "--json"], "expected_exit": 0, "expected_json_status": "pass"},
+    {"id": "contract-bearing-structural", "label": "contract-bearing structural", "validator": "validate", "fixture": "contract-bearing", "repo_root": true, "arguments": ["--mode", "standard"], "expected_exit": 0},
+    {"id": "contract-bearing-semantic", "label": "contract-bearing semantic", "fixture": "contract-bearing", "validator": "semantic", "repo_root": true, "arguments": [], "expected_exit": 0},
+    {"id": "operational-structural", "label": "operational structural", "validator": "validate", "fixture": "operational", "repo_root": true, "arguments": ["--mode", "standard"], "expected_exit": 0},
+    {"id": "operational-semantic", "label": "operational semantic", "validator": "semantic", "fixture": "operational", "repo_root": true, "arguments": [], "expected_exit": 0},
+    {"id": "bad-placeholders-structural", "label": "bad-placeholders structural", "validator": "validate", "fixture": "bad-placeholders", "repo_root": false, "arguments": ["--mode", "standard"], "expected_exit": 1},
+    {"id": "bad-unsafe-command-structural", "label": "bad-unsafe-command structural", "validator": "validate", "fixture": "bad-unsafe-command", "repo_root": false, "arguments": ["--mode", "standard"], "expected_exit": 1},
+    {"id": "good-maintainer-only-command-structural", "label": "good-maintainer-only-command structural", "validator": "validate", "fixture": "good-maintainer-only-command", "repo_root": false, "arguments": ["--mode", "standard"], "expected_exit": 0},
+    {"id": "bad-stale-path-semantic", "label": "bad-stale-path semantic", "validator": "semantic", "fixture": "bad-stale-path", "repo_root": true, "arguments": [], "expected_exit": 1},
+    {"id": "bad-broken-link-semantic-json", "label": "bad-broken-link semantic json", "validator": "semantic", "fixture": "bad-broken-link", "repo_root": true, "arguments": ["--json"], "expected_exit": 1, "expected_json_status": "fail"},
+    {"id": "dynamic-paths-semantic", "label": "dynamic-paths semantic", "validator": "semantic", "fixture": "dynamic-paths", "repo_root": true, "arguments": [], "expected_exit": 0},
+    {"id": "bad-nested-conflict-semantic", "label": "bad-nested-conflict semantic", "validator": "semantic", "fixture": "bad-nested-conflict", "repo_root": true, "arguments": [], "expected_exit": 1}
+  ]
+}

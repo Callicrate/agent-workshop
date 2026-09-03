@@ -1,0 +1,16 @@
+{
+  "name": "frontend-product-ui",
+  "version": "0.1.0+agents.a63027be192c",
+  "description": "Frontend product UI design and implementation guidance projected from the canonical AGENTS repository.",
+  "author": {
+    "name": "Callicrate",
+    "url": "https://github.com/Callicrate"
+  },
+  "keywords": [
+    "frontend",
+    "product-ui",
+    "dashboard",
+    "web-app"
+  ],
+  "skills": "./skills/"
+}

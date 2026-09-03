@@ -1,0 +1,55 @@
+bundle:
+  name: "my-project"
+  databricks_cli_version: ">=0.218.0"
+
+include:
+  - "resources/*.yml"
+
+permissions:
+  - user_name: "${var.user_name}"
+    level: CAN_MANAGE
+
+variables:
+  user_name:
+    description: "Workspace owner for paths, permissions, and tags"
+    default: "your.name@example.com"
+  job_basename:
+    default: "My Pipeline"
+  catalog:
+    default: "main"
+  schema:
+    default: "default"
+  serverless_environment_version:
+    description: "Workspace-supported serverless environment version; verify before changing"
+    default: "4"
+  tags:
+    type: complex
+    default:
+      Team: "REPLACE_WITH_TEAM"
+      Project: "${bundle.name}"
+      Owner: "${var.user_name}"
+      DataClassification: "REPLACE_WITH_DATA_CLASSIFICATION"
+      Environment: "${bundle.target}"
+      ApplicationName: "${bundle.name}"
+      ResourceOwner: "REPLACE_WITH_RESOURCE_OWNER"
+      CiscoMailAlias: "REPLACE_WITH_MAIL_ALIAS"
+      DataTaxonomy: "REPLACE_WITH_DATA_TAXONOMY"
+      IntendedPublic: "false"
+
+workspace:
+  root_path: "/Workspace/Users/${var.user_name}/bundles/${bundle.name}"
+
+targets:
+  dev:
+    default: true
+    mode: development
+    workspace:
+      host: "https://dev-workspace.databricks.com"
+      root_path: "/Workspace/Users/${var.user_name}/bundles/${bundle.name}-dev"
+  prod:
+    mode: production
+    workspace:
+      host: "https://prod-workspace.databricks.com"
+      root_path: "/Workspace/Shared/bundles/${bundle.name}"
+    run_as:
+      service_principal_name: "etl-service-principal"
