@@ -1,0 +1,552 @@
+{
+  "schemaVersion": 4,
+  "plugin": "review-and-learning",
+  "sourceRoot": "skills/",
+  "sourceDigest": "d9ee7db00299b25a31bf027264dbfb79c4f25db20dbf61027a93692da36bce22",
+  "projectionManifestDigest": "6c31e1de10ce3d8938d5e543e2ee11fd32f7edf90acc43ee55d02d8366849bb0",
+  "projectionDigest": "840b5e7b7f4d111051ffe981d9f1d1f08fcf0778874c032a26f0476c7c0e75d3",
+  "cachebuster": "840b5e7b7f4d",
+  "sourceSkills": [
+    "critically-review",
+    "extract-lessons-learned"
+  ],
+  "excludedSourcePrefixes": [],
+  "sourceFiles": [
+    {
+      "path": "skills/critically-review/assets/claim-ledger-template.csv",
+      "mode": "100644",
+      "sha256": "67e9f753294c8edaa38a1345f11fd87956fbe68d88bc29690e100b5c37d1e7dd"
+    },
+    {
+      "path": "skills/critically-review/assets/evidence-log-template.csv",
+      "mode": "100644",
+      "sha256": "cabf51a6c0892d893237804470028dba5765eb7bbaf06808a9f147501e9915bf"
+    },
+    {
+      "path": "skills/critically-review/assets/finding.schema.json",
+      "mode": "100644",
+      "sha256": "dbc1f06befda111ced2545ab8dd29263390c17701b183a72c4ff1e1922e568d3"
+    },
+    {
+      "path": "skills/critically-review/assets/findings-template.json",
+      "mode": "100644",
+      "sha256": "1178ab00558f42455d68cec4b7366d01c7da764ce891309323cdfa079a7136d0"
+    },
+    {
+      "path": "skills/critically-review/assets/review-plan-template.md",
+      "mode": "100644",
+      "sha256": "6cccac6f7f12cf54afb9141a30c54ed91d404e13386958f387084d80cf7d7d6d"
+    },
+    {
+      "path": "skills/critically-review/assets/review-report-template.md",
+      "mode": "100644",
+      "sha256": "79781cfcc807f9f7fff9e87fdad2d32ceab9346ac949abae8c80c08d6e68d81c"
+    },
+    {
+      "path": "skills/critically-review/assets/review-report.schema.json",
+      "mode": "100644",
+      "sha256": "ccd954119bd7866899f8f53f89d6a3c04c1b947b501d56b8f82525e68258ee0c"
+    },
+    {
+      "path": "skills/critically-review/assets/todo-template.md",
+      "mode": "100644",
+      "sha256": "374efcd9158b8e68c0262d3dac179d606f3197e826472e7c793f5a19116b66de"
+    },
+    {
+      "path": "skills/critically-review/evals/evals.json",
+      "mode": "100644",
+      "sha256": "c453f6a9198639fb518b5fbcaa79cbe011b17f57e01f091fcd9b4ecb207f993a"
+    },
+    {
+      "path": "skills/critically-review/evals/files/automation-business-case.md",
+      "mode": "100644",
+      "sha256": "8c135464836a7734166f01754c039d41c880613019b7db3b362efb70f6f63d95"
+    },
+    {
+      "path": "skills/critically-review/evals/files/investment-thesis.md",
+      "mode": "100644",
+      "sha256": "3c5d866d92af0793173c6c2dc1b0ae89ff434e6bbb07e104c7874b0819e24bf0"
+    },
+    {
+      "path": "skills/critically-review/evals/files/policy-memo.md",
+      "mode": "100644",
+      "sha256": "6c95e234c010a19d4bf4f018facceb4f8e65af34ddac533aaf558c52f3dc9105"
+    },
+    {
+      "path": "skills/critically-review/evals/files/product-whitepaper.md",
+      "mode": "100644",
+      "sha256": "eea3926e29dd90685baff2b4d9d03627b947b61cb1c7874496c2028e1a370d79"
+    },
+    {
+      "path": "skills/critically-review/evals/files/scoped-preview.md",
+      "mode": "100644",
+      "sha256": "7f5f8a2af3d455d670f6aafad9b515fb792bde0ed56b7d50290ce91dc3a8f3d5"
+    },
+    {
+      "path": "skills/critically-review/evals/files/system-design-note.md",
+      "mode": "100644",
+      "sha256": "d1e793b8d619ddb680e69b44ccf21b4af92eef74d976cb52df1fc83ebcd3d397"
+    },
+    {
+      "path": "skills/critically-review/references/change-review.md",
+      "mode": "100644",
+      "sha256": "b4394829167e6a5434d00a1ad1e284cd506e58aa5060c0682fe52d11fe405a8a"
+    },
+    {
+      "path": "skills/critically-review/references/data-code-and-logic.md",
+      "mode": "100644",
+      "sha256": "c2da0ed685efa510f05eec5d4f7b903272ce50b19cd5c50584b50a6ca041f35e"
+    },
+    {
+      "path": "skills/critically-review/references/domain-playbooks.md",
+      "mode": "100644",
+      "sha256": "311990002ddba8f4c942a565345adab6874da63916798bd1dcbcf710d4221859"
+    },
+    {
+      "path": "skills/critically-review/references/external-review-adjudication.md",
+      "mode": "100644",
+      "sha256": "d6059d835524917a27ec20c4c15a92b2edcf299d0bcbea033912030da1a84a26"
+    },
+    {
+      "path": "skills/critically-review/references/fact-checking.md",
+      "mode": "100644",
+      "sha256": "bc5147ebd6c9213c4bf310bc5c116d22c12a33102c040157da3e2c6e37adc055"
+    },
+    {
+      "path": "skills/critically-review/references/high-impact-claim-ledger.md",
+      "mode": "100644",
+      "sha256": "a9b98b3eae68825678eaa6c033568448978a192199d3024218c94bb1fa430a4f"
+    },
+    {
+      "path": "skills/critically-review/references/omissions-and-fallacies.md",
+      "mode": "100644",
+      "sha256": "d6ce5e29d552e639d0a78bdacf79f1ab00697a30e831a9bef680fb7b89a7f9f4"
+    },
+    {
+      "path": "skills/critically-review/references/review-method.md",
+      "mode": "100644",
+      "sha256": "786d145ed507344679937b64f7c580eaf8474acf789c10bdd817b410004a37f4"
+    },
+    {
+      "path": "skills/critically-review/references/review-vs-fix-boundary.md",
+      "mode": "100644",
+      "sha256": "abbf2e58b2477afa49682b398db3d00184c869d2c2044db1a20edff80f9abb02"
+    },
+    {
+      "path": "skills/critically-review/references/scoring-and-reporting.md",
+      "mode": "100644",
+      "sha256": "406bc021e80a80820edfa65fa3470fd0624618d7a5c7e749092ffce6c59a1e55"
+    },
+    {
+      "path": "skills/critically-review/references/structured-helper-contract.md",
+      "mode": "100644",
+      "sha256": "f546ff20f4f89e5708ebf2903c95c8a3d056ff0feeb1f54eca887748c11fa6f2"
+    },
+    {
+      "path": "skills/critically-review/references/subagent-briefs.md",
+      "mode": "100644",
+      "sha256": "94c0a2c9607715dcdf1943f033a076fda29036f19a64d2033496a913c72ff358"
+    },
+    {
+      "path": "skills/critically-review/references/technical-surface-review.md",
+      "mode": "100644",
+      "sha256": "fd29f8b6d7092eafb924584a0371164c6a326afeb9d06ccf6a7af5a7ba3cb356"
+    },
+    {
+      "path": "skills/critically-review/references/understanding-and-calibration.md",
+      "mode": "100644",
+      "sha256": "d9cec46a577766ed78d7c7857d162c4dfa10ae9a191b540c319a2b922b818992"
+    },
+    {
+      "path": "skills/critically-review/review.md",
+      "mode": "100644",
+      "sha256": "bc5b50eb7664ba8ed21e09daae4d6548fb5fead9bbcf2f6d2d12e560065090aa"
+    },
+    {
+      "path": "skills/critically-review/scripts/init_review.py",
+      "mode": "100644",
+      "sha256": "c3886a1e4d9f37da31fc0bf8d4f19cc5852dbdec558be8d2ade950d3d68a8dd0"
+    },
+    {
+      "path": "skills/critically-review/scripts/merge_findings.py",
+      "mode": "100644",
+      "sha256": "9fa88aee719cf89f5864a4d7091558772e38444d6d0a085f12bfc23cb27b687b"
+    },
+    {
+      "path": "skills/critically-review/scripts/render_report.py",
+      "mode": "100644",
+      "sha256": "385baf3c003ce62d1b99be2c843358bc5b65a1bb8823dc63df59c2813f0a8e0f"
+    },
+    {
+      "path": "skills/critically-review/scripts/review_io.py",
+      "mode": "100644",
+      "sha256": "3c600202a7c52692be57c29b5f2d4286a2b12246de5e19c887350526c6c4821e"
+    },
+    {
+      "path": "skills/critically-review/scripts/surface_snapshot.py",
+      "mode": "100644",
+      "sha256": "826c8dce44ca89b190b7879e7b1ff821449477e56ecc3ca206d004351b04343d"
+    },
+    {
+      "path": "skills/critically-review/scripts/validate_findings.py",
+      "mode": "100644",
+      "sha256": "bce85b42d6ef6c0889e9b0b2514b1cf032abfb63ff66dd4c2c6edf6a13806cb3"
+    },
+    {
+      "path": "skills/critically-review/SKILL.md",
+      "mode": "100644",
+      "sha256": "cdfb325f188195e1460b46818a6f01e194c469bf1b07087d00d01ebcc918f882"
+    },
+    {
+      "path": "skills/critically-review/tests/test_review_tools.py",
+      "mode": "100644",
+      "sha256": "67106a7b824e0ad369d8011b79129f85625177a110dd99f566bc4c406b9a2b77"
+    },
+    {
+      "path": "skills/extract-lessons-learned/references/content-first-routing.md",
+      "mode": "100644",
+      "sha256": "2981f621df37ce16a2a26a0b2a70fe4b026e758970921a238e1f856612baa993"
+    },
+    {
+      "path": "skills/extract-lessons-learned/references/evidence-slice-audit.md",
+      "mode": "100644",
+      "sha256": "3d69d5f03649e50781c99d713976414ce41309ffe56f139ecc200ec68bc8eb88"
+    },
+    {
+      "path": "skills/extract-lessons-learned/references/output-template.md",
+      "mode": "100644",
+      "sha256": "1370deaa75c3bc6c4f3ddc8300b786d99c0fb151eb07c9865928c5831c76ac43"
+    },
+    {
+      "path": "skills/extract-lessons-learned/references/routing-guide.md",
+      "mode": "100644",
+      "sha256": "23586121b5d24f92108ed2fa43eef655bcd9dfc7bf5d6856647430ee565ab142"
+    },
+    {
+      "path": "skills/extract-lessons-learned/scripts/audit_evidence_slice.py",
+      "mode": "100644",
+      "sha256": "fce8acb5e43b5206d83380c55291340cd034aaf010d565631b2b26661275dc3b"
+    },
+    {
+      "path": "skills/extract-lessons-learned/scripts/collect_project_history.py",
+      "mode": "100644",
+      "sha256": "859fcdd001f259453d50a17d0f02512c72e83c0e4548d57205b254798ace24a2"
+    },
+    {
+      "path": "skills/extract-lessons-learned/scripts/validate_lessons_report.py",
+      "mode": "100644",
+      "sha256": "7cb27dfa0aa780437b1860fa902b088119e4636766fe079a367a0e0d02b1f2f9"
+    },
+    {
+      "path": "skills/extract-lessons-learned/SKILL.md",
+      "mode": "100644",
+      "sha256": "023678d618bc6e87a839246c26909f6de87d66fe7e935b07cc9fd8c13ea2a14d"
+    },
+    {
+      "path": "skills/extract-lessons-learned/tests/test_audit_evidence_slice.py",
+      "mode": "100644",
+      "sha256": "72fae0d97a0ca73b95294b2d634eac42ae92d592e6b0c5d2d37ea5168d9337e7"
+    },
+    {
+      "path": "skills/extract-lessons-learned/tests/test_validate_lessons_report.py",
+      "mode": "100644",
+      "sha256": "38c46950cbf47d78c62145cb4d575c5406181ca1ff80f7708795591978147808"
+    }
+  ],
+  "generatedFiles": [
+    "skills/critically-review/assets/claim-ledger-template.csv",
+    "skills/critically-review/assets/evidence-log-template.csv",
+    "skills/critically-review/assets/finding.schema.json",
+    "skills/critically-review/assets/findings-template.json",
+    "skills/critically-review/assets/review-plan-template.md",
+    "skills/critically-review/assets/review-report-template.md",
+    "skills/critically-review/assets/review-report.schema.json",
+    "skills/critically-review/assets/todo-template.md",
+    "skills/critically-review/evals/evals.json",
+    "skills/critically-review/evals/files/automation-business-case.md",
+    "skills/critically-review/evals/files/investment-thesis.md",
+    "skills/critically-review/evals/files/policy-memo.md",
+    "skills/critically-review/evals/files/product-whitepaper.md",
+    "skills/critically-review/evals/files/scoped-preview.md",
+    "skills/critically-review/evals/files/system-design-note.md",
+    "skills/critically-review/references/change-review.md",
+    "skills/critically-review/references/data-code-and-logic.md",
+    "skills/critically-review/references/domain-playbooks.md",
+    "skills/critically-review/references/external-review-adjudication.md",
+    "skills/critically-review/references/fact-checking.md",
+    "skills/critically-review/references/high-impact-claim-ledger.md",
+    "skills/critically-review/references/omissions-and-fallacies.md",
+    "skills/critically-review/references/review-method.md",
+    "skills/critically-review/references/review-vs-fix-boundary.md",
+    "skills/critically-review/references/scoring-and-reporting.md",
+    "skills/critically-review/references/structured-helper-contract.md",
+    "skills/critically-review/references/subagent-briefs.md",
+    "skills/critically-review/references/technical-surface-review.md",
+    "skills/critically-review/references/understanding-and-calibration.md",
+    "skills/critically-review/review.md",
+    "skills/critically-review/scripts/init_review.py",
+    "skills/critically-review/scripts/merge_findings.py",
+    "skills/critically-review/scripts/render_report.py",
+    "skills/critically-review/scripts/review_io.py",
+    "skills/critically-review/scripts/surface_snapshot.py",
+    "skills/critically-review/scripts/validate_findings.py",
+    "skills/critically-review/SKILL.md",
+    "skills/critically-review/tests/test_review_tools.py",
+    "skills/extract-lessons-learned/references/content-first-routing.md",
+    "skills/extract-lessons-learned/references/evidence-slice-audit.md",
+    "skills/extract-lessons-learned/references/output-template.md",
+    "skills/extract-lessons-learned/references/routing-guide.md",
+    "skills/extract-lessons-learned/scripts/audit_evidence_slice.py",
+    "skills/extract-lessons-learned/scripts/collect_project_history.py",
+    "skills/extract-lessons-learned/scripts/validate_lessons_report.py",
+    "skills/extract-lessons-learned/SKILL.md",
+    "skills/extract-lessons-learned/tests/test_audit_evidence_slice.py",
+    "skills/extract-lessons-learned/tests/test_validate_lessons_report.py",
+    "source-lock.json"
+  ],
+  "generatedOutputs": [
+    {
+      "path": "skills/critically-review/assets/claim-ledger-template.csv",
+      "mode": "100644",
+      "sha256": "67e9f753294c8edaa38a1345f11fd87956fbe68d88bc29690e100b5c37d1e7dd"
+    },
+    {
+      "path": "skills/critically-review/assets/evidence-log-template.csv",
+      "mode": "100644",
+      "sha256": "cabf51a6c0892d893237804470028dba5765eb7bbaf06808a9f147501e9915bf"
+    },
+    {
+      "path": "skills/critically-review/assets/finding.schema.json",
+      "mode": "100644",
+      "sha256": "dbc1f06befda111ced2545ab8dd29263390c17701b183a72c4ff1e1922e568d3"
+    },
+    {
+      "path": "skills/critically-review/assets/findings-template.json",
+      "mode": "100644",
+      "sha256": "1178ab00558f42455d68cec4b7366d01c7da764ce891309323cdfa079a7136d0"
+    },
+    {
+      "path": "skills/critically-review/assets/review-plan-template.md",
+      "mode": "100644",
+      "sha256": "6cccac6f7f12cf54afb9141a30c54ed91d404e13386958f387084d80cf7d7d6d"
+    },
+    {
+      "path": "skills/critically-review/assets/review-report-template.md",
+      "mode": "100644",
+      "sha256": "79781cfcc807f9f7fff9e87fdad2d32ceab9346ac949abae8c80c08d6e68d81c"
+    },
+    {
+      "path": "skills/critically-review/assets/review-report.schema.json",
+      "mode": "100644",
+      "sha256": "ccd954119bd7866899f8f53f89d6a3c04c1b947b501d56b8f82525e68258ee0c"
+    },
+    {
+      "path": "skills/critically-review/assets/todo-template.md",
+      "mode": "100644",
+      "sha256": "374efcd9158b8e68c0262d3dac179d606f3197e826472e7c793f5a19116b66de"
+    },
+    {
+      "path": "skills/critically-review/evals/evals.json",
+      "mode": "100644",
+      "sha256": "c453f6a9198639fb518b5fbcaa79cbe011b17f57e01f091fcd9b4ecb207f993a"
+    },
+    {
+      "path": "skills/critically-review/evals/files/automation-business-case.md",
+      "mode": "100644",
+      "sha256": "8c135464836a7734166f01754c039d41c880613019b7db3b362efb70f6f63d95"
+    },
+    {
+      "path": "skills/critically-review/evals/files/investment-thesis.md",
+      "mode": "100644",
+      "sha256": "3c5d866d92af0793173c6c2dc1b0ae89ff434e6bbb07e104c7874b0819e24bf0"
+    },
+    {
+      "path": "skills/critically-review/evals/files/policy-memo.md",
+      "mode": "100644",
+      "sha256": "6c95e234c010a19d4bf4f018facceb4f8e65af34ddac533aaf558c52f3dc9105"
+    },
+    {
+      "path": "skills/critically-review/evals/files/product-whitepaper.md",
+      "mode": "100644",
+      "sha256": "eea3926e29dd90685baff2b4d9d03627b947b61cb1c7874496c2028e1a370d79"
+    },
+    {
+      "path": "skills/critically-review/evals/files/scoped-preview.md",
+      "mode": "100644",
+      "sha256": "7f5f8a2af3d455d670f6aafad9b515fb792bde0ed56b7d50290ce91dc3a8f3d5"
+    },
+    {
+      "path": "skills/critically-review/evals/files/system-design-note.md",
+      "mode": "100644",
+      "sha256": "d1e793b8d619ddb680e69b44ccf21b4af92eef74d976cb52df1fc83ebcd3d397"
+    },
+    {
+      "path": "skills/critically-review/references/change-review.md",
+      "mode": "100644",
+      "sha256": "b4394829167e6a5434d00a1ad1e284cd506e58aa5060c0682fe52d11fe405a8a"
+    },
+    {
+      "path": "skills/critically-review/references/data-code-and-logic.md",
+      "mode": "100644",
+      "sha256": "c2da0ed685efa510f05eec5d4f7b903272ce50b19cd5c50584b50a6ca041f35e"
+    },
+    {
+      "path": "skills/critically-review/references/domain-playbooks.md",
+      "mode": "100644",
+      "sha256": "311990002ddba8f4c942a565345adab6874da63916798bd1dcbcf710d4221859"
+    },
+    {
+      "path": "skills/critically-review/references/external-review-adjudication.md",
+      "mode": "100644",
+      "sha256": "d6059d835524917a27ec20c4c15a92b2edcf299d0bcbea033912030da1a84a26"
+    },
+    {
+      "path": "skills/critically-review/references/fact-checking.md",
+      "mode": "100644",
+      "sha256": "bc5147ebd6c9213c4bf310bc5c116d22c12a33102c040157da3e2c6e37adc055"
+    },
+    {
+      "path": "skills/critically-review/references/high-impact-claim-ledger.md",
+      "mode": "100644",
+      "sha256": "a9b98b3eae68825678eaa6c033568448978a192199d3024218c94bb1fa430a4f"
+    },
+    {
+      "path": "skills/critically-review/references/omissions-and-fallacies.md",
+      "mode": "100644",
+      "sha256": "d6ce5e29d552e639d0a78bdacf79f1ab00697a30e831a9bef680fb7b89a7f9f4"
+    },
+    {
+      "path": "skills/critically-review/references/review-method.md",
+      "mode": "100644",
+      "sha256": "786d145ed507344679937b64f7c580eaf8474acf789c10bdd817b410004a37f4"
+    },
+    {
+      "path": "skills/critically-review/references/review-vs-fix-boundary.md",
+      "mode": "100644",
+      "sha256": "abbf2e58b2477afa49682b398db3d00184c869d2c2044db1a20edff80f9abb02"
+    },
+    {
+      "path": "skills/critically-review/references/scoring-and-reporting.md",
+      "mode": "100644",
+      "sha256": "406bc021e80a80820edfa65fa3470fd0624618d7a5c7e749092ffce6c59a1e55"
+    },
+    {
+      "path": "skills/critically-review/references/structured-helper-contract.md",
+      "mode": "100644",
+      "sha256": "f546ff20f4f89e5708ebf2903c95c8a3d056ff0feeb1f54eca887748c11fa6f2"
+    },
+    {
+      "path": "skills/critically-review/references/subagent-briefs.md",
+      "mode": "100644",
+      "sha256": "94c0a2c9607715dcdf1943f033a076fda29036f19a64d2033496a913c72ff358"
+    },
+    {
+      "path": "skills/critically-review/references/technical-surface-review.md",
+      "mode": "100644",
+      "sha256": "fd29f8b6d7092eafb924584a0371164c6a326afeb9d06ccf6a7af5a7ba3cb356"
+    },
+    {
+      "path": "skills/critically-review/references/understanding-and-calibration.md",
+      "mode": "100644",
+      "sha256": "d9cec46a577766ed78d7c7857d162c4dfa10ae9a191b540c319a2b922b818992"
+    },
+    {
+      "path": "skills/critically-review/review.md",
+      "mode": "100644",
+      "sha256": "bc5b50eb7664ba8ed21e09daae4d6548fb5fead9bbcf2f6d2d12e560065090aa"
+    },
+    {
+      "path": "skills/critically-review/scripts/init_review.py",
+      "mode": "100644",
+      "sha256": "c3886a1e4d9f37da31fc0bf8d4f19cc5852dbdec558be8d2ade950d3d68a8dd0"
+    },
+    {
+      "path": "skills/critically-review/scripts/merge_findings.py",
+      "mode": "100644",
+      "sha256": "9fa88aee719cf89f5864a4d7091558772e38444d6d0a085f12bfc23cb27b687b"
+    },
+    {
+      "path": "skills/critically-review/scripts/render_report.py",
+      "mode": "100644",
+      "sha256": "385baf3c003ce62d1b99be2c843358bc5b65a1bb8823dc63df59c2813f0a8e0f"
+    },
+    {
+      "path": "skills/critically-review/scripts/review_io.py",
+      "mode": "100644",
+      "sha256": "3c600202a7c52692be57c29b5f2d4286a2b12246de5e19c887350526c6c4821e"
+    },
+    {
+      "path": "skills/critically-review/scripts/surface_snapshot.py",
+      "mode": "100644",
+      "sha256": "826c8dce44ca89b190b7879e7b1ff821449477e56ecc3ca206d004351b04343d"
+    },
+    {
+      "path": "skills/critically-review/scripts/validate_findings.py",
+      "mode": "100644",
+      "sha256": "bce85b42d6ef6c0889e9b0b2514b1cf032abfb63ff66dd4c2c6edf6a13806cb3"
+    },
+    {
+      "path": "skills/critically-review/SKILL.md",
+      "mode": "100644",
+      "sha256": "cdfb325f188195e1460b46818a6f01e194c469bf1b07087d00d01ebcc918f882"
+    },
+    {
+      "path": "skills/critically-review/tests/test_review_tools.py",
+      "mode": "100644",
+      "sha256": "67106a7b824e0ad369d8011b79129f85625177a110dd99f566bc4c406b9a2b77"
+    },
+    {
+      "path": "skills/extract-lessons-learned/references/content-first-routing.md",
+      "mode": "100644",
+      "sha256": "2981f621df37ce16a2a26a0b2a70fe4b026e758970921a238e1f856612baa993"
+    },
+    {
+      "path": "skills/extract-lessons-learned/references/evidence-slice-audit.md",
+      "mode": "100644",
+      "sha256": "3d69d5f03649e50781c99d713976414ce41309ffe56f139ecc200ec68bc8eb88"
+    },
+    {
+      "path": "skills/extract-lessons-learned/references/output-template.md",
+      "mode": "100644",
+      "sha256": "1370deaa75c3bc6c4f3ddc8300b786d99c0fb151eb07c9865928c5831c76ac43"
+    },
+    {
+      "path": "skills/extract-lessons-learned/references/routing-guide.md",
+      "mode": "100644",
+      "sha256": "23586121b5d24f92108ed2fa43eef655bcd9dfc7bf5d6856647430ee565ab142"
+    },
+    {
+      "path": "skills/extract-lessons-learned/scripts/audit_evidence_slice.py",
+      "mode": "100644",
+      "sha256": "fce8acb5e43b5206d83380c55291340cd034aaf010d565631b2b26661275dc3b"
+    },
+    {
+      "path": "skills/extract-lessons-learned/scripts/collect_project_history.py",
+      "mode": "100644",
+      "sha256": "859fcdd001f259453d50a17d0f02512c72e83c0e4548d57205b254798ace24a2"
+    },
+    {
+      "path": "skills/extract-lessons-learned/scripts/validate_lessons_report.py",
+      "mode": "100644",
+      "sha256": "7cb27dfa0aa780437b1860fa902b088119e4636766fe079a367a0e0d02b1f2f9"
+    },
+    {
+      "path": "skills/extract-lessons-learned/SKILL.md",
+      "mode": "100644",
+      "sha256": "023678d618bc6e87a839246c26909f6de87d66fe7e935b07cc9fd8c13ea2a14d"
+    },
+    {
+      "path": "skills/extract-lessons-learned/tests/test_audit_evidence_slice.py",
+      "mode": "100644",
+      "sha256": "72fae0d97a0ca73b95294b2d634eac42ae92d592e6b0c5d2d37ea5168d9337e7"
+    },
+    {
+      "path": "skills/extract-lessons-learned/tests/test_validate_lessons_report.py",
+      "mode": "100644",
+      "sha256": "38c46950cbf47d78c62145cb4d575c5406181ca1ff80f7708795591978147808"
+    }
+  ],
+  "generatedManifestFields": [
+    "version"
+  ]
+}
