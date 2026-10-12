@@ -1,0 +1,48 @@
+{
+  "document": {
+    "title": "",
+    "artifact_type": "",
+    "domain": "",
+    "review_mode": "standard"
+  },
+  "scope": {
+    "materials_reviewed": [],
+    "research_performed": false,
+    "limitations": []
+  },
+  "strengths": [],
+  "findings": [
+    {
+      "id": "F-001",
+      "title": "",
+      "category": "factuality",
+      "issue_type": "unsupported-claim",
+      "severity": "high",
+      "confidence": "medium",
+      "evidence_quality": "B",
+      "quote": "",
+      "location": "",
+      "analysis": "",
+      "why_it_matters": "",
+      "observed_evidence": "",
+      "decision_impact": "",
+      "repair_shape": "",
+      "verification_needed": "",
+      "evidence": [
+        {
+          "source_type": "artifact",
+          "reference": "",
+          "notes": ""
+        }
+      ],
+      "recommended_fix": ""
+    }
+  ],
+  "omissions": [],
+  "open_questions": [],
+  "overall_assessment": {
+    "summary": "",
+    "decision_impact": "",
+    "confidence": "medium"
+  }
+}
