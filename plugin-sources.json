@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "excludedSkills": [],
+  "plugins": [
+    {
+      "name": "databricks",
+      "baseVersion": "0.1.1",
+      "skills": [
+        "databricks-api-calls",
+        "databricks-asset-bundles",
+        "databricks-batch-inference",
+        "databricks-deploy-monitor",
+        "databricks-ml-training",
+        "databricks-model-serving",
+        "databricks-project-status",
+        "databricks-runtime-doctor",
+        "databricks-spark-etl",
+        "spark-diagnostics",
+        "mlflow-run-auditor"
+      ],
+      "cachebusterFiles": [
+        "README.md",
+        "assets/databricks.svg"
+      ]
+    },
+    {
+      "name": "repository-docs",
+      "skills": [
+        "documentation-author",
+        "api-documentation-author",
+        "agents-md"
+      ],
+      "cachebusterFiles": [
+        "README.md",
+        "assets/repository-docs.png"
+      ]
+    },
+    {
+      "name": "agent-customization",
+      "baseVersion": "0.2.0",
+      "skills": [
+        "agent-prompt-engineering",
+        "skill-author"
+      ],
+      "cachebusterFiles": [
+        "README.md",
+        "assets/agent-customization.png"
+      ]
+    },
+    {
+      "name": "review-and-learning",
+      "baseVersion": "0.2.0",
+      "skills": [
+        "critically-review",
+        "extract-lessons-learned"
+      ],
+      "cachebusterFiles": [
+        "README.md",
+        "assets/review-and-learning.png"
+      ]
+    },
+    {
+      "name": "python-local-dev",
+      "baseVersion": "0.1.1",
+      "skills": [
+        "python-debugging",
+        "local-project-execution"
+      ],
+      "cachebusterFiles": [
+        "README.md",
+        "assets/python-local-dev.png"
+      ]
+    },
+    {
+      "name": "frontend-product-ui",
+      "skills": [
+        "frontend-product-ui"
+      ],
+      "cachebusterFiles": [
+        "README.md",
+        "assets/frontend-product-ui.png"
+      ]
+    }
+  ]
+}
