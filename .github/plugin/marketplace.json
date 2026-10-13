@@ -1,0 +1,42 @@
+{
+  "name": "callicrate",
+  "owner": {
+    "name": "Callicrate"
+  },
+  "metadata": {
+    "description": "Callicrate agent skills and modular workflows, installable as plugins across Claude, Codex, and Copilot.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "databricks",
+      "source": "./marketplaces/copilot/plugins/databricks",
+      "description": "Databricks, Spark, Delta, MLflow, project health, training, serving, deployment, and runtime workflows projected from the canonical AGENTS repository."
+    },
+    {
+      "name": "repository-docs",
+      "source": "./marketplaces/copilot/plugins/repository-docs",
+      "description": "Repository, API, CLI, and AGENTS.md documentation workflows projected from the canonical AGENTS repository."
+    },
+    {
+      "name": "agent-customization",
+      "source": "./marketplaces/copilot/plugins/agent-customization",
+      "description": "Agent Skill and prompt authoring workflows projected from the canonical AGENTS repository."
+    },
+    {
+      "name": "review-and-learning",
+      "source": "./marketplaces/copilot/plugins/review-and-learning",
+      "description": "Critical review, AI retrospective, and lessons-learned workflows projected from the canonical AGENTS repository."
+    },
+    {
+      "name": "python-local-dev",
+      "source": "./marketplaces/copilot/plugins/python-local-dev",
+      "description": "Python debugging and local command-surface workflows projected from the canonical AGENTS repository."
+    },
+    {
+      "name": "frontend-product-ui",
+      "source": "./marketplaces/copilot/plugins/frontend-product-ui",
+      "description": "Frontend product UI design and implementation guidance projected from the canonical AGENTS repository."
+    }
+  ]
+}
