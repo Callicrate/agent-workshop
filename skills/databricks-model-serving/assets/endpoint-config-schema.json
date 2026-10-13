@@ -1,0 +1,484 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://skills.local/databricks-model-serving/endpoint-config-schema.json",
+  "title": "Databricks serving endpoint rollout contract",
+  "description": "Closed, offline-validatable expected state for one Databricks serving endpoint rollout.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["contract_version", "ownership_mode", "endpoint", "target_manifest", "model_handoff", "request_contract", "deployment", "telemetry", "output_contract", "production_auth", "recovery"],
+  "properties": {
+    "contract_version": {"const": 1},
+    "ownership_mode": {"type": "string", "enum": ["dab_managed", "sdk_api_managed", "external_router"]},
+    "endpoint": {"$ref": "#/$defs/endpoint"},
+    "target_manifest": {"$ref": "#/$defs/targetManifest"},
+    "model_handoff": {"$ref": "#/$defs/modelHandoff"},
+    "request_contract": {"$ref": "#/$defs/requestContract"},
+    "deployment": {"$ref": "#/$defs/deployment"},
+    "telemetry": {"$ref": "#/$defs/telemetry"},
+    "output_contract": {"$ref": "#/$defs/outputContract"},
+    "production_auth": {"$ref": "#/$defs/productionAuth"},
+    "recovery": {"$ref": "#/$defs/recovery"}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"endpoint": {"properties": {"route_optimized": {"const": true}}, "required": ["route_optimized"]}}, "required": ["endpoint"]},
+      "then": {"properties": {"production_auth": {"required": ["route_optimized_transport"]}}},
+      "else": {"properties": {"production_auth": {"not": {"required": ["route_optimized_transport"]}}}}
+    },
+    {
+      "if": {"properties": {"deployment": {"properties": {"served_entities": {"contains": {"properties": {"workload_type": {"const": "GPU_XLARGE"}}, "required": ["workload_type"]}}}, "required": ["served_entities"]}}, "required": ["deployment"]},
+      "then": {"properties": {"endpoint": {"properties": {"route_optimized": {"const": false}}, "required": ["route_optimized"]}}, "required": ["endpoint"]}
+    }
+  ],
+  "$defs": {
+    "identifier": {"type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[A-Za-z][A-Za-z0-9_-]{0,127}$"},
+    "opaqueIdentifier": {"type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"},
+    "ucIdentifier": {"type": "string", "minLength": 1, "maxLength": 128, "pattern": "^[A-Za-z_][A-Za-z0-9_]{0,127}$"},
+    "nonemptyString": {"type": "string", "minLength": 1, "maxLength": 512},
+    "fieldPath": {"type": "string", "minLength": 1, "maxLength": 256, "pattern": "^[A-Za-z_][A-Za-z0-9_]*(\\.[A-Za-z_][A-Za-z0-9_]*)*$"},
+    "httpsUrl": {"type": "string", "minLength": 9, "maxLength": 2048, "pattern": "^https://[^\\s]+$"},
+    "sha256": {"type": "string", "pattern": "^[A-Fa-f0-9]{64}$"},
+    "ucTable": {"type": "string", "pattern": "^[A-Za-z_][A-Za-z0-9_]{0,127}\\.[A-Za-z_][A-Za-z0-9_]{0,127}\\.[A-Za-z_][A-Za-z0-9_]{0,127}$"},
+    "endpoint": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "workspace_host", "target_url", "route_optimized", "expected_config_version", "creator_principal"],
+      "properties": {
+        "name": {"$ref": "#/$defs/identifier"},
+        "workspace_host": {"$ref": "#/$defs/httpsUrl"},
+        "target_url": {"$ref": "#/$defs/httpsUrl"},
+        "route_optimized": {"type": "boolean"},
+        "expected_config_version": {"type": "integer", "minimum": 1},
+        "creator_principal": {"$ref": "#/$defs/nonemptyString"}
+      }
+    },
+    "targetManifest": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["environment", "profile", "workspace_host", "endpoint_name", "target_url", "model_full_name", "served_entity_name", "destructive_operation"],
+      "properties": {
+        "environment": {"type": "string", "enum": ["dev", "staging", "prod"]},
+        "profile": {"$ref": "#/$defs/identifier"},
+        "workspace_host": {"$ref": "#/$defs/httpsUrl"},
+        "endpoint_name": {"$ref": "#/$defs/identifier"},
+        "target_url": {"$ref": "#/$defs/httpsUrl"},
+        "dab_target": {"$ref": "#/$defs/identifier"},
+        "model_full_name": {"$ref": "#/$defs/ucTable"},
+        "served_entity_name": {"$ref": "#/$defs/identifier"},
+        "destructive_operation": {"type": "boolean"}
+      }
+    },
+    "modelHandoff": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["catalog", "schema", "model_name", "model_version", "served_entity_name", "mlflow_run_id", "signature", "input_example", "feature_schema", "threshold_artifact"],
+      "properties": {
+        "catalog": {"$ref": "#/$defs/ucIdentifier"},
+        "schema": {"$ref": "#/$defs/ucIdentifier"},
+        "model_name": {"$ref": "#/$defs/ucIdentifier"},
+        "model_version": {"oneOf": [{"type": "integer", "minimum": 1}, {"type": "string", "pattern": "^[1-9][0-9]*$"}]},
+        "served_entity_name": {"$ref": "#/$defs/identifier"},
+        "mlflow_run_id": {"type": "string", "pattern": "^[A-Fa-f0-9]{32,64}$"},
+        "signature": {"$ref": "#/$defs/signature"},
+        "input_example": {"$ref": "#/$defs/inputExample"},
+        "feature_schema": {"$ref": "#/$defs/featureSchema"},
+        "threshold_artifact": {"$ref": "#/$defs/thresholdArtifact"}
+      }
+    },
+    "requestContract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["version", "allowed_shapes", "input_schema", "response_cardinality"],
+      "properties": {
+        "version": {"const": 1},
+        "allowed_shapes": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {"type": "string", "enum": ["dataframe_records", "dataframe_split"]}
+        },
+        "input_schema": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/schemaField"}},
+        "response_cardinality": {"const": "one_output_per_input_row"}
+      }
+    },
+    "schemaField": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "logical_type", "nullable"],
+      "properties": {
+        "name": {"$ref": "#/$defs/fieldPath"},
+        "logical_type": {"type": "string", "description": "Canonical JSON semantics: date is YYYY-MM-DD; timestamp is RFC3339 with explicit Z or UTC offset and no, 3, or 6 fractional digits; binary is nonempty canonical padded standard Base64 within the decoded-byte cap.", "enum": ["boolean", "integer", "long", "float", "double", "decimal", "string", "date", "timestamp", "array", "map", "struct", "binary"]},
+        "nullable": {"type": "boolean"}
+      }
+    },
+    "signature": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["inputs", "outputs"],
+      "properties": {
+        "inputs": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/schemaField"}},
+        "outputs": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/schemaField"}}
+      }
+    },
+    "inputExample": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "columns", "row_count", "artifact_digest"],
+      "properties": {
+        "kind": {"type": "string", "enum": ["synthetic", "redacted"]},
+        "columns": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/fieldPath"}},
+        "row_count": {"type": "integer", "minimum": 1, "maximum": 10},
+        "artifact_digest": {"$ref": "#/$defs/sha256"}
+      }
+    },
+    "featureSchema": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["version", "fingerprint", "features"],
+      "properties": {
+        "version": {"$ref": "#/$defs/nonemptyString"},
+        "fingerprint": {"$ref": "#/$defs/sha256"},
+        "features": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/schemaField"}}
+      }
+    },
+    "thresholdArtifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["version", "digest", "selection_split", "decisions"],
+      "properties": {
+        "version": {"$ref": "#/$defs/nonemptyString"},
+        "digest": {"$ref": "#/$defs/sha256"},
+        "selection_split": {"const": "validation"},
+        "decisions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "additionalProperties": false,
+            "required": ["name", "field", "operator", "value", "action"],
+            "properties": {
+              "name": {"$ref": "#/$defs/identifier"},
+              "field": {"$ref": "#/$defs/fieldPath"},
+              "operator": {"type": "string", "enum": ["<", "<=", ">", ">=", "=="]},
+              "value": {"type": "number"},
+              "action": {"$ref": "#/$defs/nonemptyString"}
+            }
+          }
+        }
+      }
+    },
+    "servedEntity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "entity_name", "entity_version", "scaling_mode", "workload_type", "scale_to_zero_enabled"],
+      "properties": {
+        "name": {"$ref": "#/$defs/identifier"},
+        "entity_name": {"$ref": "#/$defs/ucTable"},
+        "entity_version": {"oneOf": [{"type": "integer", "minimum": 1}, {"type": "string", "pattern": "^[1-9][0-9]*$"}]},
+        "scaling_mode": {"type": "string", "enum": ["workload_size", "provisioned_concurrency", "provisioned_throughput", "provisioned_model_units"]},
+        "workload_size": {"type": "string", "minLength": 1, "maxLength": 64},
+        "workload_type": {"type": "string", "enum": ["CPU", "CPU_MEDIUM", "CPU_LARGE", "GPU_SMALL", "GPU_MEDIUM", "GPU_LARGE", "GPU_XLARGE"]},
+        "scale_to_zero_enabled": {"type": "boolean"},
+        "min_provisioned_concurrency": {"type": "integer", "minimum": 0, "maximum": 1048576},
+        "max_provisioned_concurrency": {"type": "integer", "minimum": 1, "maximum": 1048576},
+        "min_provisioned_throughput": {"type": "integer", "minimum": 0, "maximum": 2147483647},
+        "max_provisioned_throughput": {"type": "integer", "minimum": 1, "maximum": 2147483647},
+        "provisioned_model_units": {"type": "integer", "minimum": 1, "maximum": 2147483647},
+        "burst_scaling_enabled": {"type": "boolean"}
+      },
+      "allOf": [
+        {
+          "if": {"properties": {"scaling_mode": {"const": "workload_size"}}, "required": ["scaling_mode"]},
+          "then": {"required": ["workload_size"], "not": {"anyOf": [{"required": ["min_provisioned_concurrency"]}, {"required": ["max_provisioned_concurrency"]}, {"required": ["min_provisioned_throughput"]}, {"required": ["max_provisioned_throughput"]}, {"required": ["provisioned_model_units"]}, {"required": ["burst_scaling_enabled"]}]}}
+        },
+        {
+          "if": {"properties": {"scaling_mode": {"const": "provisioned_concurrency"}}, "required": ["scaling_mode"]},
+          "then": {"required": ["min_provisioned_concurrency", "max_provisioned_concurrency"], "not": {"anyOf": [{"required": ["workload_size"]}, {"required": ["min_provisioned_throughput"]}, {"required": ["max_provisioned_throughput"]}, {"required": ["provisioned_model_units"]}, {"required": ["burst_scaling_enabled"]}]}}
+        },
+        {
+          "if": {"properties": {"scaling_mode": {"const": "provisioned_throughput"}}, "required": ["scaling_mode"]},
+          "then": {"required": ["min_provisioned_throughput", "max_provisioned_throughput"], "not": {"anyOf": [{"required": ["workload_size"]}, {"required": ["min_provisioned_concurrency"]}, {"required": ["max_provisioned_concurrency"]}, {"required": ["provisioned_model_units"]}, {"required": ["burst_scaling_enabled"]}]}}
+        },
+        {
+          "if": {"properties": {"scaling_mode": {"const": "provisioned_model_units"}}, "required": ["scaling_mode"]},
+          "then": {"required": ["provisioned_model_units", "burst_scaling_enabled"], "not": {"anyOf": [{"required": ["workload_size"]}, {"required": ["min_provisioned_concurrency"]}, {"required": ["max_provisioned_concurrency"]}, {"required": ["min_provisioned_throughput"]}, {"required": ["max_provisioned_throughput"]}]}}
+        },
+        {
+          "if": {"properties": {"workload_type": {"const": "GPU_XLARGE"}}, "required": ["workload_type"]},
+          "then": {"properties": {"scale_to_zero_enabled": {"const": false}}, "required": ["scale_to_zero_enabled"]}
+        }
+      ]
+    },
+    "route": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "served_entity_name", "traffic_percentage", "role", "allow_zero_traffic"],
+      "properties": {
+        "name": {"$ref": "#/$defs/identifier"},
+        "served_entity_name": {"$ref": "#/$defs/identifier"},
+        "traffic_percentage": {"type": "integer", "minimum": 0, "maximum": 100},
+        "role": {"type": "string", "enum": ["primary", "canary", "fallback"]},
+        "allow_zero_traffic": {"type": "boolean"}
+      }
+    },
+    "deployment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["served_entities", "routes"],
+      "properties": {
+        "served_entities": {"type": "array", "minItems": 1, "maxItems": 20, "items": {"$ref": "#/$defs/servedEntity"}},
+        "routes": {"type": "array", "minItems": 1, "maxItems": 20, "items": {"$ref": "#/$defs/route"}}
+      }
+    },
+    "tableNames": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["logs_table", "metrics_table", "traces_table"],
+      "properties": {
+        "logs_table": {"$ref": "#/$defs/ucTable"},
+        "metrics_table": {"$ref": "#/$defs/ucTable"},
+        "traces_table": {"$ref": "#/$defs/ucTable"}
+      }
+    },
+    "telemetry": {
+      "description": "Closed tagged union: disabled carries no expectations; unity_ai_gateway carries every exact table, sampling, and feature expectation.",
+      "oneOf": [
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["required", "mode"],
+          "properties": {
+            "required": {"const": false},
+            "mode": {"const": "disabled"}
+          }
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["required", "mode", "table_names", "inference_table_config", "enabled_telemetry_features"],
+          "properties": {
+            "required": {"const": true},
+            "mode": {"const": "unity_ai_gateway"},
+            "table_names": {"$ref": "#/$defs/tableNames"},
+            "inference_table_config": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": ["sampling_fraction"],
+              "properties": {"sampling_fraction": {"type": "number", "minimum": 0, "maximum": 1}}
+            },
+            "enabled_telemetry_features": {
+              "type": "array",
+              "minItems": 1,
+              "uniqueItems": true,
+              "items": {"type": "string", "enum": ["TELEMETRY_FEATURE_LOGS", "TELEMETRY_FEATURE_TRACES", "TELEMETRY_FEATURE_METRICS", "TELEMETRY_FEATURE_INFERENCE_TABLE"]}
+            }
+          }
+        }
+      ]
+    },
+    "scoreField": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["field", "minimum", "maximum", "direction", "units"],
+      "properties": {
+        "field": {"$ref": "#/$defs/fieldPath"},
+        "minimum": {"type": "number"},
+        "maximum": {"type": "number"},
+        "direction": {"type": "string", "enum": ["higher_is_better", "higher_is_worse", "higher_is_riskier", "lower_is_better", "probability", "distance", "custom"]},
+        "units": {"$ref": "#/$defs/nonemptyString"}
+      }
+    },
+    "labelField": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["field", "allowed_labels", "fallback_labels"],
+      "properties": {
+        "field": {"$ref": "#/$defs/fieldPath"},
+        "allowed_labels": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/nonemptyString"}},
+        "fallback_labels": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/nonemptyString"}}
+      }
+    },
+    "semanticAssertion": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["kind", "field"],
+      "properties": {
+        "kind": {"type": "string", "enum": ["label_equals", "score_range", "predicate"]},
+        "field": {"$ref": "#/$defs/fieldPath"},
+        "expected_label": {"$ref": "#/$defs/nonemptyString"},
+        "minimum": {"type": "number"},
+        "maximum": {"type": "number"},
+        "operator": {"type": "string", "enum": ["<", "<=", ">", ">=", "==", "!=", "is_null", "not_null"]},
+        "value": {"type": ["string", "number", "integer", "boolean", "null"]}
+      },
+      "allOf": [
+        {"if": {"properties": {"kind": {"const": "label_equals"}}, "required": ["kind"]}, "then": {"required": ["expected_label"], "not": {"anyOf": [{"required": ["minimum"]}, {"required": ["maximum"]}, {"required": ["operator"]}, {"required": ["value"]}]}}},
+        {"if": {"properties": {"kind": {"const": "score_range"}}, "required": ["kind"]}, "then": {"required": ["minimum", "maximum"], "not": {"anyOf": [{"required": ["expected_label"]}, {"required": ["operator"]}, {"required": ["value"]}]}}},
+        {"if": {"properties": {"kind": {"const": "predicate"}}, "required": ["kind"]}, "then": {"required": ["operator"], "not": {"anyOf": [{"required": ["expected_label"]}, {"required": ["minimum"]}, {"required": ["maximum"]}]}}}
+      ]
+    },
+    "outputContract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["response_schema", "required_response_fields", "nullable_response_fields", "score_fields", "label_fields", "semantic_assertions", "minimum_non_fallback_rate", "allow_identical_outputs"],
+      "properties": {
+        "response_schema": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/schemaField"}},
+        "required_response_fields": {"type": "array", "minItems": 1, "uniqueItems": true, "items": {"$ref": "#/$defs/fieldPath"}},
+        "nullable_response_fields": {"type": "array", "uniqueItems": true, "items": {"$ref": "#/$defs/fieldPath"}},
+        "score_fields": {"type": "array", "items": {"$ref": "#/$defs/scoreField"}},
+        "label_fields": {"type": "array", "items": {"$ref": "#/$defs/labelField"}},
+        "semantic_assertions": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/semanticAssertion"}},
+        "minimum_non_fallback_rate": {"type": "number", "minimum": 0, "maximum": 1},
+        "allow_identical_outputs": {"type": "boolean"}
+      }
+    },
+    "productionAuth": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["principal_type", "service_principal_id", "oauth_flow", "endpoint_permission", "immutable_creator_identity", "creator_uc_grants"],
+      "properties": {
+        "principal_type": {"const": "service_principal"},
+        "service_principal_id": {"$ref": "#/$defs/opaqueIdentifier"},
+        "oauth_flow": {"const": "oauth_m2m"},
+        "endpoint_permission": {"const": "CAN_QUERY"},
+        "immutable_creator_identity": {"$ref": "#/$defs/nonemptyString"},
+        "creator_uc_grants": {"type": "array", "minItems": 3, "uniqueItems": true, "items": {"type": "string", "enum": ["USE_CATALOG", "USE_SCHEMA", "EXECUTE_MODEL", "EXECUTE_TRANSITIVE_FUNCTIONS"]}},
+        "route_optimized_transport": {"$ref": "#/$defs/routeOptimizedTransport"}
+      }
+    },
+    "routeOptimizedTransport": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["route_id", "authorization_details"],
+      "properties": {
+        "route_id": {"$ref": "#/$defs/opaqueIdentifier"},
+        "authorization_details": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["type", "object_type", "object_path", "actions"],
+          "properties": {
+            "type": {"const": "workspace_permission"},
+            "object_type": {"const": "serving-endpoints"},
+            "object_path": {"type": "string", "pattern": "^/serving-endpoints/[A-Za-z0-9][A-Za-z0-9_-]{0,127}$"},
+            "actions": {"type": "array", "minItems": 1, "maxItems": 1, "uniqueItems": true, "prefixItems": [{"const": "query_inference_endpoint"}], "items": false}
+          }
+        }
+      }
+    },
+    "recovery": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["manifest_path", "pre_state_digest", "reverse_operation"],
+      "properties": {
+        "manifest_path": {"type": "string", "pattern": "^[A-Za-z0-9._/-]{1,512}$"},
+        "pre_state_digest": {"$ref": "#/$defs/sha256"},
+        "reverse_operation": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": ["kind", "artifact_path"],
+          "properties": {
+            "kind": {"type": "string", "enum": ["route_shift", "restore_config"]},
+            "artifact_path": {"type": "string", "pattern": "^[A-Za-z0-9._/-]{1,512}$"}
+          }
+        }
+      }
+    }
+  },
+  "examples": [
+    {
+      "contract_version": 1,
+      "ownership_mode": "sdk_api_managed",
+      "endpoint": {
+        "name": "risk-model-prod",
+        "workspace_host": "https://example.cloud.databricks.com",
+        "target_url": "https://abc123.serving.cloud.databricks.com/123456789/serving-endpoints/risk-model-prod/invocations",
+        "route_optimized": true,
+        "expected_config_version": 7,
+        "creator_principal": "serving-runtime-prod"
+      },
+      "target_manifest": {
+        "environment": "prod",
+        "profile": "prod-serving",
+        "workspace_host": "https://example.cloud.databricks.com",
+        "endpoint_name": "risk-model-prod",
+        "target_url": "https://abc123.serving.cloud.databricks.com/123456789/serving-endpoints/risk-model-prod/invocations",
+        "model_full_name": "main.ml.risk_model",
+        "served_entity_name": "risk-model-v7",
+        "destructive_operation": false
+      },
+      "model_handoff": {
+        "catalog": "main",
+        "schema": "ml",
+        "model_name": "risk_model",
+        "model_version": "7",
+        "served_entity_name": "risk-model-v7",
+        "mlflow_run_id": "0123456789abcdef0123456789abcdef",
+        "signature": {
+          "inputs": [{"name": "amount", "logical_type": "double", "nullable": false}, {"name": "country_code", "logical_type": "string", "nullable": false}],
+          "outputs": [{"name": "label", "logical_type": "string", "nullable": false}, {"name": "risk_score", "logical_type": "double", "nullable": false}]
+        },
+        "input_example": {"kind": "synthetic", "columns": ["amount", "country_code"], "row_count": 2, "artifact_digest": "0123456789abcdef0123456789abcdef0123456789abcdef0123456789abcdef"},
+        "feature_schema": {
+          "version": "v7",
+          "fingerprint": "abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789",
+          "features": [{"name": "amount", "logical_type": "double", "nullable": false}, {"name": "country_code", "logical_type": "string", "nullable": false}]
+        },
+        "threshold_artifact": {
+          "version": "v7",
+          "digest": "abcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcdefabcd",
+          "selection_split": "validation",
+          "decisions": [{"name": "review", "field": "risk_score", "operator": ">=", "value": 0.8, "action": "REVIEW"}]
+        }
+      },
+      "request_contract": {
+        "version": 1,
+        "allowed_shapes": ["dataframe_records", "dataframe_split"],
+        "input_schema": [{"name": "amount", "logical_type": "double", "nullable": false}, {"name": "country_code", "logical_type": "string", "nullable": false}],
+        "response_cardinality": "one_output_per_input_row"
+      },
+      "deployment": {
+        "served_entities": [{"name": "risk-model-v7", "entity_name": "main.ml.risk_model", "entity_version": "7", "scaling_mode": "workload_size", "workload_size": "Medium", "workload_type": "CPU", "scale_to_zero_enabled": false}],
+        "routes": [{"name": "risk-model-v7", "served_entity_name": "risk-model-v7", "traffic_percentage": 100, "role": "primary", "allow_zero_traffic": false}]
+      },
+      "telemetry": {
+        "required": true,
+        "mode": "unity_ai_gateway",
+        "table_names": {"logs_table": "main.observability.risk_model_otel_logs", "metrics_table": "main.observability.risk_model_otel_metrics", "traces_table": "main.observability.risk_model_otel_spans"},
+        "inference_table_config": {"sampling_fraction": 1.0},
+        "enabled_telemetry_features": ["TELEMETRY_FEATURE_LOGS", "TELEMETRY_FEATURE_TRACES", "TELEMETRY_FEATURE_METRICS", "TELEMETRY_FEATURE_INFERENCE_TABLE"]
+      },
+      "output_contract": {
+        "response_schema": [{"name": "label", "logical_type": "string", "nullable": false}, {"name": "risk_score", "logical_type": "double", "nullable": false}],
+        "required_response_fields": ["label", "risk_score"],
+        "nullable_response_fields": [],
+        "score_fields": [{"field": "risk_score", "minimum": 0.0, "maximum": 1.0, "direction": "higher_is_riskier", "units": "probability"}],
+        "label_fields": [{"field": "label", "allowed_labels": ["ALLOW", "REVIEW"], "fallback_labels": []}],
+        "semantic_assertions": [{"kind": "score_range", "field": "risk_score", "minimum": 0.0, "maximum": 1.0}, {"kind": "predicate", "field": "label", "operator": "not_null"}],
+        "minimum_non_fallback_rate": 1.0,
+        "allow_identical_outputs": false
+      },
+      "production_auth": {
+        "principal_type": "service_principal",
+        "service_principal_id": "11111111-2222-3333-4444-555555555555",
+        "oauth_flow": "oauth_m2m",
+        "endpoint_permission": "CAN_QUERY",
+        "immutable_creator_identity": "serving-runtime-prod",
+        "creator_uc_grants": ["USE_CATALOG", "USE_SCHEMA", "EXECUTE_MODEL"],
+        "route_optimized_transport": {
+          "route_id": "abc123",
+          "authorization_details": {
+            "type": "workspace_permission",
+            "object_type": "serving-endpoints",
+            "object_path": "/serving-endpoints/abc123",
+            "actions": ["query_inference_endpoint"]
+          }
+        }
+      },
+      "recovery": {
+        "manifest_path": "deploy/recovery/risk-model-prod.json",
+        "pre_state_digest": "1234567890abcdef1234567890abcdef1234567890abcdef1234567890abcdef",
+        "reverse_operation": {"kind": "route_shift", "artifact_path": "deploy/recovery/risk-model-prod-previous-routes.json"}
+      }
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "doctor": "bun dab_doctor.mjs"
+    },
+    "dependencies": {
+        "yaml": "^2.7.0"
+    }
+}
