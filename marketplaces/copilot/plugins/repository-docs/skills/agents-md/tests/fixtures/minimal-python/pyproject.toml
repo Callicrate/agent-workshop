@@ -1,0 +1,10 @@
+[project]
+name = "ledger-cli"
+version = "0.1.0"
+requires-python = ">=3.12"
+
+[project.scripts]
+ledger-check = "ledger_cli.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
