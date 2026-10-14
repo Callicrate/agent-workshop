@@ -1,0 +1,203 @@
+{
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "$id": "iteration-evidence.schema.json",
+    "title": "Prompt Iteration Evidence",
+    "description": "Required evidence artifact for prompt iteration passes. Documents baseline state, changes made, and regression status.",
+    "type": "object",
+    "required": [
+        "prompt_file",
+        "iteration_date",
+        "baseline_failures",
+        "edited_span",
+        "rerun_outcomes",
+        "regression_status"
+    ],
+    "properties": {
+        "prompt_file": {
+            "type": "string",
+            "description": "Relative path to the prompt file under iteration."
+        },
+        "execution_method": {
+            "type": "string",
+            "enum": [
+                "evaluation_harness",
+                "manual_observation",
+                "session_log",
+                "user_report",
+                "llm_judge"
+            ],
+            "description": "How baseline and rerun behavior were collected."
+        },
+        "model_targets": {
+            "type": "array",
+            "description": "Model families, model names, or runtimes used for baseline and rerun checks.",
+            "items": {
+                "type": "string"
+            },
+            "minItems": 1
+        },
+        "prompt_version": {
+            "type": "object",
+            "description": "Optional prompt version or provenance record for the pass.",
+            "properties": {
+                "before": {
+                    "type": "string",
+                    "description": "Commit, file hash, path, or other identifier before the edit."
+                },
+                "after": {
+                    "type": "string",
+                    "description": "Commit, file hash, path, or other identifier after the edit."
+                },
+                "storage": {
+                    "type": "string",
+                    "description": "Where the version record is stored, such as PR description, evidence file, or git history."
+                }
+            },
+            "additionalProperties": false
+        },
+        "iteration_date": {
+            "type": "string",
+            "format": "date",
+            "description": "ISO 8601 date of the iteration pass."
+        },
+        "baseline_failures": {
+            "type": "array",
+            "description": "Inputs that failed before the edit.",
+            "items": {
+                "type": "object",
+                "required": [
+                    "input_id",
+                    "observed_behavior"
+                ],
+                "properties": {
+                    "input_id": {
+                        "type": "string",
+                        "description": "Short label or index for the test input."
+                    },
+                    "observed_behavior": {
+                        "type": "string",
+                        "description": "What the model did wrong on this input."
+                    },
+                    "failure_class": {
+                        "type": "string",
+                        "enum": [
+                            "missing_constraint",
+                            "ambiguous_instruction",
+                            "conflicting_directives",
+                            "missing_context",
+                            "over_broad_rule"
+                        ],
+                        "description": "Classification of the failure per the iteration workflow."
+                    }
+                }
+            },
+            "minItems": 1
+        },
+        "edited_span": {
+            "type": "object",
+            "description": "What was changed in the prompt.",
+            "required": [
+                "section",
+                "change_summary"
+            ],
+            "properties": {
+                "section": {
+                    "type": "string",
+                    "description": "Heading or line range of the edited section."
+                },
+                "change_summary": {
+                    "type": "string",
+                    "description": "One-sentence summary of the edit."
+                },
+                "lines_added": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "lines_removed": {
+                    "type": "integer",
+                    "minimum": 0
+                }
+            }
+        },
+        "rerun_outcomes": {
+            "type": "array",
+            "description": "Pass/fail results per test input after the edit.",
+            "items": {
+                "type": "object",
+                "required": [
+                    "input_id",
+                    "result"
+                ],
+                "properties": {
+                    "input_id": {
+                        "type": "string",
+                        "description": "Same input_id from baseline_failures or test set."
+                    },
+                    "result": {
+                        "type": "string",
+                        "enum": [
+                            "pass",
+                            "fail",
+                            "partial"
+                        ]
+                    },
+                    "notes": {
+                        "type": "string",
+                        "description": "Optional detail on partial or unexpected outcome."
+                    }
+                }
+            },
+            "minItems": 1
+        },
+        "regression_status": {
+            "type": "object",
+            "description": "Summary of whether previously passing inputs still pass.",
+            "required": [
+                "regressions_found",
+                "details"
+            ],
+            "properties": {
+                "regressions_found": {
+                    "type": "boolean"
+                },
+                "details": {
+                    "type": "string",
+                    "description": "Empty string if none; otherwise list affected input_ids and behavior."
+                }
+            }
+        },
+        "audit_result": {
+            "type": "object",
+            "description": "Optional: output of audit_prompt_structure.py after the edit.",
+            "properties": {
+                "kind": {
+                    "type": "string"
+                },
+                "kind_confidence": {
+                    "type": "string",
+                    "enum": [
+                        "high",
+                        "medium",
+                        "low"
+                    ]
+                },
+                "error_count": {
+                    "type": "integer",
+                    "minimum": 0
+                },
+                "warning_count": {
+                    "type": "integer",
+                    "minimum": 0
+                }
+            }
+        },
+        "evidence_artifacts": {
+            "type": "array",
+            "description": "Optional paths or links to transcripts, harness output, screenshots, or judging notes.",
+            "items": {
+                "type": "string"
+            }
+        }
+    },
+    "additionalProperties": false
+}
