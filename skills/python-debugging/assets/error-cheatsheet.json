@@ -1,0 +1,160 @@
+{
+    "common_errors": {
+        "AttributeError_NoneType": {
+            "pattern": "AttributeError:\\s*['\"]NoneType['\"] object has no attribute",
+            "causes": [
+                "Function returned None instead of expected value",
+                "Variable not assigned",
+                "Failed API call or database query"
+            ],
+            "quick_fix": "Inspect the producing call or lookup, then enforce the required-value contract at that boundary"
+        },
+        "KeyError": {
+            "pattern": "KeyError:",
+            "causes": [
+                "Missing dictionary key",
+                "Wrong key name (typo or case sensitivity)",
+                "Key removed or never added"
+            ],
+            "quick_fix": "Inspect available keys and decide whether the field is required; validate required fields or use an explicit optional-field default"
+        },
+        "TypeError_not_subscriptable": {
+            "pattern": "TypeError: .* object is not subscriptable",
+            "causes": [
+                "Trying to index None",
+                "Trying to index a non-sequence type",
+                "Function returned unexpected type"
+            ],
+            "quick_fix": "Inspect type(value) and repr(value), then correct the producer or branch on the documented runtime shape"
+        },
+        "TypeError_operand": {
+            "pattern": "TypeError: unsupported operand type",
+            "causes": [
+                "Mixing incompatible types (str + int)",
+                "Operating on None",
+                "Wrong argument types to function"
+            ],
+            "quick_fix": "Inspect both operand types and correct conversion at the input boundary"
+        },
+        "ImportError": {
+            "pattern": "ImportError|ModuleNotFoundError",
+            "causes": [
+                "Package not installed",
+                "Wrong package name",
+                "Virtual environment not activated",
+                "Circular import"
+            ],
+            "quick_fix": "Check pip list, verify venv, check import paths"
+        },
+        "NameError": {
+            "pattern": "NameError: name .* is not defined",
+            "causes": [
+                "Variable not assigned yet",
+                "Typo in variable name",
+                "Variable in different scope",
+                "Notebook cell not executed"
+            ],
+            "quick_fix": "Run cells in order, check spelling, check scope"
+        },
+        "IndexError": {
+            "pattern": "IndexError: .* index out of range",
+            "causes": [
+                "Empty list or sequence",
+                "Index exceeds length",
+                "Off-by-one error"
+            ],
+            "quick_fix": "Check length before accessing: if len(items) > index"
+        },
+        "ValueError_unpack": {
+            "pattern": "ValueError: (not enough|too many) values to unpack",
+            "causes": [
+                "Mismatched unpacking assignment",
+                "Unexpected data structure"
+            ],
+            "quick_fix": "Inspect the producer and sequence length, then fix the returned shape or explicitly handle documented optional extras"
+        },
+        "RecursionError": {
+            "pattern": "RecursionError: maximum recursion depth",
+            "causes": [
+                "Infinite recursion (no base case)",
+                "Circular references",
+                "Very deep data structures"
+            ],
+            "quick_fix": "Add/fix base case, use iteration instead"
+        },
+        "UnicodeDecodeError": {
+            "pattern": "UnicodeDecodeError",
+            "causes": [
+                "Wrong encoding specified",
+                "Binary data read as text",
+                "Mixed encodings in file"
+            ],
+            "quick_fix": "Inspect the file format and declared encoding; decode strictly with the correct encoding or handle a documented binary format"
+        },
+        "UnicodeEncodeError": {
+            "pattern": "UnicodeEncodeError",
+            "causes": [
+                "Console encoding cannot represent printed characters",
+                "Non-ASCII status glyphs in quick verification scripts",
+                "PYTHONIOENCODING or terminal encoding is not UTF-8"
+            ],
+            "quick_fix": "Use ASCII status text or configure UTF-8 output before printing non-ASCII symbols"
+        }
+    },
+    "pyspark_errors": {
+        "AnalysisException_column": {
+            "pattern": "AnalysisException.*cannot resolve",
+            "causes": [
+                "Column name typo",
+                "Case sensitivity mismatch",
+                "Column from wrong DataFrame"
+            ],
+            "quick_fix": "Print df.columns to see available columns"
+        },
+        "Column_not_callable": {
+            "pattern": "'Column' object is not callable",
+            "causes": [
+                "Extra parentheses on column reference",
+                "Using Python method instead of PySpark function"
+            ],
+            "quick_fix": "Remove extra parens, use F.lower(col) not col.lower()"
+        },
+        "Py4JJavaError": {
+            "pattern": "Py4JJavaError",
+            "causes": [
+                "JVM-side exception",
+                "Driver/executor memory issues",
+                "Network or connection problems"
+            ],
+            "quick_fix": "Look for 'Caused by' in full traceback for root cause"
+        }
+    },
+    "async_errors": {
+        "EventLoop_closed": {
+            "pattern": "RuntimeError: Event loop is closed",
+            "causes": [
+                "Windows-specific cleanup issue",
+                "Loop closed while tasks pending"
+            ],
+            "quick_fix": "Set WindowsSelectorEventLoopPolicy on Windows"
+        },
+        "coroutine_not_awaited": {
+            "pattern": "RuntimeWarning: coroutine .* was never awaited",
+            "causes": [
+                "Missing await keyword",
+                "Calling async function without await"
+            ],
+            "quick_fix": "Add await before async function call"
+        }
+    },
+    "debugging_steps": [
+        "1. Read the FULL traceback (error is usually at the bottom)",
+        "2. Print type(variable) to check types",
+        "3. Print repr(variable) to see exact contents",
+        "4. Break complex expressions into separate lines",
+        "5. Add strategic print/log statements",
+        "6. Check for None values explicitly",
+        "7. Verify function return values",
+        "8. Check import paths and package versions"
+    ]
+}
