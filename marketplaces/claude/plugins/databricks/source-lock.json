@@ -1,0 +1,1705 @@
+{
+  "schemaVersion": 4,
+  "plugin": "databricks",
+  "sourceRoot": "skills/",
+  "sourceDigest": "c7a8c7bcd7a48ee434ca2016d2bf2a384311a7bd40ce2e7269cb00f7a585f371",
+  "projectionManifestDigest": "8e53e435f67dbc5469c7bd88de649cb248f857a9dbce1c47fdd2839cedb9a329",
+  "projectionDigest": "92528fd61db97ccaf6ade493319448fbca54845dfe669afdb71a544baee00c94",
+  "cachebuster": "92528fd61db9",
+  "sourceSkills": [
+    "databricks-api-calls",
+    "databricks-asset-bundles",
+    "databricks-batch-inference",
+    "databricks-deploy-monitor",
+    "databricks-ml-training",
+    "databricks-model-serving",
+    "databricks-project-status",
+    "databricks-runtime-doctor",
+    "databricks-spark-etl",
+    "spark-diagnostics",
+    "mlflow-run-auditor"
+  ],
+  "excludedSourcePrefixes": [],
+  "sourceFiles": [
+    {
+      "path": "skills/databricks-api-calls/references/api-call-workflows.md",
+      "mode": "100644",
+      "sha256": "52b40b641bee56af5d9e7aefd1237dff83effffe85e492a22a32526d4a0967f5"
+    },
+    {
+      "path": "skills/databricks-api-calls/references/bulk-list-mutation.md",
+      "mode": "100644",
+      "sha256": "8124f29fa949f885388161b3212aa784bce8ee7c2a0b2dea52e0dd810b10960a"
+    },
+    {
+      "path": "skills/databricks-api-calls/references/databricks-api-endpoints.md",
+      "mode": "100644",
+      "sha256": "587ba6bec54a60cc41feb7663f7eea630cea5ecc66ca990dbc305ce684eb6dfb"
+    },
+    {
+      "path": "skills/databricks-api-calls/references/model-backend-gateways.md",
+      "mode": "100644",
+      "sha256": "0aa38861216d429ea5112672041b6c6fbd6723795ab44c88ac688aa822335b34"
+    },
+    {
+      "path": "skills/databricks-api-calls/references/operation-classes.md",
+      "mode": "100644",
+      "sha256": "3d68470c4d772df991f745a8ba7955a2cefba8dcce77202189bd76aac26bf643"
+    },
+    {
+      "path": "skills/databricks-api-calls/references/profile-workspace-preflight.md",
+      "mode": "100644",
+      "sha256": "658ffc59ac7b0f47c26d40f6b0da8a04469e4955eca649d29266fc98dae7bad7"
+    },
+    {
+      "path": "skills/databricks-api-calls/references/request-body-contracts.md",
+      "mode": "100644",
+      "sha256": "b163bb503a7058e3ce33e626537ee8e53134f4dc1724be73385f3f461a5c6d60"
+    },
+    {
+      "path": "skills/databricks-api-calls/scripts/check_databricks_context.py",
+      "mode": "100644",
+      "sha256": "9b62b42a6a50df90083fcc1885bc644d99eda1b44cb0bdd5ba82a399b1769b79"
+    },
+    {
+      "path": "skills/databricks-api-calls/scripts/render_api_script.py",
+      "mode": "100644",
+      "sha256": "c3455522b42329d62a823266d40716943ed282779170d8d838713b8963c3b70c"
+    },
+    {
+      "path": "skills/databricks-api-calls/scripts/safe_databricks_diagnostics.py",
+      "mode": "100644",
+      "sha256": "eb6329a7bc570e052fbdc6b280b93284a19936017bee7f70a9961765a7ee8e09"
+    },
+    {
+      "path": "skills/databricks-api-calls/SKILL.md",
+      "mode": "100644",
+      "sha256": "3f3616c98658752dd39a180107f02e2ed4be222a73660ca99462c7b5a606cfc7"
+    },
+    {
+      "path": "skills/databricks-api-calls/tests/test_helper_safety.py",
+      "mode": "100644",
+      "sha256": "ce67ad389e8890a3b002697fdccb7cab2b8e64c65ea3f9512c1d90318bda9932"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/assets/databricks-full.yml",
+      "mode": "100644",
+      "sha256": "f62eeee1d7a1c5917c5907906dc2de44493d7b7d6aea846410504f120f5ecd83"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/assets/databricks-minimal.yml",
+      "mode": "100644",
+      "sha256": "c3b34526ea8a35a16a85cdfd5da01f0196b1c534d126e4978439294341b5e72a"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/assets/databricks-split.yml",
+      "mode": "100644",
+      "sha256": "d7f146e8868757b8aa93a904e84c45b16ef6a3d0ed4277b65adb5221e82d6f3d"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/assets/local-path-policy.json",
+      "mode": "100644",
+      "sha256": "16e743882aef6684eb29b6f8e09995fe9e1c86aad1d91180a642aee5082417e4"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/references/ci-cd-patterns.md",
+      "mode": "100644",
+      "sha256": "8769ca28ae5ab4bc1efecb5e27d27b8d227e2aeff034679426cdb550838d269f"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/references/dab-config-schema.md",
+      "mode": "100644",
+      "sha256": "14efa5449a1efb9a9f6d12263131e34d387000f222c958a46618411902f324c7"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/references/dab-quick-reference.md",
+      "mode": "100644",
+      "sha256": "29916b494d698c57f9d1e336a14b1b4180c46136b45b377ec7c48a2fafb98dc0"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/references/gpu-cluster-patterns.md",
+      "mode": "100644",
+      "sha256": "257ee18dd97721c14472a994dc89775be7201d4a6e874e19ad701b667de7b66c"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/references/job-configuration.md",
+      "mode": "100644",
+      "sha256": "8acde8df784452b4cc2cf044b82e9a669328487e6330149083041b8d8cc6fcdd"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/references/job-topology-changes.md",
+      "mode": "100644",
+      "sha256": "b800b544d7dc757cfce81612183797685fc953da4fba0ab05286030cdb742725"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/references/multi-job-patterns.md",
+      "mode": "100644",
+      "sha256": "f04c90d2bf4dd4a9574838cf03d0458452338ce742c9ae44bd19659321b8ef19"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/references/operation-classes.md",
+      "mode": "100644",
+      "sha256": "3d68470c4d772df991f745a8ba7955a2cefba8dcce77202189bd76aac26bf643"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/references/profile-workspace-preflight.md",
+      "mode": "100644",
+      "sha256": "e8b1612f2e525166e98b888a10d68e4e47c63697f1d81895eafdd65fc1f5eb76"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/references/python-dependency-management.md",
+      "mode": "100644",
+      "sha256": "5dfa7c1013641c9e42518b7bafb0617b40fdd3d3507c6207fa2273918484fc2a"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/references/resources-splitting.md",
+      "mode": "100644",
+      "sha256": "be442ac9db4faaeaf86303d6a42047c2fd29c0f4c135cee8a435a299e0e4cbff"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/references/supported-runtimes.yml",
+      "mode": "100644",
+      "sha256": "38cce1728ba56621f417b6993b69d079212e97648a16e4bc031485a20ed17a03"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/scripts/dab_doctor.mjs",
+      "mode": "100644",
+      "sha256": "f27aed90f09f4e7df9707884ab3448efcbabf5aed4082d1c43effabce41935b6"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/scripts/package.json",
+      "mode": "100644",
+      "sha256": "fc5f05f3d5d35378dddb8dc206591f9283120f23d579d3b3f03a6e1f515af684"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/scripts/requirements.txt",
+      "mode": "100644",
+      "sha256": "4963e368330fa3956d38386930ce329da5b86a979614250d18c873b253210a4f"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/scripts/validate_bundle.py",
+      "mode": "100644",
+      "sha256": "d7a320fd0d6794096a6892f6fd97975d8ae1759f1a37b98d5e8197020c205498"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/SKILL.md",
+      "mode": "100644",
+      "sha256": "2480f1c5e2256def5ffaf639bf8b0246348375c273cdf05668bc7d0ca10e9ee8"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/tests/test_job_parameters.py",
+      "mode": "100644",
+      "sha256": "ca90c6609477488f66eff8794e753ba17fcda5e7ed6dcf93add526e8f3ce2d81"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/tests/test_path_safety.py",
+      "mode": "100644",
+      "sha256": "2391a542ff52f3cda5e7b5b15f29d7d9b93235cdad198887624dd3c7e8b97c8a"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/tests/test_permissions.py",
+      "mode": "100644",
+      "sha256": "9024bfc86d8eea4cbf95dd54dcb2ba2a3358e67989693327d0a5770b17ea8c70"
+    },
+    {
+      "path": "skills/databricks-batch-inference/assets/scoring-quarantine-table-ddl.sql",
+      "mode": "100644",
+      "sha256": "90769385d794a5afcd74d4a27fed3665c602c652c69652cddf62ba16ae72565c"
+    },
+    {
+      "path": "skills/databricks-batch-inference/assets/scoring-run-audit-ddl.sql",
+      "mode": "100644",
+      "sha256": "299d4825d283aa5e790caf6bceb3aad6ebfd4bfb530373a2c9c33c4284956561"
+    },
+    {
+      "path": "skills/databricks-batch-inference/assets/scoring-table-ddl.sql",
+      "mode": "100644",
+      "sha256": "70995d982c30f07e9c3f93d674ac42524f4755bd18f64d9f78be0c201c016d2d"
+    },
+    {
+      "path": "skills/databricks-batch-inference/references/core-batch-inference-patterns.md",
+      "mode": "100644",
+      "sha256": "675e879cd96779522580e452bced42257431ff577c501b4f9a6f68cedfdfb655"
+    },
+    {
+      "path": "skills/databricks-batch-inference/references/label-share-anomaly-gating.md",
+      "mode": "100644",
+      "sha256": "5e7c90f2951c9b7549ec3c3ed654b823683779e8cffad799aea706d14037fd59"
+    },
+    {
+      "path": "skills/databricks-batch-inference/references/model-signature-contract.md",
+      "mode": "100644",
+      "sha256": "4a2cabb283d3b558f09d08f56ffdc6903bf925a7d3221a4e73904bec7b05b4e6"
+    },
+    {
+      "path": "skills/databricks-batch-inference/references/promote-ensemble-batch-loop.md",
+      "mode": "100644",
+      "sha256": "5c03a6e39b067ee13b6acc4e45669c0ff843e5c7c964c0fbe9213729c6a83221"
+    },
+    {
+      "path": "skills/databricks-batch-inference/references/reconciliation-sql-contract.md",
+      "mode": "100644",
+      "sha256": "b36458d8985b1b3418587fc5c88855cad081b5469e23f2aacc270eabba0fc6da"
+    },
+    {
+      "path": "skills/databricks-batch-inference/references/safe-write-patterns.md",
+      "mode": "100644",
+      "sha256": "38f22a5f23907a7c18dfae60d580ee4c4a050137b4dae92448bf8d206430a07d"
+    },
+    {
+      "path": "skills/databricks-batch-inference/references/scoring-dataflow-contract.md",
+      "mode": "100644",
+      "sha256": "12f4690a09fd2454e65804d23f4d023cc686f80164a6a66b841853bc38180966"
+    },
+    {
+      "path": "skills/databricks-batch-inference/references/uc-model-loading.md",
+      "mode": "100644",
+      "sha256": "d5d76d5889cdb53ed63961231a5cf044e658fb572cc0a19368351efa96c27a40"
+    },
+    {
+      "path": "skills/databricks-batch-inference/scripts/business_key_contract.py",
+      "mode": "100644",
+      "sha256": "58d87e183c62d70b5869b8366bb846cbe5def54f51a428871e6af8cc509d85c4"
+    },
+    {
+      "path": "skills/databricks-batch-inference/scripts/derive_publication_decision.py",
+      "mode": "100644",
+      "sha256": "1552f516754cd299da8782ee58ea76f304676bdbe38e59bd681ad6725f6f16e1"
+    },
+    {
+      "path": "skills/databricks-batch-inference/scripts/emit_reconciliation_sql.py",
+      "mode": "100644",
+      "sha256": "2a04d7877edc23ee3c464bfb00e7878983f3e43a2cd9f364f87e3717848b4f11"
+    },
+    {
+      "path": "skills/databricks-batch-inference/SKILL.md",
+      "mode": "100644",
+      "sha256": "b2894814456fab6773ea87708f8c19d5ce2cbb410f5fc84fac01af3ac8f13fee"
+    },
+    {
+      "path": "skills/databricks-batch-inference/tests/fixtures/full-branches.sql",
+      "mode": "100644",
+      "sha256": "db6a74281e533616f294a37c85382658919b61e9ce24ea6d10982c732ee77610"
+    },
+    {
+      "path": "skills/databricks-batch-inference/tests/fixtures/publication-decision-cases.json",
+      "mode": "100644",
+      "sha256": "dd42a7db0d3808e7a69604713428ca90a0c8c817b2eddc024b9ad951e93d124b"
+    },
+    {
+      "path": "skills/databricks-batch-inference/tests/test_emit_reconciliation_sql.py",
+      "mode": "100644",
+      "sha256": "af7306ae3c9f6a55e130a50c677bdc1dabc918b6b9b7730dd084f0d5aa7523da"
+    },
+    {
+      "path": "skills/databricks-deploy-monitor/references/common-failure-patterns.md",
+      "mode": "100644",
+      "sha256": "392349dfeb41f7484cf21a3f3681dd84ad46e05ecc6a9be1fac82234c6b134e8"
+    },
+    {
+      "path": "skills/databricks-deploy-monitor/references/date-window-run-ledger.md",
+      "mode": "100644",
+      "sha256": "37da2f0a370cf673334ebde6dd1dd8bb9abc441f96a724d29849b263cc1a2063"
+    },
+    {
+      "path": "skills/databricks-deploy-monitor/references/deploy-monitor-workflow.md",
+      "mode": "100644",
+      "sha256": "a043bc08710fb7072403b04851b37f9afbff0d80424db44e4e5199f4daf930ae"
+    },
+    {
+      "path": "skills/databricks-deploy-monitor/references/one-off-task-recovery.md",
+      "mode": "100644",
+      "sha256": "47eaa994eb0b65939199bfd4bfdacfc285d1bf01f8c581006d1d4e716e8708ad"
+    },
+    {
+      "path": "skills/databricks-deploy-monitor/references/operation-classes.md",
+      "mode": "100644",
+      "sha256": "3d68470c4d772df991f745a8ba7955a2cefba8dcce77202189bd76aac26bf643"
+    },
+    {
+      "path": "skills/databricks-deploy-monitor/references/output-contract-verification.md",
+      "mode": "100644",
+      "sha256": "bb1bb39f1bf889e30fe74bbae45fad3ec3c5f58a5e6936aaec1d6d4aea236bce"
+    },
+    {
+      "path": "skills/databricks-deploy-monitor/references/profile-workspace-preflight.md",
+      "mode": "100644",
+      "sha256": "90e6c550d49cc671bf0de204b55d1ef27aa622eb2c093fc9a79cb84ec0c53318"
+    },
+    {
+      "path": "skills/databricks-deploy-monitor/references/run-status-helper-contract.md",
+      "mode": "100644",
+      "sha256": "af757d9dd171aca486701d280c2a936f1bc3db84675836061a11ace46eaf9f74"
+    },
+    {
+      "path": "skills/databricks-deploy-monitor/scripts/check_run_status.py",
+      "mode": "100644",
+      "sha256": "fb6059b50919484a2de661de9b2d931d2d3e930b69615408a18c7d9055c2c5ea"
+    },
+    {
+      "path": "skills/databricks-deploy-monitor/scripts/check_run_status.sh",
+      "mode": "100644",
+      "sha256": "8d788d1354b9cc71edf87727e7de689235bd7124ee3e66b27248e54f85b795cd"
+    },
+    {
+      "path": "skills/databricks-deploy-monitor/scripts/extract_launch_run_id.py",
+      "mode": "100644",
+      "sha256": "c0f53bc27448af6ecf24eac6a8c070a75e4751a467ee5c88cd8a3d5fce2fec51"
+    },
+    {
+      "path": "skills/databricks-deploy-monitor/SKILL.md",
+      "mode": "100644",
+      "sha256": "e88e66823b46c6dd0f9e0b3a946a34d15b4b918f17517462aea3eea7decaaa7b"
+    },
+    {
+      "path": "skills/databricks-deploy-monitor/tests/test_check_run_status.py",
+      "mode": "100644",
+      "sha256": "90523a929f6a251ba0a3510401df9a7476f678a70ef4cd8743ea40f8db2b146b"
+    },
+    {
+      "path": "skills/databricks-deploy-monitor/tests/test_extract_launch_run_id.py",
+      "mode": "100644",
+      "sha256": "ccc0c46cb2fa1dfef491779a2c7c1644c918ad473869537674cbe64aec790931"
+    },
+    {
+      "path": "skills/databricks-ml-training/assets/parameter-block-template.py",
+      "mode": "100644",
+      "sha256": "a09c83d7aebedfa5a6c0245a8ef87d4d2b7eddd4ea793dff5d88280dc93cffc0"
+    },
+    {
+      "path": "skills/databricks-ml-training/assets/training-config-schema.json",
+      "mode": "100644",
+      "sha256": "314e561dc164d8f6f75b47183b1a19f4bf7103b68d28cdc81f08fb792648d678"
+    },
+    {
+      "path": "skills/databricks-ml-training/references/common-metrics-reference.md",
+      "mode": "100644",
+      "sha256": "24e20f88f66e7663c72bd601cd3db74dc5b9ae71bb0f661facce81ceab72b8ee"
+    },
+    {
+      "path": "skills/databricks-ml-training/references/core-training-patterns.md",
+      "mode": "100644",
+      "sha256": "87f5c6e9322d593c5df0b926351b32418b84fbe97f03d5d69292fceede746af1"
+    },
+    {
+      "path": "skills/databricks-ml-training/references/ensemble-training.md",
+      "mode": "100644",
+      "sha256": "50b6dfccb8eb1d48cb558020ab35dd013a4ef2495d28824530284061591181aa"
+    },
+    {
+      "path": "skills/databricks-ml-training/references/feature-schema-contract.md",
+      "mode": "100644",
+      "sha256": "8ceec0611e34f5afa51d055fc1319044d8044ed860bad98033a197550125a60b"
+    },
+    {
+      "path": "skills/databricks-ml-training/references/huggingface-transformers.md",
+      "mode": "100644",
+      "sha256": "532d3b33c0453e9b8a5e25574c22ff47215d89cec229f7fec87f36ffa8fcd10a"
+    },
+    {
+      "path": "skills/databricks-ml-training/references/imbalanced-classification.md",
+      "mode": "100644",
+      "sha256": "7c8aed890076d8256680609ab524b6794657e41eec5ee12ef16666db51b42032"
+    },
+    {
+      "path": "skills/databricks-ml-training/references/ml-lifecycle-handoffs.md",
+      "mode": "100644",
+      "sha256": "990904c9b6a1a101a5186d91ac9c339d2022fa33ee7b8f85c86672fc8c7aa742"
+    },
+    {
+      "path": "skills/databricks-ml-training/references/mlflow-dataset-metadata.md",
+      "mode": "100644",
+      "sha256": "4dbdc6dc1608e09ca9d840cfef9da1b579c74352036b07eb80485aaf45a880ac"
+    },
+    {
+      "path": "skills/databricks-ml-training/references/point-in-time-training.md",
+      "mode": "100644",
+      "sha256": "72ad054034830e2c550bb1dceb926f402049ba301cf8c5fc77df8c397e15576e"
+    },
+    {
+      "path": "skills/databricks-ml-training/references/tabular-training-patterns.md",
+      "mode": "100644",
+      "sha256": "0780657c90e6cf222f499d307b3f0949263b9b9ad2c9d5ae9b72bef210fc1eb6"
+    },
+    {
+      "path": "skills/databricks-ml-training/references/training-compute-preflight.md",
+      "mode": "100644",
+      "sha256": "d0b170c3b192fbf6b103d3e6b96bda92cbd53c8c3513b787e17bcf7b3a45ada5"
+    },
+    {
+      "path": "skills/databricks-ml-training/scripts/feature_schema_contract.py",
+      "mode": "100644",
+      "sha256": "e0e10f7ecb31a5b8650a0026a4c0123e5d6253c4d8c4bb4433cdb26a9655dd8e"
+    },
+    {
+      "path": "skills/databricks-ml-training/scripts/imbalance_contract.py",
+      "mode": "100644",
+      "sha256": "ad404a488c7d17600045d333525cbe8c6a6dcca04de7ec8a269678e2c507247c"
+    },
+    {
+      "path": "skills/databricks-ml-training/scripts/mlflow_example_privacy.py",
+      "mode": "100644",
+      "sha256": "0a6a74db388468ca7d8520b96a599cd2b1745b5d27cf8c373b361898985698fa"
+    },
+    {
+      "path": "skills/databricks-ml-training/scripts/point_in_time_contract.py",
+      "mode": "100644",
+      "sha256": "c50616609970c3513ba1b058ef9ecb31a31f6964f93addd7bfd8268e2c19f6a4"
+    },
+    {
+      "path": "skills/databricks-ml-training/scripts/promotion_eligibility.py",
+      "mode": "100644",
+      "sha256": "d5746e3a23a7435cd8a44a03fb2fca10126b75372a7e134c05376bd220ec4a29"
+    },
+    {
+      "path": "skills/databricks-ml-training/scripts/validate_training_config.py",
+      "mode": "100644",
+      "sha256": "b999e5e82d1a9803dcb9f0b7224e4355fcf692b83fbef8e86da31db269536d75"
+    },
+    {
+      "path": "skills/databricks-ml-training/SKILL.md",
+      "mode": "100644",
+      "sha256": "d3778777b8bc41c75322286063a6c0dda300a4aa51e68bbc770455ff2beeb7f8"
+    },
+    {
+      "path": "skills/databricks-ml-training/templates/model-performance-report-template.md",
+      "mode": "100644",
+      "sha256": "022e92f219b22d75c8cb2077e13286e5a3af7ab0902fff28e6d5b2f19b8eb50e"
+    },
+    {
+      "path": "skills/databricks-ml-training/tests/privacy_column_cases.py",
+      "mode": "100644",
+      "sha256": "8a44a494490758a9d7ce1268c158690d6edebb8b2c7d870890c08ee4d4db79b3"
+    },
+    {
+      "path": "skills/databricks-ml-training/tests/test_temporal_and_feature_schema_contract.py",
+      "mode": "100644",
+      "sha256": "5fcccd9b09bb219a85a67bbb86680bb8f26f8f75880e817b01e337ecb0111b4c"
+    },
+    {
+      "path": "skills/databricks-ml-training/tests/test_training_contract_helpers.py",
+      "mode": "100644",
+      "sha256": "3e61a09f1bebbe1f9bd04dd7e2a14feb87bce159de193a7538079b667e671055"
+    },
+    {
+      "path": "skills/databricks-ml-training/tests/test_validate_training_config.py",
+      "mode": "100644",
+      "sha256": "f434e23792ba760bc97f35e62b76d23a4f105e3b3112eb0ee8b0306335fe538d"
+    },
+    {
+      "path": "skills/databricks-model-serving/assets/endpoint-config-schema.json",
+      "mode": "100644",
+      "sha256": "b40121cc9aab45d6b431ff936de4e54437ed2b04af7bd471c076218239b00570"
+    },
+    {
+      "path": "skills/databricks-model-serving/assets/serving-config-template.py",
+      "mode": "100644",
+      "sha256": "df290b7da162edbc3e106532cac42c6f6523316732fef7f6fef9372ea862e207"
+    },
+    {
+      "path": "skills/databricks-model-serving/references/core-serving-patterns.md",
+      "mode": "100644",
+      "sha256": "557b1390c3a94e9c0d8771d5862ea71901ae0fffbe53508ff302dfad44c6f03e"
+    },
+    {
+      "path": "skills/databricks-model-serving/references/endpoint-helper-contract.md",
+      "mode": "100644",
+      "sha256": "15bfbc7b97ec0127a8afa3a0447476544540e2c4be588d03ab63603b1ab32439"
+    },
+    {
+      "path": "skills/databricks-model-serving/references/llm-router-serving-patterns.md",
+      "mode": "100644",
+      "sha256": "fec91d541d8b5c7b9111f2161094be773e065c00cc73c8b5e5a4ee15bc46ed5d"
+    },
+    {
+      "path": "skills/databricks-model-serving/references/monitoring-patterns.md",
+      "mode": "100644",
+      "sha256": "ddf21d67a630717e1fa2a67af9900fba1eb1681faab3c502819e72ba8f0a26e8"
+    },
+    {
+      "path": "skills/databricks-model-serving/references/operation-classes.md",
+      "mode": "100644",
+      "sha256": "3668b169e1fd86b7bcafcb000205f2c2c8cdb79f742f7e2ab2803a32829e918a"
+    },
+    {
+      "path": "skills/databricks-model-serving/references/prod-target-safety.md",
+      "mode": "100644",
+      "sha256": "a33eb22d7417c6c848fe731a970df8b6bc6ebf65d8482bd955c6c08939382050"
+    },
+    {
+      "path": "skills/databricks-model-serving/references/semantic-readiness-patterns.md",
+      "mode": "100644",
+      "sha256": "e35cdca2c61858c08b1e602921ab5fb264cc49f21fa9c840e93c3a333eb9c7a8"
+    },
+    {
+      "path": "skills/databricks-model-serving/scripts/check_endpoint.py",
+      "mode": "100644",
+      "sha256": "9bc88a6e638d53848ca1aa062ea1a78cfc2235ffe0420fce18229f96928d7264"
+    },
+    {
+      "path": "skills/databricks-model-serving/scripts/logical_types.py",
+      "mode": "100644",
+      "sha256": "d937055d4276371776a1f6da842780b96a4ca34f225ba3669faebc5a16b99e53"
+    },
+    {
+      "path": "skills/databricks-model-serving/scripts/validate_endpoint_config.py",
+      "mode": "100644",
+      "sha256": "09fa19645a7cbdd70aacd2af02006903bbcaf109c2ab2b4d6fbd11d2afc28eeb"
+    },
+    {
+      "path": "skills/databricks-model-serving/SKILL.md",
+      "mode": "100644",
+      "sha256": "7514fa5b35325647fe74d7676193eb76a12a78c9fd34a822f4636ed2401b6250"
+    },
+    {
+      "path": "skills/databricks-model-serving/tests/test_check_endpoint.py",
+      "mode": "100644",
+      "sha256": "11ee59d8cd4315bf5e67722e1ef490ec8f02431f22a7814646f8b928597b2992"
+    },
+    {
+      "path": "skills/databricks-model-serving/tests/test_validate_endpoint_config.py",
+      "mode": "100644",
+      "sha256": "1c8c90cd7e56239225a60b9e65fee8932a50e972f6094ddcf3a954b98bbb5ef8"
+    },
+    {
+      "path": "skills/databricks-project-status/references/review-workflow.md",
+      "mode": "100644",
+      "sha256": "2ea65c8ac841133000b89ebdfd1866a2b788ae8bbef99e3519b1c51836bcd0fa"
+    },
+    {
+      "path": "skills/databricks-project-status/scripts/status_report.py",
+      "mode": "100644",
+      "sha256": "fa923491f4cee3c9326666ba102447029a20cc48a372eb51b4733fc12908f138"
+    },
+    {
+      "path": "skills/databricks-project-status/SKILL.md",
+      "mode": "100644",
+      "sha256": "0c8d5c6cfbdcfb0068a4d88a046fd3730a682efb1cb9e1c0d6cfc68ce64fb74d"
+    },
+    {
+      "path": "skills/databricks-project-status/templates/status-report.md",
+      "mode": "100644",
+      "sha256": "c2087c46f0749b2735941523df79c3f825acf5f26b588d73b88c3b23b834c336"
+    },
+    {
+      "path": "skills/databricks-project-status/tests/test_status_report.py",
+      "mode": "100644",
+      "sha256": "8f3aa7837c1f3f6ead6f330e7da70c016ef83d4ebb9fb91fadb8f820d6393a23"
+    },
+    {
+      "path": "skills/databricks-runtime-doctor/references/databricks-job-runtime-triage.md",
+      "mode": "100644",
+      "sha256": "8db44389a6ad9f14ed12411e01435d1d8d689ae7ac61927acd06eb63e7e57ded"
+    },
+    {
+      "path": "skills/databricks-runtime-doctor/references/fresh-runtime-evidence.md",
+      "mode": "100644",
+      "sha256": "26c5f4f6562e32086216b08f0e207a9d7f08b2bc8f9d781bef9e6f380b056853"
+    },
+    {
+      "path": "skills/databricks-runtime-doctor/references/hf-trainingargs-compat.md",
+      "mode": "100644",
+      "sha256": "97fe93be5aa7beb4dc5b3142570befa75ecf60a92c5cbaa10e12804aa2fa458a"
+    },
+    {
+      "path": "skills/databricks-runtime-doctor/references/import-time-dependency-triage.md",
+      "mode": "100644",
+      "sha256": "ca4dd44a2e920826d269f46f9cf6da7f20b62030eb3f353074326968a6ead264"
+    },
+    {
+      "path": "skills/databricks-runtime-doctor/references/known-good-matrices.md",
+      "mode": "100644",
+      "sha256": "eba5553a0eb2306c7b98d00272e1b5dd1cb25e3b2693e907d9c97d82e82c72d2"
+    },
+    {
+      "path": "skills/databricks-runtime-doctor/scripts/check_notebook_runtime_order.py",
+      "mode": "100644",
+      "sha256": "426670a2c7c4a0394c724f5f3a0aad3a4d0a6979c0e3703e94949e049fe1f475"
+    },
+    {
+      "path": "skills/databricks-runtime-doctor/scripts/collect_env_snapshot.py",
+      "mode": "100644",
+      "sha256": "e31f03db77c75845acbdb4b9875bd0f0d04729d448fbf48b3f22db0a632d056c"
+    },
+    {
+      "path": "skills/databricks-runtime-doctor/scripts/probe_training_arguments.py",
+      "mode": "100644",
+      "sha256": "d5f68e84b0ad5d073a15f33cd1d56d54b0074b43922e93326935d724ac8dd15d"
+    },
+    {
+      "path": "skills/databricks-runtime-doctor/scripts/runtime_safety.py",
+      "mode": "100644",
+      "sha256": "aa1f43c346042fb43357df7dce46c247af264a3f93eda1f5260cfdf7b1d2de26"
+    },
+    {
+      "path": "skills/databricks-runtime-doctor/scripts/tests/test_runtime_doctor_scripts.py",
+      "mode": "100644",
+      "sha256": "b1ca39a5c005256bdb2a6c171756fc3e1d53e3e63617f0852c8a5dcde0a142a0"
+    },
+    {
+      "path": "skills/databricks-runtime-doctor/SKILL.md",
+      "mode": "100644",
+      "sha256": "1f3282443f97f187f4b40b5c4bb83741e9fc180ae96179238f258e047aa7f3f5"
+    },
+    {
+      "path": "skills/databricks-spark-etl/assets/scd2-table-ddl.sql",
+      "mode": "100644",
+      "sha256": "996d8b19403057260181fc7aa67ee0288663a0af88cad2aea1feb8e6376d69f0"
+    },
+    {
+      "path": "skills/databricks-spark-etl/references/core-etl-patterns.md",
+      "mode": "100644",
+      "sha256": "cf6cc3e4db54abd56a8f1dd2a176fd5938b7ec93ebe744f2bf14b1c13d1d1030"
+    },
+    {
+      "path": "skills/databricks-spark-etl/references/delta-errors.md",
+      "mode": "100644",
+      "sha256": "ed9de676205db71c607b3aa3d677eb12f8e47920a7a576329639bc4e3000041a"
+    },
+    {
+      "path": "skills/databricks-spark-etl/references/delta-write-contracts.md",
+      "mode": "100644",
+      "sha256": "a58fe8407d4671adfea092422b2f605d4d84733b1c032601de7fa4dc2b9dc146"
+    },
+    {
+      "path": "skills/databricks-spark-etl/references/schema-write-contract.md",
+      "mode": "100644",
+      "sha256": "65aeda5b727e68588a7a8c5338e582ac5fa2954a54bdf24d3035344ef8e373ee"
+    },
+    {
+      "path": "skills/databricks-spark-etl/references/streaming-patterns.md",
+      "mode": "100644",
+      "sha256": "e1760c038f62f2e5e50628ed37ba4825dec732ab8909910d8903387c156ddd3e"
+    },
+    {
+      "path": "skills/databricks-spark-etl/scripts/validate_schema.py",
+      "mode": "100644",
+      "sha256": "023009ed9ffea4cbaed504465566dfde7aaa3b436583447777287317fe4da9c0"
+    },
+    {
+      "path": "skills/databricks-spark-etl/SKILL.md",
+      "mode": "100644",
+      "sha256": "cc3b77dfd9e48242a96b173e5beb1fd49be7e15fb5ec0f009160a81a3fed8979"
+    },
+    {
+      "path": "skills/databricks-spark-etl/tests/test_validate_schema.py",
+      "mode": "100644",
+      "sha256": "1f1b9e33abfd967eff3c402ae7db4e460c69d24fc119ceb33ab82ecb11bc4b69"
+    },
+    {
+      "path": "skills/mlflow-run-auditor/references/audit-output-contract.md",
+      "mode": "100644",
+      "sha256": "ab882ab07a726699e949d81a80664b10ab0823e61336f44e42e50bbda61393ad"
+    },
+    {
+      "path": "skills/mlflow-run-auditor/references/job-ready-run-audit.md",
+      "mode": "100644",
+      "sha256": "844248123f7dc59dc531808f111e09627a38f102ef183c8aecdccdd9af94a269"
+    },
+    {
+      "path": "skills/mlflow-run-auditor/references/logging-patches.md",
+      "mode": "100644",
+      "sha256": "bd097477b26c7b2bfd37d3fbfd05a6f8a96389a164e520abd515be67d89793ef"
+    },
+    {
+      "path": "skills/mlflow-run-auditor/references/metric-provenance.md",
+      "mode": "100644",
+      "sha256": "7a3eb710ccda5086f28748dd47c205bc6977cb2e29a1fc9400069551eccc6070"
+    },
+    {
+      "path": "skills/mlflow-run-auditor/references/registry-consistency.md",
+      "mode": "100644",
+      "sha256": "b34640fcc9fef19184dcdc565e14edf0f46ed1c102559a21815a2141f64d746c"
+    },
+    {
+      "path": "skills/mlflow-run-auditor/references/trace-span-hierarchy.md",
+      "mode": "100644",
+      "sha256": "559f3f09fe7a921d0aa9ab992266acbf1b2573dd750b8c523a70d6843a96bd20"
+    },
+    {
+      "path": "skills/mlflow-run-auditor/scripts/audit_mlflow_runs.py",
+      "mode": "100644",
+      "sha256": "2d6760b73122cbd25457d4c45760d82294eacccdf82cb1346e0ce3c58d98d599"
+    },
+    {
+      "path": "skills/mlflow-run-auditor/SKILL.md",
+      "mode": "100644",
+      "sha256": "668ed58804c62576460cf3897051b53acf51410a50f8fad525e375611fb5d9ee"
+    },
+    {
+      "path": "skills/mlflow-run-auditor/tests/test_audit_mlflow_runs.py",
+      "mode": "100644",
+      "sha256": "f922ce75e6a9d6f0f563328fc3241db4d77f1731bdacb9da64956318bac81b6d"
+    },
+    {
+      "path": "skills/spark-diagnostics/references/cluster-runtime-diagnostics.md",
+      "mode": "100644",
+      "sha256": "40784c6ff0233b63b53ca3d85577edee1e617a52710359bd2f471539339433a5"
+    },
+    {
+      "path": "skills/spark-diagnostics/references/remediation-patterns.md",
+      "mode": "100644",
+      "sha256": "67e0fa7d35ac3e2ce48ca788a78f6930808579876c17f8035e58045c0b3c3228"
+    },
+    {
+      "path": "skills/spark-diagnostics/references/runtime-performance-diagnostics.md",
+      "mode": "100644",
+      "sha256": "8686ab4b803f40d4f824143f0643c05995b905eddf7ca689b64621b9d0cfffd6"
+    },
+    {
+      "path": "skills/spark-diagnostics/references/shared-skill-patterns.md",
+      "mode": "100644",
+      "sha256": "50fff3525cdbbb7668d41a24313d56960c26e6589ddcb68ae924bf7201901127"
+    },
+    {
+      "path": "skills/spark-diagnostics/references/static-auditor-contract.md",
+      "mode": "100644",
+      "sha256": "3ddff31d669410c1fe16d38a08eb8a0d0c6336def1be5a1d2938210b55473ef4"
+    },
+    {
+      "path": "skills/spark-diagnostics/references/static-detection-examples.md",
+      "mode": "100644",
+      "sha256": "8dd2f16efd2395ac267c3c0b93cc49fac663bfe48160cd272a3ca7b296967c28"
+    },
+    {
+      "path": "skills/spark-diagnostics/references/table-coverage-diagnostics.md",
+      "mode": "100644",
+      "sha256": "a0b2ebd87a5315094a8893c02b31d4a20e73191743bd75bb02a93147d81de9ae"
+    },
+    {
+      "path": "skills/spark-diagnostics/scripts/audit_spark_antipatterns.py",
+      "mode": "100644",
+      "sha256": "8c578b8d5823ec51d6f03a00bc8c9cb4bc5034514a31846354489fdad4d79eff"
+    },
+    {
+      "path": "skills/spark-diagnostics/SKILL.md",
+      "mode": "100644",
+      "sha256": "a6702d31d0490f1d6f99200145acabbee9e4997375d4b90b5e7f6dc76c852ade"
+    },
+    {
+      "path": "skills/spark-diagnostics/tests/test_audit_spark_antipatterns.py",
+      "mode": "100644",
+      "sha256": "8024f59f1b154b401e3afe655883846019b0de1b913f3454c762d23b4e30dd03"
+    }
+  ],
+  "generatedFiles": [
+    "skills/databricks-api-calls/references/api-call-workflows.md",
+    "skills/databricks-api-calls/references/bulk-list-mutation.md",
+    "skills/databricks-api-calls/references/databricks-api-endpoints.md",
+    "skills/databricks-api-calls/references/model-backend-gateways.md",
+    "skills/databricks-api-calls/references/operation-classes.md",
+    "skills/databricks-api-calls/references/profile-workspace-preflight.md",
+    "skills/databricks-api-calls/references/request-body-contracts.md",
+    "skills/databricks-api-calls/scripts/check_databricks_context.py",
+    "skills/databricks-api-calls/scripts/render_api_script.py",
+    "skills/databricks-api-calls/scripts/safe_databricks_diagnostics.py",
+    "skills/databricks-api-calls/SKILL.md",
+    "skills/databricks-api-calls/tests/test_helper_safety.py",
+    "skills/databricks-asset-bundles/assets/databricks-full.yml",
+    "skills/databricks-asset-bundles/assets/databricks-minimal.yml",
+    "skills/databricks-asset-bundles/assets/databricks-split.yml",
+    "skills/databricks-asset-bundles/assets/local-path-policy.json",
+    "skills/databricks-asset-bundles/references/ci-cd-patterns.md",
+    "skills/databricks-asset-bundles/references/dab-config-schema.md",
+    "skills/databricks-asset-bundles/references/dab-quick-reference.md",
+    "skills/databricks-asset-bundles/references/gpu-cluster-patterns.md",
+    "skills/databricks-asset-bundles/references/job-configuration.md",
+    "skills/databricks-asset-bundles/references/job-topology-changes.md",
+    "skills/databricks-asset-bundles/references/multi-job-patterns.md",
+    "skills/databricks-asset-bundles/references/operation-classes.md",
+    "skills/databricks-asset-bundles/references/profile-workspace-preflight.md",
+    "skills/databricks-asset-bundles/references/python-dependency-management.md",
+    "skills/databricks-asset-bundles/references/resources-splitting.md",
+    "skills/databricks-asset-bundles/references/supported-runtimes.yml",
+    "skills/databricks-asset-bundles/scripts/dab_doctor.mjs",
+    "skills/databricks-asset-bundles/scripts/package.json",
+    "skills/databricks-asset-bundles/scripts/requirements.txt",
+    "skills/databricks-asset-bundles/scripts/validate_bundle.py",
+    "skills/databricks-asset-bundles/SKILL.md",
+    "skills/databricks-asset-bundles/tests/test_job_parameters.py",
+    "skills/databricks-asset-bundles/tests/test_path_safety.py",
+    "skills/databricks-asset-bundles/tests/test_permissions.py",
+    "skills/databricks-batch-inference/assets/scoring-quarantine-table-ddl.sql",
+    "skills/databricks-batch-inference/assets/scoring-run-audit-ddl.sql",
+    "skills/databricks-batch-inference/assets/scoring-table-ddl.sql",
+    "skills/databricks-batch-inference/references/core-batch-inference-patterns.md",
+    "skills/databricks-batch-inference/references/label-share-anomaly-gating.md",
+    "skills/databricks-batch-inference/references/model-signature-contract.md",
+    "skills/databricks-batch-inference/references/promote-ensemble-batch-loop.md",
+    "skills/databricks-batch-inference/references/reconciliation-sql-contract.md",
+    "skills/databricks-batch-inference/references/safe-write-patterns.md",
+    "skills/databricks-batch-inference/references/scoring-dataflow-contract.md",
+    "skills/databricks-batch-inference/references/uc-model-loading.md",
+    "skills/databricks-batch-inference/scripts/business_key_contract.py",
+    "skills/databricks-batch-inference/scripts/derive_publication_decision.py",
+    "skills/databricks-batch-inference/scripts/emit_reconciliation_sql.py",
+    "skills/databricks-batch-inference/SKILL.md",
+    "skills/databricks-batch-inference/tests/fixtures/full-branches.sql",
+    "skills/databricks-batch-inference/tests/fixtures/publication-decision-cases.json",
+    "skills/databricks-batch-inference/tests/test_emit_reconciliation_sql.py",
+    "skills/databricks-deploy-monitor/references/common-failure-patterns.md",
+    "skills/databricks-deploy-monitor/references/date-window-run-ledger.md",
+    "skills/databricks-deploy-monitor/references/deploy-monitor-workflow.md",
+    "skills/databricks-deploy-monitor/references/one-off-task-recovery.md",
+    "skills/databricks-deploy-monitor/references/operation-classes.md",
+    "skills/databricks-deploy-monitor/references/output-contract-verification.md",
+    "skills/databricks-deploy-monitor/references/profile-workspace-preflight.md",
+    "skills/databricks-deploy-monitor/references/run-status-helper-contract.md",
+    "skills/databricks-deploy-monitor/scripts/check_run_status.py",
+    "skills/databricks-deploy-monitor/scripts/check_run_status.sh",
+    "skills/databricks-deploy-monitor/scripts/extract_launch_run_id.py",
+    "skills/databricks-deploy-monitor/SKILL.md",
+    "skills/databricks-deploy-monitor/tests/test_check_run_status.py",
+    "skills/databricks-deploy-monitor/tests/test_extract_launch_run_id.py",
+    "skills/databricks-ml-training/assets/parameter-block-template.py",
+    "skills/databricks-ml-training/assets/training-config-schema.json",
+    "skills/databricks-ml-training/references/common-metrics-reference.md",
+    "skills/databricks-ml-training/references/core-training-patterns.md",
+    "skills/databricks-ml-training/references/ensemble-training.md",
+    "skills/databricks-ml-training/references/feature-schema-contract.md",
+    "skills/databricks-ml-training/references/huggingface-transformers.md",
+    "skills/databricks-ml-training/references/imbalanced-classification.md",
+    "skills/databricks-ml-training/references/ml-lifecycle-handoffs.md",
+    "skills/databricks-ml-training/references/mlflow-dataset-metadata.md",
+    "skills/databricks-ml-training/references/point-in-time-training.md",
+    "skills/databricks-ml-training/references/tabular-training-patterns.md",
+    "skills/databricks-ml-training/references/training-compute-preflight.md",
+    "skills/databricks-ml-training/scripts/feature_schema_contract.py",
+    "skills/databricks-ml-training/scripts/imbalance_contract.py",
+    "skills/databricks-ml-training/scripts/mlflow_example_privacy.py",
+    "skills/databricks-ml-training/scripts/point_in_time_contract.py",
+    "skills/databricks-ml-training/scripts/promotion_eligibility.py",
+    "skills/databricks-ml-training/scripts/validate_training_config.py",
+    "skills/databricks-ml-training/SKILL.md",
+    "skills/databricks-ml-training/templates/model-performance-report-template.md",
+    "skills/databricks-ml-training/tests/privacy_column_cases.py",
+    "skills/databricks-ml-training/tests/test_temporal_and_feature_schema_contract.py",
+    "skills/databricks-ml-training/tests/test_training_contract_helpers.py",
+    "skills/databricks-ml-training/tests/test_validate_training_config.py",
+    "skills/databricks-model-serving/assets/endpoint-config-schema.json",
+    "skills/databricks-model-serving/assets/serving-config-template.py",
+    "skills/databricks-model-serving/references/core-serving-patterns.md",
+    "skills/databricks-model-serving/references/endpoint-helper-contract.md",
+    "skills/databricks-model-serving/references/llm-router-serving-patterns.md",
+    "skills/databricks-model-serving/references/monitoring-patterns.md",
+    "skills/databricks-model-serving/references/operation-classes.md",
+    "skills/databricks-model-serving/references/prod-target-safety.md",
+    "skills/databricks-model-serving/references/semantic-readiness-patterns.md",
+    "skills/databricks-model-serving/scripts/check_endpoint.py",
+    "skills/databricks-model-serving/scripts/logical_types.py",
+    "skills/databricks-model-serving/scripts/validate_endpoint_config.py",
+    "skills/databricks-model-serving/SKILL.md",
+    "skills/databricks-model-serving/tests/test_check_endpoint.py",
+    "skills/databricks-model-serving/tests/test_validate_endpoint_config.py",
+    "skills/databricks-project-status/references/review-workflow.md",
+    "skills/databricks-project-status/scripts/status_report.py",
+    "skills/databricks-project-status/SKILL.md",
+    "skills/databricks-project-status/templates/status-report.md",
+    "skills/databricks-project-status/tests/test_status_report.py",
+    "skills/databricks-runtime-doctor/references/databricks-job-runtime-triage.md",
+    "skills/databricks-runtime-doctor/references/fresh-runtime-evidence.md",
+    "skills/databricks-runtime-doctor/references/hf-trainingargs-compat.md",
+    "skills/databricks-runtime-doctor/references/import-time-dependency-triage.md",
+    "skills/databricks-runtime-doctor/references/known-good-matrices.md",
+    "skills/databricks-runtime-doctor/scripts/check_notebook_runtime_order.py",
+    "skills/databricks-runtime-doctor/scripts/collect_env_snapshot.py",
+    "skills/databricks-runtime-doctor/scripts/probe_training_arguments.py",
+    "skills/databricks-runtime-doctor/scripts/runtime_safety.py",
+    "skills/databricks-runtime-doctor/scripts/tests/test_runtime_doctor_scripts.py",
+    "skills/databricks-runtime-doctor/SKILL.md",
+    "skills/databricks-spark-etl/assets/scd2-table-ddl.sql",
+    "skills/databricks-spark-etl/references/core-etl-patterns.md",
+    "skills/databricks-spark-etl/references/delta-errors.md",
+    "skills/databricks-spark-etl/references/delta-write-contracts.md",
+    "skills/databricks-spark-etl/references/schema-write-contract.md",
+    "skills/databricks-spark-etl/references/streaming-patterns.md",
+    "skills/databricks-spark-etl/scripts/validate_schema.py",
+    "skills/databricks-spark-etl/SKILL.md",
+    "skills/databricks-spark-etl/tests/test_validate_schema.py",
+    "skills/mlflow-run-auditor/references/audit-output-contract.md",
+    "skills/mlflow-run-auditor/references/job-ready-run-audit.md",
+    "skills/mlflow-run-auditor/references/logging-patches.md",
+    "skills/mlflow-run-auditor/references/metric-provenance.md",
+    "skills/mlflow-run-auditor/references/registry-consistency.md",
+    "skills/mlflow-run-auditor/references/trace-span-hierarchy.md",
+    "skills/mlflow-run-auditor/scripts/audit_mlflow_runs.py",
+    "skills/mlflow-run-auditor/SKILL.md",
+    "skills/mlflow-run-auditor/tests/test_audit_mlflow_runs.py",
+    "skills/spark-diagnostics/references/cluster-runtime-diagnostics.md",
+    "skills/spark-diagnostics/references/remediation-patterns.md",
+    "skills/spark-diagnostics/references/runtime-performance-diagnostics.md",
+    "skills/spark-diagnostics/references/shared-skill-patterns.md",
+    "skills/spark-diagnostics/references/static-auditor-contract.md",
+    "skills/spark-diagnostics/references/static-detection-examples.md",
+    "skills/spark-diagnostics/references/table-coverage-diagnostics.md",
+    "skills/spark-diagnostics/scripts/audit_spark_antipatterns.py",
+    "skills/spark-diagnostics/SKILL.md",
+    "skills/spark-diagnostics/tests/test_audit_spark_antipatterns.py",
+    "source-lock.json"
+  ],
+  "generatedOutputs": [
+    {
+      "path": "skills/databricks-api-calls/references/api-call-workflows.md",
+      "mode": "100644",
+      "sha256": "52b40b641bee56af5d9e7aefd1237dff83effffe85e492a22a32526d4a0967f5"
+    },
+    {
+      "path": "skills/databricks-api-calls/references/bulk-list-mutation.md",
+      "mode": "100644",
+      "sha256": "8124f29fa949f885388161b3212aa784bce8ee7c2a0b2dea52e0dd810b10960a"
+    },
+    {
+      "path": "skills/databricks-api-calls/references/databricks-api-endpoints.md",
+      "mode": "100644",
+      "sha256": "587ba6bec54a60cc41feb7663f7eea630cea5ecc66ca990dbc305ce684eb6dfb"
+    },
+    {
+      "path": "skills/databricks-api-calls/references/model-backend-gateways.md",
+      "mode": "100644",
+      "sha256": "0aa38861216d429ea5112672041b6c6fbd6723795ab44c88ac688aa822335b34"
+    },
+    {
+      "path": "skills/databricks-api-calls/references/operation-classes.md",
+      "mode": "100644",
+      "sha256": "3d68470c4d772df991f745a8ba7955a2cefba8dcce77202189bd76aac26bf643"
+    },
+    {
+      "path": "skills/databricks-api-calls/references/profile-workspace-preflight.md",
+      "mode": "100644",
+      "sha256": "658ffc59ac7b0f47c26d40f6b0da8a04469e4955eca649d29266fc98dae7bad7"
+    },
+    {
+      "path": "skills/databricks-api-calls/references/request-body-contracts.md",
+      "mode": "100644",
+      "sha256": "b163bb503a7058e3ce33e626537ee8e53134f4dc1724be73385f3f461a5c6d60"
+    },
+    {
+      "path": "skills/databricks-api-calls/scripts/check_databricks_context.py",
+      "mode": "100644",
+      "sha256": "9b62b42a6a50df90083fcc1885bc644d99eda1b44cb0bdd5ba82a399b1769b79"
+    },
+    {
+      "path": "skills/databricks-api-calls/scripts/render_api_script.py",
+      "mode": "100644",
+      "sha256": "c3455522b42329d62a823266d40716943ed282779170d8d838713b8963c3b70c"
+    },
+    {
+      "path": "skills/databricks-api-calls/scripts/safe_databricks_diagnostics.py",
+      "mode": "100644",
+      "sha256": "eb6329a7bc570e052fbdc6b280b93284a19936017bee7f70a9961765a7ee8e09"
+    },
+    {
+      "path": "skills/databricks-api-calls/SKILL.md",
+      "mode": "100644",
+      "sha256": "3f3616c98658752dd39a180107f02e2ed4be222a73660ca99462c7b5a606cfc7"
+    },
+    {
+      "path": "skills/databricks-api-calls/tests/test_helper_safety.py",
+      "mode": "100644",
+      "sha256": "ce67ad389e8890a3b002697fdccb7cab2b8e64c65ea3f9512c1d90318bda9932"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/assets/databricks-full.yml",
+      "mode": "100644",
+      "sha256": "f62eeee1d7a1c5917c5907906dc2de44493d7b7d6aea846410504f120f5ecd83"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/assets/databricks-minimal.yml",
+      "mode": "100644",
+      "sha256": "c3b34526ea8a35a16a85cdfd5da01f0196b1c534d126e4978439294341b5e72a"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/assets/databricks-split.yml",
+      "mode": "100644",
+      "sha256": "d7f146e8868757b8aa93a904e84c45b16ef6a3d0ed4277b65adb5221e82d6f3d"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/assets/local-path-policy.json",
+      "mode": "100644",
+      "sha256": "16e743882aef6684eb29b6f8e09995fe9e1c86aad1d91180a642aee5082417e4"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/references/ci-cd-patterns.md",
+      "mode": "100644",
+      "sha256": "8769ca28ae5ab4bc1efecb5e27d27b8d227e2aeff034679426cdb550838d269f"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/references/dab-config-schema.md",
+      "mode": "100644",
+      "sha256": "14efa5449a1efb9a9f6d12263131e34d387000f222c958a46618411902f324c7"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/references/dab-quick-reference.md",
+      "mode": "100644",
+      "sha256": "29916b494d698c57f9d1e336a14b1b4180c46136b45b377ec7c48a2fafb98dc0"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/references/gpu-cluster-patterns.md",
+      "mode": "100644",
+      "sha256": "257ee18dd97721c14472a994dc89775be7201d4a6e874e19ad701b667de7b66c"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/references/job-configuration.md",
+      "mode": "100644",
+      "sha256": "8acde8df784452b4cc2cf044b82e9a669328487e6330149083041b8d8cc6fcdd"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/references/job-topology-changes.md",
+      "mode": "100644",
+      "sha256": "b800b544d7dc757cfce81612183797685fc953da4fba0ab05286030cdb742725"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/references/multi-job-patterns.md",
+      "mode": "100644",
+      "sha256": "f04c90d2bf4dd4a9574838cf03d0458452338ce742c9ae44bd19659321b8ef19"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/references/operation-classes.md",
+      "mode": "100644",
+      "sha256": "3d68470c4d772df991f745a8ba7955a2cefba8dcce77202189bd76aac26bf643"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/references/profile-workspace-preflight.md",
+      "mode": "100644",
+      "sha256": "e8b1612f2e525166e98b888a10d68e4e47c63697f1d81895eafdd65fc1f5eb76"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/references/python-dependency-management.md",
+      "mode": "100644",
+      "sha256": "5dfa7c1013641c9e42518b7bafb0617b40fdd3d3507c6207fa2273918484fc2a"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/references/resources-splitting.md",
+      "mode": "100644",
+      "sha256": "be442ac9db4faaeaf86303d6a42047c2fd29c0f4c135cee8a435a299e0e4cbff"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/references/supported-runtimes.yml",
+      "mode": "100644",
+      "sha256": "38cce1728ba56621f417b6993b69d079212e97648a16e4bc031485a20ed17a03"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/scripts/dab_doctor.mjs",
+      "mode": "100644",
+      "sha256": "f27aed90f09f4e7df9707884ab3448efcbabf5aed4082d1c43effabce41935b6"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/scripts/package.json",
+      "mode": "100644",
+      "sha256": "fc5f05f3d5d35378dddb8dc206591f9283120f23d579d3b3f03a6e1f515af684"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/scripts/requirements.txt",
+      "mode": "100644",
+      "sha256": "4963e368330fa3956d38386930ce329da5b86a979614250d18c873b253210a4f"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/scripts/validate_bundle.py",
+      "mode": "100644",
+      "sha256": "d7a320fd0d6794096a6892f6fd97975d8ae1759f1a37b98d5e8197020c205498"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/SKILL.md",
+      "mode": "100644",
+      "sha256": "2480f1c5e2256def5ffaf639bf8b0246348375c273cdf05668bc7d0ca10e9ee8"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/tests/test_job_parameters.py",
+      "mode": "100644",
+      "sha256": "ca90c6609477488f66eff8794e753ba17fcda5e7ed6dcf93add526e8f3ce2d81"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/tests/test_path_safety.py",
+      "mode": "100644",
+      "sha256": "2391a542ff52f3cda5e7b5b15f29d7d9b93235cdad198887624dd3c7e8b97c8a"
+    },
+    {
+      "path": "skills/databricks-asset-bundles/tests/test_permissions.py",
+      "mode": "100644",
+      "sha256": "9024bfc86d8eea4cbf95dd54dcb2ba2a3358e67989693327d0a5770b17ea8c70"
+    },
+    {
+      "path": "skills/databricks-batch-inference/assets/scoring-quarantine-table-ddl.sql",
+      "mode": "100644",
+      "sha256": "90769385d794a5afcd74d4a27fed3665c602c652c69652cddf62ba16ae72565c"
+    },
+    {
+      "path": "skills/databricks-batch-inference/assets/scoring-run-audit-ddl.sql",
+      "mode": "100644",
+      "sha256": "299d4825d283aa5e790caf6bceb3aad6ebfd4bfb530373a2c9c33c4284956561"
+    },
+    {
+      "path": "skills/databricks-batch-inference/assets/scoring-table-ddl.sql",
+      "mode": "100644",
+      "sha256": "70995d982c30f07e9c3f93d674ac42524f4755bd18f64d9f78be0c201c016d2d"
+    },
+    {
+      "path": "skills/databricks-batch-inference/references/core-batch-inference-patterns.md",
+      "mode": "100644",
+      "sha256": "675e879cd96779522580e452bced42257431ff577c501b4f9a6f68cedfdfb655"
+    },
+    {
+      "path": "skills/databricks-batch-inference/references/label-share-anomaly-gating.md",
+      "mode": "100644",
+      "sha256": "5e7c90f2951c9b7549ec3c3ed654b823683779e8cffad799aea706d14037fd59"
+    },
+    {
+      "path": "skills/databricks-batch-inference/references/model-signature-contract.md",
+      "mode": "100644",
+      "sha256": "4a2cabb283d3b558f09d08f56ffdc6903bf925a7d3221a4e73904bec7b05b4e6"
+    },
+    {
+      "path": "skills/databricks-batch-inference/references/promote-ensemble-batch-loop.md",
+      "mode": "100644",
+      "sha256": "5c03a6e39b067ee13b6acc4e45669c0ff843e5c7c964c0fbe9213729c6a83221"
+    },
+    {
+      "path": "skills/databricks-batch-inference/references/reconciliation-sql-contract.md",
+      "mode": "100644",
+      "sha256": "b36458d8985b1b3418587fc5c88855cad081b5469e23f2aacc270eabba0fc6da"
+    },
+    {
+      "path": "skills/databricks-batch-inference/references/safe-write-patterns.md",
+      "mode": "100644",
+      "sha256": "38f22a5f23907a7c18dfae60d580ee4c4a050137b4dae92448bf8d206430a07d"
+    },
+    {
+      "path": "skills/databricks-batch-inference/references/scoring-dataflow-contract.md",
+      "mode": "100644",
+      "sha256": "12f4690a09fd2454e65804d23f4d023cc686f80164a6a66b841853bc38180966"
+    },
+    {
+      "path": "skills/databricks-batch-inference/references/uc-model-loading.md",
+      "mode": "100644",
+      "sha256": "d5d76d5889cdb53ed63961231a5cf044e658fb572cc0a19368351efa96c27a40"
+    },
+    {
+      "path": "skills/databricks-batch-inference/scripts/business_key_contract.py",
+      "mode": "100644",
+      "sha256": "58d87e183c62d70b5869b8366bb846cbe5def54f51a428871e6af8cc509d85c4"
+    },
+    {
+      "path": "skills/databricks-batch-inference/scripts/derive_publication_decision.py",
+      "mode": "100644",
+      "sha256": "1552f516754cd299da8782ee58ea76f304676bdbe38e59bd681ad6725f6f16e1"
+    },
+    {
+      "path": "skills/databricks-batch-inference/scripts/emit_reconciliation_sql.py",
+      "mode": "100644",
+      "sha256": "2a04d7877edc23ee3c464bfb00e7878983f3e43a2cd9f364f87e3717848b4f11"
+    },
+    {
+      "path": "skills/databricks-batch-inference/SKILL.md",
+      "mode": "100644",
+      "sha256": "b2894814456fab6773ea87708f8c19d5ce2cbb410f5fc84fac01af3ac8f13fee"
+    },
+    {
+      "path": "skills/databricks-batch-inference/tests/fixtures/full-branches.sql",
+      "mode": "100644",
+      "sha256": "db6a74281e533616f294a37c85382658919b61e9ce24ea6d10982c732ee77610"
+    },
+    {
+      "path": "skills/databricks-batch-inference/tests/fixtures/publication-decision-cases.json",
+      "mode": "100644",
+      "sha256": "dd42a7db0d3808e7a69604713428ca90a0c8c817b2eddc024b9ad951e93d124b"
+    },
+    {
+      "path": "skills/databricks-batch-inference/tests/test_emit_reconciliation_sql.py",
+      "mode": "100644",
+      "sha256": "af7306ae3c9f6a55e130a50c677bdc1dabc918b6b9b7730dd084f0d5aa7523da"
+    },
+    {
+      "path": "skills/databricks-deploy-monitor/references/common-failure-patterns.md",
+      "mode": "100644",
+      "sha256": "392349dfeb41f7484cf21a3f3681dd84ad46e05ecc6a9be1fac82234c6b134e8"
+    },
+    {
+      "path": "skills/databricks-deploy-monitor/references/date-window-run-ledger.md",
+      "mode": "100644",
+      "sha256": "37da2f0a370cf673334ebde6dd1dd8bb9abc441f96a724d29849b263cc1a2063"
+    },
+    {
+      "path": "skills/databricks-deploy-monitor/references/deploy-monitor-workflow.md",
+      "mode": "100644",
+      "sha256": "a043bc08710fb7072403b04851b37f9afbff0d80424db44e4e5199f4daf930ae"
+    },
+    {
+      "path": "skills/databricks-deploy-monitor/references/one-off-task-recovery.md",
+      "mode": "100644",
+      "sha256": "47eaa994eb0b65939199bfd4bfdacfc285d1bf01f8c581006d1d4e716e8708ad"
+    },
+    {
+      "path": "skills/databricks-deploy-monitor/references/operation-classes.md",
+      "mode": "100644",
+      "sha256": "3d68470c4d772df991f745a8ba7955a2cefba8dcce77202189bd76aac26bf643"
+    },
+    {
+      "path": "skills/databricks-deploy-monitor/references/output-contract-verification.md",
+      "mode": "100644",
+      "sha256": "bb1bb39f1bf889e30fe74bbae45fad3ec3c5f58a5e6936aaec1d6d4aea236bce"
+    },
+    {
+      "path": "skills/databricks-deploy-monitor/references/profile-workspace-preflight.md",
+      "mode": "100644",
+      "sha256": "90e6c550d49cc671bf0de204b55d1ef27aa622eb2c093fc9a79cb84ec0c53318"
+    },
+    {
+      "path": "skills/databricks-deploy-monitor/references/run-status-helper-contract.md",
+      "mode": "100644",
+      "sha256": "af757d9dd171aca486701d280c2a936f1bc3db84675836061a11ace46eaf9f74"
+    },
+    {
+      "path": "skills/databricks-deploy-monitor/scripts/check_run_status.py",
+      "mode": "100644",
+      "sha256": "fb6059b50919484a2de661de9b2d931d2d3e930b69615408a18c7d9055c2c5ea"
+    },
+    {
+      "path": "skills/databricks-deploy-monitor/scripts/check_run_status.sh",
+      "mode": "100644",
+      "sha256": "8d788d1354b9cc71edf87727e7de689235bd7124ee3e66b27248e54f85b795cd"
+    },
+    {
+      "path": "skills/databricks-deploy-monitor/scripts/extract_launch_run_id.py",
+      "mode": "100644",
+      "sha256": "c0f53bc27448af6ecf24eac6a8c070a75e4751a467ee5c88cd8a3d5fce2fec51"
+    },
+    {
+      "path": "skills/databricks-deploy-monitor/SKILL.md",
+      "mode": "100644",
+      "sha256": "e88e66823b46c6dd0f9e0b3a946a34d15b4b918f17517462aea3eea7decaaa7b"
+    },
+    {
+      "path": "skills/databricks-deploy-monitor/tests/test_check_run_status.py",
+      "mode": "100644",
+      "sha256": "90523a929f6a251ba0a3510401df9a7476f678a70ef4cd8743ea40f8db2b146b"
+    },
+    {
+      "path": "skills/databricks-deploy-monitor/tests/test_extract_launch_run_id.py",
+      "mode": "100644",
+      "sha256": "ccc0c46cb2fa1dfef491779a2c7c1644c918ad473869537674cbe64aec790931"
+    },
+    {
+      "path": "skills/databricks-ml-training/assets/parameter-block-template.py",
+      "mode": "100644",
+      "sha256": "a09c83d7aebedfa5a6c0245a8ef87d4d2b7eddd4ea793dff5d88280dc93cffc0"
+    },
+    {
+      "path": "skills/databricks-ml-training/assets/training-config-schema.json",
+      "mode": "100644",
+      "sha256": "314e561dc164d8f6f75b47183b1a19f4bf7103b68d28cdc81f08fb792648d678"
+    },
+    {
+      "path": "skills/databricks-ml-training/references/common-metrics-reference.md",
+      "mode": "100644",
+      "sha256": "24e20f88f66e7663c72bd601cd3db74dc5b9ae71bb0f661facce81ceab72b8ee"
+    },
+    {
+      "path": "skills/databricks-ml-training/references/core-training-patterns.md",
+      "mode": "100644",
+      "sha256": "87f5c6e9322d593c5df0b926351b32418b84fbe97f03d5d69292fceede746af1"
+    },
+    {
+      "path": "skills/databricks-ml-training/references/ensemble-training.md",
+      "mode": "100644",
+      "sha256": "50b6dfccb8eb1d48cb558020ab35dd013a4ef2495d28824530284061591181aa"
+    },
+    {
+      "path": "skills/databricks-ml-training/references/feature-schema-contract.md",
+      "mode": "100644",
+      "sha256": "8ceec0611e34f5afa51d055fc1319044d8044ed860bad98033a197550125a60b"
+    },
+    {
+      "path": "skills/databricks-ml-training/references/huggingface-transformers.md",
+      "mode": "100644",
+      "sha256": "532d3b33c0453e9b8a5e25574c22ff47215d89cec229f7fec87f36ffa8fcd10a"
+    },
+    {
+      "path": "skills/databricks-ml-training/references/imbalanced-classification.md",
+      "mode": "100644",
+      "sha256": "7c8aed890076d8256680609ab524b6794657e41eec5ee12ef16666db51b42032"
+    },
+    {
+      "path": "skills/databricks-ml-training/references/ml-lifecycle-handoffs.md",
+      "mode": "100644",
+      "sha256": "990904c9b6a1a101a5186d91ac9c339d2022fa33ee7b8f85c86672fc8c7aa742"
+    },
+    {
+      "path": "skills/databricks-ml-training/references/mlflow-dataset-metadata.md",
+      "mode": "100644",
+      "sha256": "4dbdc6dc1608e09ca9d840cfef9da1b579c74352036b07eb80485aaf45a880ac"
+    },
+    {
+      "path": "skills/databricks-ml-training/references/point-in-time-training.md",
+      "mode": "100644",
+      "sha256": "72ad054034830e2c550bb1dceb926f402049ba301cf8c5fc77df8c397e15576e"
+    },
+    {
+      "path": "skills/databricks-ml-training/references/tabular-training-patterns.md",
+      "mode": "100644",
+      "sha256": "0780657c90e6cf222f499d307b3f0949263b9b9ad2c9d5ae9b72bef210fc1eb6"
+    },
+    {
+      "path": "skills/databricks-ml-training/references/training-compute-preflight.md",
+      "mode": "100644",
+      "sha256": "d0b170c3b192fbf6b103d3e6b96bda92cbd53c8c3513b787e17bcf7b3a45ada5"
+    },
+    {
+      "path": "skills/databricks-ml-training/scripts/feature_schema_contract.py",
+      "mode": "100644",
+      "sha256": "e0e10f7ecb31a5b8650a0026a4c0123e5d6253c4d8c4bb4433cdb26a9655dd8e"
+    },
+    {
+      "path": "skills/databricks-ml-training/scripts/imbalance_contract.py",
+      "mode": "100644",
+      "sha256": "ad404a488c7d17600045d333525cbe8c6a6dcca04de7ec8a269678e2c507247c"
+    },
+    {
+      "path": "skills/databricks-ml-training/scripts/mlflow_example_privacy.py",
+      "mode": "100644",
+      "sha256": "0a6a74db388468ca7d8520b96a599cd2b1745b5d27cf8c373b361898985698fa"
+    },
+    {
+      "path": "skills/databricks-ml-training/scripts/point_in_time_contract.py",
+      "mode": "100644",
+      "sha256": "c50616609970c3513ba1b058ef9ecb31a31f6964f93addd7bfd8268e2c19f6a4"
+    },
+    {
+      "path": "skills/databricks-ml-training/scripts/promotion_eligibility.py",
+      "mode": "100644",
+      "sha256": "d5746e3a23a7435cd8a44a03fb2fca10126b75372a7e134c05376bd220ec4a29"
+    },
+    {
+      "path": "skills/databricks-ml-training/scripts/validate_training_config.py",
+      "mode": "100644",
+      "sha256": "b999e5e82d1a9803dcb9f0b7224e4355fcf692b83fbef8e86da31db269536d75"
+    },
+    {
+      "path": "skills/databricks-ml-training/SKILL.md",
+      "mode": "100644",
+      "sha256": "d3778777b8bc41c75322286063a6c0dda300a4aa51e68bbc770455ff2beeb7f8"
+    },
+    {
+      "path": "skills/databricks-ml-training/templates/model-performance-report-template.md",
+      "mode": "100644",
+      "sha256": "022e92f219b22d75c8cb2077e13286e5a3af7ab0902fff28e6d5b2f19b8eb50e"
+    },
+    {
+      "path": "skills/databricks-ml-training/tests/privacy_column_cases.py",
+      "mode": "100644",
+      "sha256": "8a44a494490758a9d7ce1268c158690d6edebb8b2c7d870890c08ee4d4db79b3"
+    },
+    {
+      "path": "skills/databricks-ml-training/tests/test_temporal_and_feature_schema_contract.py",
+      "mode": "100644",
+      "sha256": "5fcccd9b09bb219a85a67bbb86680bb8f26f8f75880e817b01e337ecb0111b4c"
+    },
+    {
+      "path": "skills/databricks-ml-training/tests/test_training_contract_helpers.py",
+      "mode": "100644",
+      "sha256": "3e61a09f1bebbe1f9bd04dd7e2a14feb87bce159de193a7538079b667e671055"
+    },
+    {
+      "path": "skills/databricks-ml-training/tests/test_validate_training_config.py",
+      "mode": "100644",
+      "sha256": "f434e23792ba760bc97f35e62b76d23a4f105e3b3112eb0ee8b0306335fe538d"
+    },
+    {
+      "path": "skills/databricks-model-serving/assets/endpoint-config-schema.json",
+      "mode": "100644",
+      "sha256": "b40121cc9aab45d6b431ff936de4e54437ed2b04af7bd471c076218239b00570"
+    },
+    {
+      "path": "skills/databricks-model-serving/assets/serving-config-template.py",
+      "mode": "100644",
+      "sha256": "df290b7da162edbc3e106532cac42c6f6523316732fef7f6fef9372ea862e207"
+    },
+    {
+      "path": "skills/databricks-model-serving/references/core-serving-patterns.md",
+      "mode": "100644",
+      "sha256": "557b1390c3a94e9c0d8771d5862ea71901ae0fffbe53508ff302dfad44c6f03e"
+    },
+    {
+      "path": "skills/databricks-model-serving/references/endpoint-helper-contract.md",
+      "mode": "100644",
+      "sha256": "15bfbc7b97ec0127a8afa3a0447476544540e2c4be588d03ab63603b1ab32439"
+    },
+    {
+      "path": "skills/databricks-model-serving/references/llm-router-serving-patterns.md",
+      "mode": "100644",
+      "sha256": "fec91d541d8b5c7b9111f2161094be773e065c00cc73c8b5e5a4ee15bc46ed5d"
+    },
+    {
+      "path": "skills/databricks-model-serving/references/monitoring-patterns.md",
+      "mode": "100644",
+      "sha256": "ddf21d67a630717e1fa2a67af9900fba1eb1681faab3c502819e72ba8f0a26e8"
+    },
+    {
+      "path": "skills/databricks-model-serving/references/operation-classes.md",
+      "mode": "100644",
+      "sha256": "3668b169e1fd86b7bcafcb000205f2c2c8cdb79f742f7e2ab2803a32829e918a"
+    },
+    {
+      "path": "skills/databricks-model-serving/references/prod-target-safety.md",
+      "mode": "100644",
+      "sha256": "a33eb22d7417c6c848fe731a970df8b6bc6ebf65d8482bd955c6c08939382050"
+    },
+    {
+      "path": "skills/databricks-model-serving/references/semantic-readiness-patterns.md",
+      "mode": "100644",
+      "sha256": "e35cdca2c61858c08b1e602921ab5fb264cc49f21fa9c840e93c3a333eb9c7a8"
+    },
+    {
+      "path": "skills/databricks-model-serving/scripts/check_endpoint.py",
+      "mode": "100644",
+      "sha256": "9bc88a6e638d53848ca1aa062ea1a78cfc2235ffe0420fce18229f96928d7264"
+    },
+    {
+      "path": "skills/databricks-model-serving/scripts/logical_types.py",
+      "mode": "100644",
+      "sha256": "d937055d4276371776a1f6da842780b96a4ca34f225ba3669faebc5a16b99e53"
+    },
+    {
+      "path": "skills/databricks-model-serving/scripts/validate_endpoint_config.py",
+      "mode": "100644",
+      "sha256": "09fa19645a7cbdd70aacd2af02006903bbcaf109c2ab2b4d6fbd11d2afc28eeb"
+    },
+    {
+      "path": "skills/databricks-model-serving/SKILL.md",
+      "mode": "100644",
+      "sha256": "7514fa5b35325647fe74d7676193eb76a12a78c9fd34a822f4636ed2401b6250"
+    },
+    {
+      "path": "skills/databricks-model-serving/tests/test_check_endpoint.py",
+      "mode": "100644",
+      "sha256": "11ee59d8cd4315bf5e67722e1ef490ec8f02431f22a7814646f8b928597b2992"
+    },
+    {
+      "path": "skills/databricks-model-serving/tests/test_validate_endpoint_config.py",
+      "mode": "100644",
+      "sha256": "1c8c90cd7e56239225a60b9e65fee8932a50e972f6094ddcf3a954b98bbb5ef8"
+    },
+    {
+      "path": "skills/databricks-project-status/references/review-workflow.md",
+      "mode": "100644",
+      "sha256": "2ea65c8ac841133000b89ebdfd1866a2b788ae8bbef99e3519b1c51836bcd0fa"
+    },
+    {
+      "path": "skills/databricks-project-status/scripts/status_report.py",
+      "mode": "100644",
+      "sha256": "fa923491f4cee3c9326666ba102447029a20cc48a372eb51b4733fc12908f138"
+    },
+    {
+      "path": "skills/databricks-project-status/SKILL.md",
+      "mode": "100644",
+      "sha256": "0c8d5c6cfbdcfb0068a4d88a046fd3730a682efb1cb9e1c0d6cfc68ce64fb74d"
+    },
+    {
+      "path": "skills/databricks-project-status/templates/status-report.md",
+      "mode": "100644",
+      "sha256": "c2087c46f0749b2735941523df79c3f825acf5f26b588d73b88c3b23b834c336"
+    },
+    {
+      "path": "skills/databricks-project-status/tests/test_status_report.py",
+      "mode": "100644",
+      "sha256": "8f3aa7837c1f3f6ead6f330e7da70c016ef83d4ebb9fb91fadb8f820d6393a23"
+    },
+    {
+      "path": "skills/databricks-runtime-doctor/references/databricks-job-runtime-triage.md",
+      "mode": "100644",
+      "sha256": "8db44389a6ad9f14ed12411e01435d1d8d689ae7ac61927acd06eb63e7e57ded"
+    },
+    {
+      "path": "skills/databricks-runtime-doctor/references/fresh-runtime-evidence.md",
+      "mode": "100644",
+      "sha256": "26c5f4f6562e32086216b08f0e207a9d7f08b2bc8f9d781bef9e6f380b056853"
+    },
+    {
+      "path": "skills/databricks-runtime-doctor/references/hf-trainingargs-compat.md",
+      "mode": "100644",
+      "sha256": "97fe93be5aa7beb4dc5b3142570befa75ecf60a92c5cbaa10e12804aa2fa458a"
+    },
+    {
+      "path": "skills/databricks-runtime-doctor/references/import-time-dependency-triage.md",
+      "mode": "100644",
+      "sha256": "ca4dd44a2e920826d269f46f9cf6da7f20b62030eb3f353074326968a6ead264"
+    },
+    {
+      "path": "skills/databricks-runtime-doctor/references/known-good-matrices.md",
+      "mode": "100644",
+      "sha256": "eba5553a0eb2306c7b98d00272e1b5dd1cb25e3b2693e907d9c97d82e82c72d2"
+    },
+    {
+      "path": "skills/databricks-runtime-doctor/scripts/check_notebook_runtime_order.py",
+      "mode": "100644",
+      "sha256": "426670a2c7c4a0394c724f5f3a0aad3a4d0a6979c0e3703e94949e049fe1f475"
+    },
+    {
+      "path": "skills/databricks-runtime-doctor/scripts/collect_env_snapshot.py",
+      "mode": "100644",
+      "sha256": "e31f03db77c75845acbdb4b9875bd0f0d04729d448fbf48b3f22db0a632d056c"
+    },
+    {
+      "path": "skills/databricks-runtime-doctor/scripts/probe_training_arguments.py",
+      "mode": "100644",
+      "sha256": "d5f68e84b0ad5d073a15f33cd1d56d54b0074b43922e93326935d724ac8dd15d"
+    },
+    {
+      "path": "skills/databricks-runtime-doctor/scripts/runtime_safety.py",
+      "mode": "100644",
+      "sha256": "aa1f43c346042fb43357df7dce46c247af264a3f93eda1f5260cfdf7b1d2de26"
+    },
+    {
+      "path": "skills/databricks-runtime-doctor/scripts/tests/test_runtime_doctor_scripts.py",
+      "mode": "100644",
+      "sha256": "b1ca39a5c005256bdb2a6c171756fc3e1d53e3e63617f0852c8a5dcde0a142a0"
+    },
+    {
+      "path": "skills/databricks-runtime-doctor/SKILL.md",
+      "mode": "100644",
+      "sha256": "1f3282443f97f187f4b40b5c4bb83741e9fc180ae96179238f258e047aa7f3f5"
+    },
+    {
+      "path": "skills/databricks-spark-etl/assets/scd2-table-ddl.sql",
+      "mode": "100644",
+      "sha256": "996d8b19403057260181fc7aa67ee0288663a0af88cad2aea1feb8e6376d69f0"
+    },
+    {
+      "path": "skills/databricks-spark-etl/references/core-etl-patterns.md",
+      "mode": "100644",
+      "sha256": "cf6cc3e4db54abd56a8f1dd2a176fd5938b7ec93ebe744f2bf14b1c13d1d1030"
+    },
+    {
+      "path": "skills/databricks-spark-etl/references/delta-errors.md",
+      "mode": "100644",
+      "sha256": "ed9de676205db71c607b3aa3d677eb12f8e47920a7a576329639bc4e3000041a"
+    },
+    {
+      "path": "skills/databricks-spark-etl/references/delta-write-contracts.md",
+      "mode": "100644",
+      "sha256": "a58fe8407d4671adfea092422b2f605d4d84733b1c032601de7fa4dc2b9dc146"
+    },
+    {
+      "path": "skills/databricks-spark-etl/references/schema-write-contract.md",
+      "mode": "100644",
+      "sha256": "65aeda5b727e68588a7a8c5338e582ac5fa2954a54bdf24d3035344ef8e373ee"
+    },
+    {
+      "path": "skills/databricks-spark-etl/references/streaming-patterns.md",
+      "mode": "100644",
+      "sha256": "e1760c038f62f2e5e50628ed37ba4825dec732ab8909910d8903387c156ddd3e"
+    },
+    {
+      "path": "skills/databricks-spark-etl/scripts/validate_schema.py",
+      "mode": "100644",
+      "sha256": "023009ed9ffea4cbaed504465566dfde7aaa3b436583447777287317fe4da9c0"
+    },
+    {
+      "path": "skills/databricks-spark-etl/SKILL.md",
+      "mode": "100644",
+      "sha256": "cc3b77dfd9e48242a96b173e5beb1fd49be7e15fb5ec0f009160a81a3fed8979"
+    },
+    {
+      "path": "skills/databricks-spark-etl/tests/test_validate_schema.py",
+      "mode": "100644",
+      "sha256": "1f1b9e33abfd967eff3c402ae7db4e460c69d24fc119ceb33ab82ecb11bc4b69"
+    },
+    {
+      "path": "skills/mlflow-run-auditor/references/audit-output-contract.md",
+      "mode": "100644",
+      "sha256": "ab882ab07a726699e949d81a80664b10ab0823e61336f44e42e50bbda61393ad"
+    },
+    {
+      "path": "skills/mlflow-run-auditor/references/job-ready-run-audit.md",
+      "mode": "100644",
+      "sha256": "844248123f7dc59dc531808f111e09627a38f102ef183c8aecdccdd9af94a269"
+    },
+    {
+      "path": "skills/mlflow-run-auditor/references/logging-patches.md",
+      "mode": "100644",
+      "sha256": "bd097477b26c7b2bfd37d3fbfd05a6f8a96389a164e520abd515be67d89793ef"
+    },
+    {
+      "path": "skills/mlflow-run-auditor/references/metric-provenance.md",
+      "mode": "100644",
+      "sha256": "7a3eb710ccda5086f28748dd47c205bc6977cb2e29a1fc9400069551eccc6070"
+    },
+    {
+      "path": "skills/mlflow-run-auditor/references/registry-consistency.md",
+      "mode": "100644",
+      "sha256": "b34640fcc9fef19184dcdc565e14edf0f46ed1c102559a21815a2141f64d746c"
+    },
+    {
+      "path": "skills/mlflow-run-auditor/references/trace-span-hierarchy.md",
+      "mode": "100644",
+      "sha256": "559f3f09fe7a921d0aa9ab992266acbf1b2573dd750b8c523a70d6843a96bd20"
+    },
+    {
+      "path": "skills/mlflow-run-auditor/scripts/audit_mlflow_runs.py",
+      "mode": "100644",
+      "sha256": "2d6760b73122cbd25457d4c45760d82294eacccdf82cb1346e0ce3c58d98d599"
+    },
+    {
+      "path": "skills/mlflow-run-auditor/SKILL.md",
+      "mode": "100644",
+      "sha256": "668ed58804c62576460cf3897051b53acf51410a50f8fad525e375611fb5d9ee"
+    },
+    {
+      "path": "skills/mlflow-run-auditor/tests/test_audit_mlflow_runs.py",
+      "mode": "100644",
+      "sha256": "f922ce75e6a9d6f0f563328fc3241db4d77f1731bdacb9da64956318bac81b6d"
+    },
+    {
+      "path": "skills/spark-diagnostics/references/cluster-runtime-diagnostics.md",
+      "mode": "100644",
+      "sha256": "40784c6ff0233b63b53ca3d85577edee1e617a52710359bd2f471539339433a5"
+    },
+    {
+      "path": "skills/spark-diagnostics/references/remediation-patterns.md",
+      "mode": "100644",
+      "sha256": "67e0fa7d35ac3e2ce48ca788a78f6930808579876c17f8035e58045c0b3c3228"
+    },
+    {
+      "path": "skills/spark-diagnostics/references/runtime-performance-diagnostics.md",
+      "mode": "100644",
+      "sha256": "8686ab4b803f40d4f824143f0643c05995b905eddf7ca689b64621b9d0cfffd6"
+    },
+    {
+      "path": "skills/spark-diagnostics/references/shared-skill-patterns.md",
+      "mode": "100644",
+      "sha256": "50fff3525cdbbb7668d41a24313d56960c26e6589ddcb68ae924bf7201901127"
+    },
+    {
+      "path": "skills/spark-diagnostics/references/static-auditor-contract.md",
+      "mode": "100644",
+      "sha256": "3ddff31d669410c1fe16d38a08eb8a0d0c6336def1be5a1d2938210b55473ef4"
+    },
+    {
+      "path": "skills/spark-diagnostics/references/static-detection-examples.md",
+      "mode": "100644",
+      "sha256": "8dd2f16efd2395ac267c3c0b93cc49fac663bfe48160cd272a3ca7b296967c28"
+    },
+    {
+      "path": "skills/spark-diagnostics/references/table-coverage-diagnostics.md",
+      "mode": "100644",
+      "sha256": "a0b2ebd87a5315094a8893c02b31d4a20e73191743bd75bb02a93147d81de9ae"
+    },
+    {
+      "path": "skills/spark-diagnostics/scripts/audit_spark_antipatterns.py",
+      "mode": "100644",
+      "sha256": "8c578b8d5823ec51d6f03a00bc8c9cb4bc5034514a31846354489fdad4d79eff"
+    },
+    {
+      "path": "skills/spark-diagnostics/SKILL.md",
+      "mode": "100644",
+      "sha256": "a6702d31d0490f1d6f99200145acabbee9e4997375d4b90b5e7f6dc76c852ade"
+    },
+    {
+      "path": "skills/spark-diagnostics/tests/test_audit_spark_antipatterns.py",
+      "mode": "100644",
+      "sha256": "8024f59f1b154b401e3afe655883846019b0de1b913f3454c762d23b4e30dd03"
+    }
+  ],
+  "generatedManifestFields": [
+    "version"
+  ]
+}
