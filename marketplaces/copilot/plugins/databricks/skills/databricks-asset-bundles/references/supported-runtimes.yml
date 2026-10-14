@@ -1,0 +1,12 @@
+last_verified: "2026-05-29"
+owner_note: "Update this file after checking the target workspace runtime selector and current Databricks Runtime documentation. Treat validator runtime findings as freshness checks, not official product limits."
+classic_runtime_prefixes:
+  - "17.3.x-scala2.12"
+  - "17.3.x-gpu-ml-scala2.12"
+  - "17.3.x-cpu-ml-scala2.12"
+template_dependency_versions:
+  pydantic: "2.11.3"
+  tenacity: "9.1.2"
+  mlflow: "2.21.3"
+  scikit-learn: "1.6.1"
+  elasticsearch: "8.17.2"

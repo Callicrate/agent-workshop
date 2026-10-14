@@ -1,0 +1,126 @@
+{
+  "schema_version": "skill-routing-cases/v1",
+  "skill_revision": "routing-cases-v1",
+  "cases": [
+    {
+      "id": "murmuration-read-context",
+      "group": "consult-tend",
+      "kind": "positive",
+      "prompt": "Read prior Murmuration decisions about this checkpoint without changing any discussion.",
+      "must_select": ["consult"],
+      "must_not_select": ["tend"]
+    },
+    {
+      "id": "murmuration-participate",
+      "group": "consult-tend",
+      "kind": "adjacent-negative",
+      "prompt": "Tend Murmuration and post the completed-work finding to the active discussion.",
+      "must_select": ["tend"],
+      "must_not_select": ["consult"]
+    },
+    {
+      "id": "murmuration-local-only",
+      "group": "consult-tend",
+      "kind": "boundary",
+      "prompt": "Summarize the local project notes without contacting shared services.",
+      "must_select": [],
+      "must_not_select": ["consult", "tend"]
+    },
+    {
+      "id": "python-traceback",
+      "group": "python-debugging-databricks-runtime-doctor",
+      "kind": "positive",
+      "prompt": "A local pytest collection fails with ModuleNotFoundError after a package refactor; trace and fix the Python cause.",
+      "must_select": ["python-debugging"],
+      "must_not_select": ["databricks-runtime-doctor"]
+    },
+    {
+      "id": "databricks-cuda-runtime",
+      "group": "python-debugging-databricks-runtime-doctor",
+      "kind": "adjacent-negative",
+      "prompt": "A Databricks DBR image stopped importing torch after a CUDA update; diagnose the runtime and cluster cause.",
+      "must_select": ["databricks-runtime-doctor"],
+      "must_not_select": ["python-debugging"]
+    },
+    {
+      "id": "python-databricks-boundary",
+      "group": "python-debugging-databricks-runtime-doctor",
+      "kind": "boundary",
+      "prompt": "Choose a model-quality metric for an offline experiment without debugging a failure or changing runtime configuration.",
+      "must_select": [],
+      "must_not_select": ["databricks-runtime-doctor", "python-debugging"]
+    },
+    {
+      "id": "skill-resource-update",
+      "group": "skill-author-agents-md-make-documentation",
+      "kind": "positive",
+      "prompt": "Add a deterministic fixture to an existing reusable skill and update its SKILL file with the new workflow.",
+      "must_select": ["skill-author"],
+      "must_not_select": ["agents-md", "documentation-author"]
+    },
+    {
+      "id": "agents-guidance-update",
+      "group": "skill-author-agents-md-make-documentation",
+      "kind": "adjacent-negative",
+      "prompt": "Create scoped AGENTS.md guidance for a repository module using the verified local validation command.",
+      "must_select": ["agents-md"],
+      "must_not_select": ["documentation-author", "skill-author"]
+    },
+    {
+      "id": "readme-documentation-update",
+      "group": "skill-author-agents-md-make-documentation",
+      "kind": "boundary",
+      "prompt": "Update the repository README with the supported installation and verification steps.",
+      "must_select": ["documentation-author"],
+      "must_not_select": ["agents-md", "skill-author"]
+    },
+    {
+      "id": "graphiti-durable-convention",
+      "group": "graphiti-durable-transient",
+      "kind": "positive",
+      "prompt": "Record a durable coding convention that should guide future work across projects.",
+      "must_select": ["graphiti-memory"],
+      "must_not_select": []
+    },
+    {
+      "id": "graphiti-transient-status",
+      "group": "graphiti-durable-transient",
+      "kind": "adjacent-negative",
+      "prompt": "Track the one-off test command and current task status for this session only.",
+      "must_select": [],
+      "must_not_select": ["graphiti-memory"]
+    },
+    {
+      "id": "graphiti-canonical-boundary",
+      "group": "graphiti-durable-transient",
+      "kind": "boundary",
+      "prompt": "Update the authoritative repository guidance with a verified rule for all contributors.",
+      "must_select": [],
+      "must_not_select": ["graphiti-memory"]
+    },
+    {
+      "id": "spark-execution-oom",
+      "group": "spark-diagnostics-databricks-spark-etl",
+      "kind": "positive",
+      "prompt": "A Spark job exhausts the driver after toPandas is used for logging; diagnose and fix the execution failure.",
+      "must_select": ["spark-diagnostics"],
+      "must_not_select": ["databricks-spark-etl"]
+    },
+    {
+      "id": "spark-etl-scd2-write",
+      "group": "spark-diagnostics-databricks-spark-etl",
+      "kind": "adjacent-negative",
+      "prompt": "Change a Delta merge so the SCD2 current-record filter and target-table timestamps stay correct.",
+      "must_select": ["databricks-spark-etl"],
+      "must_not_select": ["spark-diagnostics"]
+    },
+    {
+      "id": "spark-etl-model-boundary",
+      "group": "spark-diagnostics-databricks-spark-etl",
+      "kind": "boundary",
+      "prompt": "Compare two trained models using an existing evaluation table without changing Spark execution or ETL logic.",
+      "must_select": [],
+      "must_not_select": ["databricks-spark-etl", "spark-diagnostics"]
+    }
+  ]
+}
